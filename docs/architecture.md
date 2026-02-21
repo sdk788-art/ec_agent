@@ -14,7 +14,8 @@ MVP의 빠른 검증과 향후 프로덕션 레벨로의 확장성을 동시에 
     * **설계 (Gemini 3.1 Pro):** 깊은 추론 능력을 활용해 데이터 스키마 및 프롬프트 로직 설계.
     * **데이터 생성 및 검수 (Gemini 3.1 Pro):** 뷰티 도메인 리서치 및 현실적인 Mock-up 데이터(JSON) 생성.
     * **지엽적 기능 구현 및 테스트 (Gemini 3.1 Pro):** 세션 히스토리에 구축된 도메인 컨텍스트를 재활용하여, 프로젝트 의도에 부합하는 세부 기능을 신속하게 구현함.
-    * **LLM API (Anthropic API):** Claude Code CLI 환경과의 네이티브 연동 및 최적의 호환성을 확보하여, 지연 없는 Agentic Workflow를 구축하기 위해 선택
+    * **로컬 개발 환경 (Cursor IDE):** AI 네이티브 에디터인 Cursor IDE를 활용하여 개발 효율화.
+    * **LLM API (Anthropic API):** Claude Code CLI 환경과의 네이티브 연동 및 최적의 호환성을 확보하여, 지연 없는 Agentic Workflow를 구축하기 위해 선택.
     * **구현 및 오케스트레이션 (Claude Sonnet 4.6):** 우수한 코딩 정확도를 바탕으로 Streamlit 및 Python 로직 구현.
     * **의의:** AI를 단순 도구가 아닌 '목적별 전문가 조직'으로 오케스트레이션하여 산출물의 품질을 극대화했습니다.
 
