@@ -327,6 +327,21 @@ def _clear_llm_caches() -> None:
         del st.session_state[k]
 
 
+# ── UI 버튼 콜백 함수 ──────────────────────────────────────────────────────
+# on_click 콜백은 스크립트 재실행(rerun) 이전에 실행되므로,
+# 상태 변경이 즉시 반영되어 한 번의 클릭만으로 UI가 업데이트된다.
+
+def _cb_select_product(pid: int) -> None:
+    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID를 세션에 저장."""
+    st.session_state.selected_product_id = pid
+
+
+def _cb_add_to_cart(pid: int) -> None:
+    """'장바구니 담기/추가' 버튼 콜백: cart_added에 ID를 추가하고 풍선 효과 표시."""
+    st.session_state.cart_added.add(pid)
+    st.balloons()
+
+
 # ── 사이드바: 고객 선택 및 로그인 ─────────────────────────────────────────
 with st.sidebar:
     st.header("👤 고객 로그인")
@@ -523,20 +538,20 @@ else:
                             st.info(f"💬 {row['description']}")
 
                     # Micro-task 4: 상품 선택 버튼
+                    # on_click 콜백으로 교체 → 클릭 즉시 상태 반영 (단일 클릭 동작)
                     with btn_col:
                         is_selected = (
                             st.session_state.selected_product_id == row["product_id"]
                         )
                         btn_label = "✅ 선택됨" if is_selected else "상품 선택"
-                        if st.button(
+                        st.button(
                             btn_label,
                             key=f"select_{row['product_id']}",
                             use_container_width=True,
                             type="primary" if is_selected else "secondary",
-                        ):
-                            # 선택된 상품 ID를 세션 상태에 저장
-                            st.session_state.selected_product_id = int(row["product_id"])
-                            st.rerun()
+                            on_click=_cb_select_product,
+                            args=(int(row["product_id"]),),
+                        )
 
     # ── Step 3: 상품 상세 / 리뷰 요약 / 시너지 상품 추천 ──────────────────
     if st.session_state.selected_product_id is not None:
@@ -606,9 +621,24 @@ else:
                 st.info(f"{skin_type_ko} 피부 타입 고객이 남긴 리뷰가 아직 없습니다.")
 
             # ── Micro-task 7 (하단): 장바구니 담기 버튼 ───────────────────────
-            if st.button("🛒 장바구니 담기", type="primary", key=f"cart_{selected_id}"):
-                st.balloons()
-                st.success(f"**{p['product_name']}**이(가) 장바구니에 담겼습니다! 🎉")
+            # on_click 콜백 패턴: 클릭 즉시 cart_added에 추가 → 단일 클릭으로 UI 업데이트
+            main_pid = int(selected_id)
+            if main_pid in st.session_state.cart_added:
+                # 이미 담긴 상태: 비활성화 버튼으로 완료 피드백 표시
+                st.button(
+                    "✅ 장바구니에 담겼습니다",
+                    type="primary",
+                    key=f"cart_{main_pid}",
+                    disabled=True,
+                )
+            else:
+                st.button(
+                    "🛒 장바구니 담기",
+                    type="primary",
+                    key=f"cart_{main_pid}",
+                    on_click=_cb_add_to_cart,
+                    args=(main_pid,),
+                )
 
             st.divider()
 
@@ -654,8 +684,7 @@ else:
                             cs_id = int(cs_row["product_id"])
                             already_in_cart = cs_id in st.session_state.cart_added
                             if already_in_cart:
-                                # 이미 담긴 상태: 비활성화 버튼으로 피드백 표시
-                                # selected_product_id 변경 없음 → rerun 시 LLM 캐시 그대로 유지
+                                # 이미 담긴 상태: 비활성화 버튼으로 완료 피드백 표시
                                 st.button(
                                     "✅ 담겼습니다",
                                     key=f"cart_cross_{cs_id}",
@@ -663,13 +692,14 @@ else:
                                     disabled=True,
                                 )
                             else:
-                                if st.button(
+                                # on_click 콜백 패턴: 단일 클릭으로 즉시 상태 반영
+                                # selected_product_id 불변 → LLM 캐시 그대로 유지
+                                st.button(
                                     "🛒 장바구니 추가",
                                     key=f"cart_cross_{cs_id}",
                                     use_container_width=True,
-                                ):
-                                    # selected_product_id를 변경하지 않으므로
-                                    # rerun 후 동일 캐시 키 사용 → LLM 재호출 없음
-                                    st.session_state.cart_added.add(cs_id)
+                                    on_click=_cb_add_to_cart,
+                                    args=(cs_id,),
+                                )
             else:
                 st.info("이 상품과 함께 구매된 데이터가 충분하지 않아 시너지 추천을 제공할 수 없습니다.")
