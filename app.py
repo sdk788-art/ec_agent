@@ -160,6 +160,151 @@ def system_filter_products(params: dict, customer: dict) -> pd.DataFrame:
     return result.reset_index(drop=True)
 
 
+# ── Step 3 / Micro-task 5: System — 동일 피부 타입 리뷰 필터링 및 지표 계산 ──
+def system_get_same_skin_reviews(product_id: int, skin_type: str) -> tuple[pd.DataFrame, dict]:
+    """S → A: 선택 상품의 동일 피부 타입 고객 리뷰를 필터링하고 정량 지표를 계산.
+
+    H-A-S 원칙: LLM에 전달하기 전 Pandas로 교차 검증 및 필터링 수행.
+    반환값 tuple:
+      - filtered_df : 조건에 맞는 리뷰 DataFrame
+      - metrics     : 정량 지표 dict (total, avg_rate, satisfaction_pct)
+    """
+    # 동일 피부 타입 고객 ID 목록 추출
+    same_type_ids = customers[customers["base_skin_type"] == skin_type]["customer_id"]
+
+    # 선택 상품 + 동일 피부 타입 고객 리뷰만 필터링
+    filtered = reviews[
+        (reviews["product_id"] == product_id) &
+        (reviews["customer_id"].isin(same_type_ids))
+    ].copy()
+
+    total = len(filtered)
+
+    if total > 0:
+        avg_rate = round(filtered["rate"].mean(), 2)
+        high_satisfaction = int((filtered["rate"] >= 4.0).sum())
+        satisfaction_pct = round(high_satisfaction / total * 100, 1)
+    else:
+        avg_rate = 0.0
+        satisfaction_pct = 0.0
+
+    metrics = {
+        "total_reviews": total,
+        "avg_rate": avg_rate,
+        "satisfaction_pct": satisfaction_pct,
+    }
+
+    return filtered, metrics
+
+
+# ── Step 3 / Micro-task 6: Agent — 필터링된 리뷰 텍스트를 LLM이 요약 ─────────
+def agent_summarize_reviews(
+    filtered_reviews_df: pd.DataFrame,
+    skin_type: str,
+    metrics: dict,
+) -> str:
+    """S → A: 사전 필터링된 리뷰 텍스트와 정량 지표만 LLM에 전달하여 요약 생성.
+
+    H-A-S 원칙: System이 먼저 필터링한 결과물만 Agent에 전달 (전체 DB 비전달).
+    프롬프트 지시: 반드시 한국어로 출력.
+    """
+    review_texts = filtered_reviews_df["review"].dropna().tolist()
+
+    if not review_texts:
+        return None  # 텍스트 리뷰 없음 → 호출 불필요
+
+    skin_type_ko = SKIN_TYPE_KO.get(skin_type, skin_type)
+    reviews_joined = "\n".join(f"- {text}" for text in review_texts)
+
+    prompt = (
+        f"다음은 {skin_type_ko} 피부 고객들이 남긴 리뷰입니다.\n"
+        f"[정량 지표] 총 {metrics['total_reviews']}건 · 평균 평점 {metrics['avg_rate']}점 · "
+        f"만족도(4점 이상) {metrics['satisfaction_pct']}%\n\n"
+        f"[리뷰 목록]\n{reviews_joined}\n\n"
+        "이 고객들의 만족 및 불만족 포인트를 한국어로 자연스럽게 2~3문장으로 요약해 주세요."
+    )
+
+    response = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=512,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.content[0].text.strip()
+
+
+# ── Step 3 / Micro-task 8: System — 함께 구매 빈도 기반 시너지 상품 추출 ─────
+def system_get_cross_sell_products(selected_id: int, top_n: int = 2) -> pd.DataFrame:
+    """S → A: 선택 상품과 가장 자주 함께 구매된 상위 N개 상품을 결정론적으로 추출.
+
+    H-A-S 원칙: LLM 개입 없이 순수 Pandas 집계 연산만 사용.
+    """
+    purchase_logs = logs[logs["action_type"] == "purchase"]
+
+    # 선택 상품을 구매한 고객 ID
+    buyers = purchase_logs[purchase_logs["product_id"] == selected_id]["customer_id"]
+
+    if buyers.empty:
+        return pd.DataFrame()
+
+    # 해당 고객들이 구매한 다른 상품 (선택 상품 제외)
+    co_purchases = purchase_logs[
+        (purchase_logs["customer_id"].isin(buyers)) &
+        (purchase_logs["product_id"] != selected_id)
+    ]
+
+    if co_purchases.empty:
+        return pd.DataFrame()
+
+    # 함께 구매 빈도 상위 top_n 상품 ID 추출
+    top_ids = (
+        co_purchases.groupby("product_id").size()
+        .nlargest(top_n)
+        .index.tolist()
+    )
+
+    return products[products["product_id"].isin(top_ids)].copy().reset_index(drop=True)
+
+
+# ── Step 3 / Micro-task 9: Agent — 시너지 상품 크로스셀링 메시지 생성 ──────────
+def agent_recommend_cross_sell(
+    selected_product: pd.Series,
+    cross_sell_df: pd.DataFrame,
+    customer: dict,
+) -> str:
+    """S → A: 시너지 상품 정보와 고객 피부 고민을 LLM에 전달하여 크로스셀링 메시지 생성.
+
+    H-A-S 원칙: System이 추출한 상품 정보만 Agent에 전달 (전체 DB 비전달).
+    프롬프트 지시: 반드시 한국어 2~3문장으로 출력.
+    """
+    # 고객 피부 고민 한국어 변환
+    concerns = customer.get("skin_concerns", [])
+    if isinstance(concerns, str):
+        concerns = json.loads(concerns)
+    concern_labels = [SKIN_CONCERN_KO.get(c, c) for c in concerns]
+    concern_str = ", ".join(concern_labels) if concern_labels else "없음"
+
+    # 추천 상품 목록 (이름 + 카테고리)
+    cross_items = [
+        f"'{row['product_name']}'({PRODUCT_TYPE_KO.get(row['product_type'], row['product_type'])})"
+        for _, row in cross_sell_df.iterrows()
+    ]
+    cross_str = ", ".join(cross_items)
+
+    prompt = (
+        f"현재 고객의 피부 고민은 {concern_str}입니다.\n"
+        f"이 고객이 현재 보고 있는 상품 '{selected_product['product_name']}'과 "
+        f"{cross_str}을(를) 함께 사용했을 때의 시너지 효과를 강조하는 "
+        "매력적인 크로스셀링 메시지를 2~3문장의 한국어로 작성해 주세요."
+    )
+
+    response = client.messages.create(
+        model="claude-sonnet-4-6",
+        max_tokens=512,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    return response.content[0].text.strip()
+
+
 # ── 사이드바: 고객 선택 및 로그인 ─────────────────────────────────────────
 with st.sidebar:
     st.header("👤 고객 로그인")
@@ -356,16 +501,126 @@ else:
                             st.session_state.selected_product_id = int(row["product_id"])
                             st.rerun()
 
-    # ── 선택된 상품 정보 요약 표시 ────────────────────────────────────────
+    # ── Step 3: 상품 상세 / 리뷰 요약 / 시너지 상품 추천 ──────────────────
     if st.session_state.selected_product_id is not None:
         selected_id = st.session_state.selected_product_id
         selected_row = products[products["product_id"] == selected_id]
 
         if not selected_row.empty:
             p = selected_row.iloc[0]
+            skin_type = customer["base_skin_type"]
+            skin_type_ko = SKIN_TYPE_KO.get(skin_type, skin_type)
+
             st.divider()
-            st.subheader(f"📦 선택한 상품: {p['product_name']}")
-            st.success(
-                f"상품 ID **{selected_id}**번이 선택되었습니다. "
-                "다음 단계에서 피부 타입별 리뷰 요약을 제공합니다."
-            )
+
+            # ── Micro-task 7 (상단): 상품 상세 정보 ────────────────────────
+            st.subheader(f"📦 {p['product_name']}")
+
+            d1, d2, d3, d4 = st.columns(4)
+            with d1:
+                st.metric("카테고리", PRODUCT_TYPE_KO.get(p["product_type"], p["product_type"]))
+            with d2:
+                st.metric("브랜드", p["brand"])
+            with d3:
+                st.metric("가격", f"{int(p['price']):,}원")
+            with d4:
+                st.metric("재고", f"{int(p['stock'])}개")
+
+            if p.get("description"):
+                st.info(f"💬 {p['description']}")
+
+            st.divider()
+
+            # ── Micro-task 5: System — 동일 피부 타입 리뷰 필터링 및 지표 계산 ──
+            filtered_reviews_df, metrics = system_get_same_skin_reviews(selected_id, skin_type)
+
+            st.subheader(f"🔍 {skin_type_ko} 피부 고객 리뷰 분석")
+
+            m1, m2, m3 = st.columns(3)
+            with m1:
+                st.metric("동일 피부 타입 리뷰", f"{metrics['total_reviews']}건")
+            with m2:
+                avg_display = f"⭐ {metrics['avg_rate']:.1f} / 5.0" if metrics["total_reviews"] > 0 else "N/A"
+                st.metric("평균 평점", avg_display)
+            with m3:
+                sat_display = f"{metrics['satisfaction_pct']}%" if metrics["total_reviews"] > 0 else "N/A"
+                st.metric("만족도 (4점↑)", sat_display)
+
+            # ── Micro-task 6: Agent — 리뷰 요약 (세션 캐시로 중복 API 호출 방지) ──
+            # 캐시 키에 skin_type 포함 → 다른 피부 타입 고객 로그인 시 재계산
+            review_cache_key = f"review_summary_{selected_id}_{skin_type}"
+
+            if review_cache_key not in st.session_state:
+                if metrics["total_reviews"] > 0:
+                    with st.spinner("AI가 리뷰를 분석하고 요약 중입니다..."):
+                        st.session_state[review_cache_key] = agent_summarize_reviews(
+                            filtered_reviews_df, skin_type, metrics
+                        )
+                else:
+                    # 리뷰 없음 → API 호출 생략
+                    st.session_state[review_cache_key] = None
+
+            # ── Micro-task 7 (중단): AI 리뷰 요약 출력 ────────────────────────
+            st.subheader("🤖 AI 리뷰 요약")
+            summary = st.session_state.get(review_cache_key)
+            if summary:
+                st.success(summary)
+            else:
+                st.info(f"{skin_type_ko} 피부 타입 고객이 남긴 리뷰가 아직 없습니다.")
+
+            # ── Micro-task 7 (하단): 장바구니 담기 버튼 ───────────────────────
+            if st.button("🛒 장바구니 담기", type="primary", key=f"cart_{selected_id}"):
+                st.balloons()
+                st.success(f"**{p['product_name']}**이(가) 장바구니에 담겼습니다! 🎉")
+
+            st.divider()
+
+            # ── Micro-task 8: System — 함께 구매 빈도 기반 시너지 상품 추출 ─────
+            cross_df = system_get_cross_sell_products(selected_id, top_n=2)
+
+            # ── Micro-task 9: Agent — 크로스셀링 메시지 생성 및 UI 출력 ─────────
+            if not cross_df.empty:
+                # 캐시 키에 customer_id 포함 → 피부 고민이 다른 고객에게 재계산
+                customer_id = int(customer["customer_id"])
+                cross_msg_key = f"cross_msg_{selected_id}_{customer_id}"
+
+                if cross_msg_key not in st.session_state:
+                    with st.spinner("AI가 맞춤 시너지 추천 메시지를 작성 중입니다..."):
+                        st.session_state[cross_msg_key] = agent_recommend_cross_sell(
+                            p, cross_df, customer
+                        )
+
+                st.subheader("✨ 함께 쓰면 더 좋은 시너지 상품")
+
+                # AI 크로스셀링 메시지 출력
+                cross_msg = st.session_state.get(cross_msg_key)
+                if cross_msg:
+                    st.info(f"💡 {cross_msg}")
+
+                # 추천 상품 카드 표시
+                for _, cs_row in cross_df.iterrows():
+                    with st.container(border=True):
+                        cs_type_ko = PRODUCT_TYPE_KO.get(cs_row["product_type"], cs_row["product_type"])
+                        cs_info_col, cs_btn_col = st.columns([4, 1])
+                        with cs_info_col:
+                            st.markdown(
+                                f"**{cs_row['product_name']}**&nbsp;&nbsp;`{cs_type_ko}`"
+                            )
+                            st.caption(
+                                f"브랜드: {cs_row['brand']} &nbsp;|&nbsp; "
+                                f"가격: {int(cs_row['price']):,}원 &nbsp;|&nbsp; "
+                                f"재고: {int(cs_row['stock'])}개"
+                            )
+                            if cs_row.get("description"):
+                                st.write(f"💬 {cs_row['description']}")
+                        with cs_btn_col:
+                            if st.button(
+                                "상품 선택",
+                                key=f"select_cross_{cs_row['product_id']}",
+                                use_container_width=True,
+                            ):
+                                # 시너지 상품 선택 시 해당 상품으로 전환
+                                st.session_state.selected_product_id = int(cs_row["product_id"])
+                                st.rerun()
+            else:
+                st.info("이 상품과 함께 구매된 데이터가 충분하지 않아 시너지 추천을 제공할 수 없습니다.")
