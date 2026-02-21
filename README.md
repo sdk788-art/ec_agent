@@ -12,7 +12,6 @@ my-ecommerce-agent/
 │   └── reviews.json
 ├── docs/                  # 아키텍처 및 기획 문서
 │   ├── architecture.md    # 아키텍처 메모
-│   ├── table_def.md       # 테이블정의서
 │   └── kpi_sheet.md       # KPI 시트
 ├── app.py                 # Streamlit 메인 실행 파일
 ├── requirements.txt       # 패키지 의존성 관리
