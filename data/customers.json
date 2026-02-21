@@ -1,0 +1,542 @@
+[
+    {
+        "customer_id": 1,
+        "gender": "female",
+        "age": 33,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 2,
+        "gender": "male",
+        "age": 55,
+        "base_skin_type": "normal",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "acne_trouble",
+            "severe_dryness",
+            "redness"
+        ]
+    },
+    {
+        "customer_id": 3,
+        "gender": "male",
+        "age": 32,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 4,
+        "gender": "other",
+        "age": 52,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 5,
+        "gender": "male",
+        "age": 28,
+        "base_skin_type": "normal",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "redness",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 6,
+        "gender": "female",
+        "age": 24,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pores",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 7,
+        "gender": "female",
+        "age": 34,
+        "base_skin_type": "combination",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 8,
+        "gender": "other",
+        "age": 36,
+        "base_skin_type": "combination",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "acne_trouble",
+            "pigmentation_blemish",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 9,
+        "gender": "male",
+        "age": 20,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 10,
+        "gender": "male",
+        "age": 24,
+        "base_skin_type": "oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 11,
+        "gender": "male",
+        "age": 41,
+        "base_skin_type": "oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "severe_dryness",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 12,
+        "gender": "other",
+        "age": 28,
+        "base_skin_type": "normal",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "wrinkles_aging",
+            "severe_dryness",
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 13,
+        "gender": "other",
+        "age": 53,
+        "base_skin_type": "normal",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pigmentation_blemish",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 14,
+        "gender": "male",
+        "age": 38,
+        "base_skin_type": "oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pores"
+        ]
+    },
+    {
+        "customer_id": 15,
+        "gender": "other",
+        "age": 38,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pores"
+        ]
+    },
+    {
+        "customer_id": 16,
+        "gender": "male",
+        "age": 34,
+        "base_skin_type": "combination",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness",
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 17,
+        "gender": "other",
+        "age": 55,
+        "base_skin_type": "normal",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "redness",
+            "dullness",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 18,
+        "gender": "male",
+        "age": 50,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "wrinkles_aging",
+            "pores"
+        ]
+    },
+    {
+        "customer_id": 19,
+        "gender": "male",
+        "age": 27,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 20,
+        "gender": "other",
+        "age": 47,
+        "base_skin_type": "combination",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "acne_trouble",
+            "pigmentation_blemish",
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 21,
+        "gender": "other",
+        "age": 25,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 22,
+        "gender": "female",
+        "age": 28,
+        "base_skin_type": "oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 23,
+        "gender": "male",
+        "age": 50,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness",
+            "wrinkles_aging",
+            "redness"
+        ]
+    },
+    {
+        "customer_id": 24,
+        "gender": "male",
+        "age": 41,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "redness",
+            "dullness",
+            "pores"
+        ]
+    },
+    {
+        "customer_id": 25,
+        "gender": "female",
+        "age": 19,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble",
+            "redness",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 26,
+        "gender": "male",
+        "age": 54,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pores",
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 27,
+        "gender": "male",
+        "age": 26,
+        "base_skin_type": "dry",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pigmentation_blemish",
+            "acne_trouble",
+            "redness"
+        ]
+    },
+    {
+        "customer_id": 28,
+        "gender": "other",
+        "age": 45,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 29,
+        "gender": "female",
+        "age": 41,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "severe_dryness",
+            "pores",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 30,
+        "gender": "male",
+        "age": 22,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "acne_trouble",
+            "pores"
+        ]
+    },
+    {
+        "customer_id": 31,
+        "gender": "male",
+        "age": 18,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "redness",
+            "pores",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 32,
+        "gender": "male",
+        "age": 39,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 33,
+        "gender": "other",
+        "age": 49,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 34,
+        "gender": "other",
+        "age": 54,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 35,
+        "gender": "male",
+        "age": 24,
+        "base_skin_type": "normal",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "dullness",
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 36,
+        "gender": "female",
+        "age": 21,
+        "base_skin_type": "combination",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pigmentation_blemish",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 37,
+        "gender": "male",
+        "age": 33,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness",
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 38,
+        "gender": "male",
+        "age": 35,
+        "base_skin_type": "normal",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pigmentation_blemish",
+            "pores",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 39,
+        "gender": "other",
+        "age": 24,
+        "base_skin_type": "normal",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 40,
+        "gender": "male",
+        "age": 28,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 41,
+        "gender": "male",
+        "age": 28,
+        "base_skin_type": "combination",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pores",
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 42,
+        "gender": "female",
+        "age": 45,
+        "base_skin_type": "dry",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "wrinkles_aging",
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 43,
+        "gender": "male",
+        "age": 21,
+        "base_skin_type": "normal",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "wrinkles_aging"
+        ]
+    },
+    {
+        "customer_id": 44,
+        "gender": "other",
+        "age": 48,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble"
+        ]
+    },
+    {
+        "customer_id": 45,
+        "gender": "other",
+        "age": 22,
+        "base_skin_type": "dry",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble",
+            "pores",
+            "dullness"
+        ]
+    },
+    {
+        "customer_id": 46,
+        "gender": "male",
+        "age": 55,
+        "base_skin_type": "combination",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "redness"
+        ]
+    },
+    {
+        "customer_id": 47,
+        "gender": "other",
+        "age": 55,
+        "base_skin_type": "dehydrated_oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pigmentation_blemish"
+        ]
+    },
+    {
+        "customer_id": 48,
+        "gender": "other",
+        "age": 38,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 49,
+        "gender": "other",
+        "age": 37,
+        "base_skin_type": "oily",
+        "is_sensitive": false,
+        "skin_concerns": [
+            "pores",
+            "severe_dryness"
+        ]
+    },
+    {
+        "customer_id": 50,
+        "gender": "female",
+        "age": 54,
+        "base_skin_type": "oily",
+        "is_sensitive": true,
+        "skin_concerns": [
+            "acne_trouble"
+        ]
+    }
+]

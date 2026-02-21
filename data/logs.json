@@ -1,0 +1,6226 @@
+[
+    {
+        "log_id": "82001d72-70b4-4763-a6d7-2210def98d6c",
+        "customer_id": 1,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 14.8,
+        "timestamp": "2026-02-17T04:07:04.523"
+    },
+    {
+        "log_id": "9e426a7e-4e69-4493-85b6-242e1d9472fe",
+        "customer_id": 1,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 74.7,
+        "timestamp": "2026-01-26T03:07:04.523"
+    },
+    {
+        "log_id": "f13d4ec1-6a34-4674-ae18-26ace7dca3f4",
+        "customer_id": 1,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T02:07:04.523"
+    },
+    {
+        "log_id": "2b1d8c84-c1b1-42cc-a0e6-96abe3440318",
+        "customer_id": 1,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T00:07:04.523"
+    },
+    {
+        "log_id": "0631a42e-6f52-4ad1-8957-aa02d24f04d8",
+        "customer_id": 1,
+        "product_id": 37,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T19:07:04.523"
+    },
+    {
+        "log_id": "a51f2269-840e-4d5b-8c48-c63bd5c6ca33",
+        "customer_id": 1,
+        "product_id": 48,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T05:07:04.523"
+    },
+    {
+        "log_id": "313eedba-3f32-4864-9176-837462f07508",
+        "customer_id": 1,
+        "product_id": 41,
+        "action_type": "view",
+        "dwell_time": 29.3,
+        "timestamp": "2026-02-15T16:07:04.523"
+    },
+    {
+        "log_id": "356ca860-49f2-4bd5-a4cb-7a5e31257d93",
+        "customer_id": 1,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T15:07:04.523"
+    },
+    {
+        "log_id": "5b870e02-a3b9-4994-ad69-9b73b51388d3",
+        "customer_id": 1,
+        "product_id": 11,
+        "action_type": "view",
+        "dwell_time": 5.3,
+        "timestamp": "2026-02-08T12:07:04.523"
+    },
+    {
+        "log_id": "897590d4-8d32-4f14-a052-b0bbeb293c95",
+        "customer_id": 1,
+        "product_id": 31,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T05:07:04.523"
+    },
+    {
+        "log_id": "087c75d1-e522-4877-9bbe-666a95b3c48d",
+        "customer_id": 1,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T17:07:04.523"
+    },
+    {
+        "log_id": "b805b6ab-d599-44c6-a8cc-7ffe418c617f",
+        "customer_id": 1,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T08:07:04.523"
+    },
+    {
+        "log_id": "48cf7a0d-2484-47f2-8003-c401a6cb8e18",
+        "customer_id": 1,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T10:07:04.523"
+    },
+    {
+        "log_id": "992ce4a9-0439-44c1-bf09-9da90a8aba7c",
+        "customer_id": 1,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T10:07:04.523"
+    },
+    {
+        "log_id": "8d019016-49a4-4058-9e41-b24e19f6092a",
+        "customer_id": 2,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T16:07:04.523"
+    },
+    {
+        "log_id": "70bd58bc-fbf1-4589-a92f-76356600e025",
+        "customer_id": 2,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 22.1,
+        "timestamp": "2026-02-08T17:07:04.523"
+    },
+    {
+        "log_id": "72debbc9-9e88-4736-8a16-21c73ca8fe43",
+        "customer_id": 2,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T14:07:04.523"
+    },
+    {
+        "log_id": "60c1038a-07f7-41b0-b916-43e4c4e67a7b",
+        "customer_id": 2,
+        "product_id": 39,
+        "action_type": "view",
+        "dwell_time": 91.1,
+        "timestamp": "2026-01-27T19:07:04.523"
+    },
+    {
+        "log_id": "6a498bc0-f270-41c5-8502-e85ea0ea82a3",
+        "customer_id": 2,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T19:07:04.523"
+    },
+    {
+        "log_id": "d41b3197-7c27-41e4-9cb6-7fc15c48d1ab",
+        "customer_id": 2,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 85.5,
+        "timestamp": "2026-02-06T08:07:04.523"
+    },
+    {
+        "log_id": "d5a1df90-1c81-4cf5-9d15-ef440c9a4f34",
+        "customer_id": 2,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T03:07:04.523"
+    },
+    {
+        "log_id": "bf881428-45a2-4b59-a44d-7d4341dc7fd9",
+        "customer_id": 2,
+        "product_id": 3,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T05:07:04.523"
+    },
+    {
+        "log_id": "6bca1bf2-94dc-4c23-9a77-da79d6ff180f",
+        "customer_id": 2,
+        "product_id": 39,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T20:07:04.523"
+    },
+    {
+        "log_id": "ef0f0f2d-b212-49ee-b471-6253ca405870",
+        "customer_id": 2,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T12:07:04.523"
+    },
+    {
+        "log_id": "7847a3f1-1b5d-4f37-a787-e7b50ca8270a",
+        "customer_id": 2,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T04:07:04.523"
+    },
+    {
+        "log_id": "337e5814-4b8f-46a5-bada-4eeaa51925c4",
+        "customer_id": 2,
+        "product_id": 18,
+        "action_type": "view",
+        "dwell_time": 71.3,
+        "timestamp": "2026-02-16T07:07:04.523"
+    },
+    {
+        "log_id": "ef016e0c-6447-4951-8315-35aa8250f4fb",
+        "customer_id": 2,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 55.9,
+        "timestamp": "2026-02-07T02:07:04.523"
+    },
+    {
+        "log_id": "1989a0cc-d055-4368-abd0-4df8c2a767f6",
+        "customer_id": 2,
+        "product_id": 28,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T04:07:04.523"
+    },
+    {
+        "log_id": "c900185b-5758-4017-af5b-8c9f32649b80",
+        "customer_id": 2,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T01:07:04.523"
+    },
+    {
+        "log_id": "3ea04002-912d-402c-bcac-801445d7e315",
+        "customer_id": 2,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T23:07:04.523"
+    },
+    {
+        "log_id": "1305b496-6a2a-447a-9510-d2e7b7c9d20b",
+        "customer_id": 2,
+        "product_id": 11,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T13:07:04.523"
+    },
+    {
+        "log_id": "2954bfe7-5fe1-4b8d-8dce-9f8bbc55cce2",
+        "customer_id": 2,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T08:07:04.523"
+    },
+    {
+        "log_id": "f82f01ef-bc44-4e0a-913a-06d81b938381",
+        "customer_id": 2,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T22:07:04.523"
+    },
+    {
+        "log_id": "028c475a-0bab-4ca6-9907-1a57b3a1a0f3",
+        "customer_id": 2,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 34.0,
+        "timestamp": "2026-02-05T12:07:04.523"
+    },
+    {
+        "log_id": "eb8e530f-80be-4462-97b8-c3e157bacb78",
+        "customer_id": 2,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T10:07:04.523"
+    },
+    {
+        "log_id": "5a3615b8-8575-495b-94e6-3d947cf9a329",
+        "customer_id": 2,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T10:07:04.523"
+    },
+    {
+        "log_id": "45744d39-6378-47cb-be9b-6aa4033af075",
+        "customer_id": 3,
+        "product_id": 30,
+        "action_type": "view",
+        "dwell_time": 52.5,
+        "timestamp": "2026-02-13T03:07:04.523"
+    },
+    {
+        "log_id": "1f44a7fb-0b43-4eb3-900b-7419f271eac5",
+        "customer_id": 3,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 92.0,
+        "timestamp": "2026-02-07T21:07:04.523"
+    },
+    {
+        "log_id": "1f744286-9f2b-4655-a597-586c8245233a",
+        "customer_id": 3,
+        "product_id": 14,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T11:07:04.523"
+    },
+    {
+        "log_id": "2cca3a9f-55fd-42c1-b711-afe597e6e366",
+        "customer_id": 3,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T14:07:04.523"
+    },
+    {
+        "log_id": "b8eb339e-9e3c-41c6-873c-752ea60bf761",
+        "customer_id": 3,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T08:07:04.523"
+    },
+    {
+        "log_id": "a4675b43-c066-4638-bd3d-77e04903cc4b",
+        "customer_id": 3,
+        "product_id": 39,
+        "action_type": "view",
+        "dwell_time": 96.9,
+        "timestamp": "2026-01-23T06:07:04.523"
+    },
+    {
+        "log_id": "de39169d-d24b-4546-bb26-4b6d45cb2da3",
+        "customer_id": 3,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T19:07:04.523"
+    },
+    {
+        "log_id": "f24f4493-4ecd-46ad-8045-4d045042acdd",
+        "customer_id": 3,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 30.8,
+        "timestamp": "2026-02-08T23:07:04.523"
+    },
+    {
+        "log_id": "894d3a14-c3b3-421a-8920-4c196ed60455",
+        "customer_id": 3,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 100.7,
+        "timestamp": "2026-02-05T13:07:04.523"
+    },
+    {
+        "log_id": "d0986557-7a8c-46cd-85d6-f0633df4f9bf",
+        "customer_id": 3,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T08:07:04.523"
+    },
+    {
+        "log_id": "3f094d9f-65b9-4b5b-99f3-be78b074d10c",
+        "customer_id": 3,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T18:07:04.523"
+    },
+    {
+        "log_id": "cc85ec20-6e25-41ff-8b2f-47d451db44b6",
+        "customer_id": 3,
+        "product_id": 30,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T17:07:04.523"
+    },
+    {
+        "log_id": "0b0c20f6-3b73-4b5b-9b8f-ed4bac132d09",
+        "customer_id": 3,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T22:07:04.523"
+    },
+    {
+        "log_id": "38c33569-5335-47d6-a7da-ed0d03bbe015",
+        "customer_id": 3,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T09:07:04.523"
+    },
+    {
+        "log_id": "bdf7a6d2-bc87-4780-aee3-643fb30e7118",
+        "customer_id": 3,
+        "product_id": 22,
+        "action_type": "view",
+        "dwell_time": 112.4,
+        "timestamp": "2026-01-30T23:07:04.523"
+    },
+    {
+        "log_id": "f7c50c68-02c7-47b3-81ee-e29734cbb1a6",
+        "customer_id": 3,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T10:07:04.523"
+    },
+    {
+        "log_id": "f7d488d7-21d7-45b2-b5ef-9d3c84d20c49",
+        "customer_id": 3,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T04:07:04.523"
+    },
+    {
+        "log_id": "8d93abde-9a2b-4394-9a64-f5f8a018a13c",
+        "customer_id": 3,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T14:07:04.523"
+    },
+    {
+        "log_id": "52e9e38a-157a-485b-a85a-307595e70d40",
+        "customer_id": 4,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T00:07:04.523"
+    },
+    {
+        "log_id": "3dfd793d-f28f-43cf-8257-9b81ab440642",
+        "customer_id": 4,
+        "product_id": 37,
+        "action_type": "view",
+        "dwell_time": 49.0,
+        "timestamp": "2026-02-13T17:07:04.523"
+    },
+    {
+        "log_id": "11e88f8b-39bc-4772-aa82-ff2962365c54",
+        "customer_id": 4,
+        "product_id": 48,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T20:07:04.523"
+    },
+    {
+        "log_id": "6189f063-ac77-4573-b590-7666ebf9dada",
+        "customer_id": 4,
+        "product_id": 25,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T22:07:04.523"
+    },
+    {
+        "log_id": "40a19b38-c648-4d22-93fa-f6460c868b87",
+        "customer_id": 4,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T06:07:04.523"
+    },
+    {
+        "log_id": "d77915a3-697f-47d6-b674-59274b83cf63",
+        "customer_id": 4,
+        "product_id": 33,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T14:07:04.523"
+    },
+    {
+        "log_id": "8ca2d562-edd5-49cc-82d5-13fa2e3fac06",
+        "customer_id": 4,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T13:07:04.523"
+    },
+    {
+        "log_id": "ff782549-bcbd-4bfe-8ddf-53b570ddfde1",
+        "customer_id": 4,
+        "product_id": 1,
+        "action_type": "view",
+        "dwell_time": 88.1,
+        "timestamp": "2026-02-08T00:07:04.523"
+    },
+    {
+        "log_id": "da2fbb57-31ad-4b7c-a7cc-e735f7973fca",
+        "customer_id": 4,
+        "product_id": 10,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T06:07:04.523"
+    },
+    {
+        "log_id": "4875f97c-9b14-40fa-833d-4a26c3c4441e",
+        "customer_id": 4,
+        "product_id": 22,
+        "action_type": "view",
+        "dwell_time": 76.7,
+        "timestamp": "2026-02-06T18:07:04.523"
+    },
+    {
+        "log_id": "6c297be1-6af7-4be5-98c6-b3fb895f76da",
+        "customer_id": 4,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T12:07:04.523"
+    },
+    {
+        "log_id": "c32f0fee-0341-4ae2-b590-804bb18bc3a0",
+        "customer_id": 4,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T03:07:04.523"
+    },
+    {
+        "log_id": "084cdbb6-0d06-41a4-97bd-a887d22df9b5",
+        "customer_id": 4,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T08:07:04.523"
+    },
+    {
+        "log_id": "6701d7d4-022c-487c-a707-cadb9e563a40",
+        "customer_id": 4,
+        "product_id": 5,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T05:07:04.523"
+    },
+    {
+        "log_id": "ef555561-3eca-4ca9-b60f-bfba2d6b0585",
+        "customer_id": 4,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 119.7,
+        "timestamp": "2026-02-12T07:07:04.523"
+    },
+    {
+        "log_id": "9d8ee3bf-6edd-4c72-84cf-e0b7ec998785",
+        "customer_id": 4,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T23:07:04.523"
+    },
+    {
+        "log_id": "676d826a-0777-46ac-b23e-ef44d2471ee1",
+        "customer_id": 4,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T13:07:04.523"
+    },
+    {
+        "log_id": "7ec94ad6-6731-46ad-9c53-8b835b8b8271",
+        "customer_id": 4,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 10.3,
+        "timestamp": "2026-02-13T19:07:04.523"
+    },
+    {
+        "log_id": "bee4b1e2-65e2-40ec-9c23-4d17a0744a86",
+        "customer_id": 5,
+        "product_id": 34,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T17:07:04.523"
+    },
+    {
+        "log_id": "a9a209f9-27e4-4538-aabd-25f8ba19228d",
+        "customer_id": 5,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T07:07:04.523"
+    },
+    {
+        "log_id": "53fe88cb-1306-4d3f-8371-007f0d3cf1da",
+        "customer_id": 5,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 105.1,
+        "timestamp": "2026-01-27T12:07:04.523"
+    },
+    {
+        "log_id": "d36f4670-1b66-4cd5-84c2-f7f1f1ebd78d",
+        "customer_id": 5,
+        "product_id": 32,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T17:07:04.523"
+    },
+    {
+        "log_id": "6a4a6487-f98a-4450-81aa-f9f88b8c1ea0",
+        "customer_id": 5,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T17:07:04.523"
+    },
+    {
+        "log_id": "aee44b7d-ec1f-4b8b-a1b2-14b2d7408237",
+        "customer_id": 5,
+        "product_id": 17,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T00:07:04.523"
+    },
+    {
+        "log_id": "a0038e07-c243-45b4-afe7-6d0f112bdf81",
+        "customer_id": 5,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T00:07:04.523"
+    },
+    {
+        "log_id": "1081fae0-15b4-4c97-9df7-f660c9c585a9",
+        "customer_id": 5,
+        "product_id": 5,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T15:07:04.523"
+    },
+    {
+        "log_id": "9e76b6dd-95cd-41b9-aa58-5adacb539477",
+        "customer_id": 5,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T04:07:04.523"
+    },
+    {
+        "log_id": "43b3072f-f3ad-4e6f-bd22-80e7225b6fe4",
+        "customer_id": 5,
+        "product_id": 17,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T08:07:04.523"
+    },
+    {
+        "log_id": "2ea147c2-64a1-44dd-adfd-89275718d431",
+        "customer_id": 5,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T19:07:04.523"
+    },
+    {
+        "log_id": "6fa047b5-40ee-4e50-b1ae-0f1762415157",
+        "customer_id": 5,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T01:07:04.523"
+    },
+    {
+        "log_id": "01b073fe-4ec4-486f-a020-9d7511e57e7f",
+        "customer_id": 5,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 71.1,
+        "timestamp": "2026-02-04T04:07:04.523"
+    },
+    {
+        "log_id": "6b329de6-d95d-49c0-82e2-a32089ad8ba8",
+        "customer_id": 5,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T10:07:04.523"
+    },
+    {
+        "log_id": "6205c5f3-c458-425f-a3e7-1f6d4e1c0474",
+        "customer_id": 5,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T10:07:04.523"
+    },
+    {
+        "log_id": "25305721-962e-4f5c-a4b4-b5c220005062",
+        "customer_id": 6,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T01:07:04.523"
+    },
+    {
+        "log_id": "4c63a5fe-e158-42eb-bfaa-e10aa4d7268b",
+        "customer_id": 6,
+        "product_id": 15,
+        "action_type": "view",
+        "dwell_time": 78.2,
+        "timestamp": "2026-02-10T21:07:04.523"
+    },
+    {
+        "log_id": "930932f2-81c9-428e-8bab-051905960d9e",
+        "customer_id": 6,
+        "product_id": 47,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T07:07:04.523"
+    },
+    {
+        "log_id": "046e3920-fefb-407c-84f8-4df22367b9e8",
+        "customer_id": 6,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T14:07:04.523"
+    },
+    {
+        "log_id": "66efa336-7265-45e7-9e64-cf5d49a1b519",
+        "customer_id": 6,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 9.5,
+        "timestamp": "2026-02-20T06:07:04.523"
+    },
+    {
+        "log_id": "70a0d241-08d7-46cb-a4a9-a7ccd6195036",
+        "customer_id": 6,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T04:07:04.523"
+    },
+    {
+        "log_id": "70050892-7d10-42a2-a9ee-eb653796228d",
+        "customer_id": 6,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T12:07:04.523"
+    },
+    {
+        "log_id": "0dda1bcb-ce23-48c4-bb4b-edcdb0788e07",
+        "customer_id": 6,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T23:07:04.523"
+    },
+    {
+        "log_id": "c07882a1-8eac-4618-9d0f-1ce82d29f145",
+        "customer_id": 6,
+        "product_id": 24,
+        "action_type": "view",
+        "dwell_time": 66.0,
+        "timestamp": "2026-01-27T03:07:04.523"
+    },
+    {
+        "log_id": "3345b4e4-5c81-46fc-83b4-d11f2bdebec9",
+        "customer_id": 6,
+        "product_id": 17,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T15:07:04.523"
+    },
+    {
+        "log_id": "d667c0f8-186b-485e-80dc-923590cb67c2",
+        "customer_id": 7,
+        "product_id": 8,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T20:07:04.523"
+    },
+    {
+        "log_id": "f2bf934b-c647-4dca-96f2-e072558911c1",
+        "customer_id": 7,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T14:07:04.523"
+    },
+    {
+        "log_id": "c246ad9e-eec3-4a0a-81f6-57ea7aab6a10",
+        "customer_id": 7,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T07:07:04.523"
+    },
+    {
+        "log_id": "795dcd1e-a33e-4de5-929c-030f16a4ddc7",
+        "customer_id": 7,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T12:07:04.523"
+    },
+    {
+        "log_id": "5694327d-dba3-4210-b9ef-40e2dc569c5d",
+        "customer_id": 7,
+        "product_id": 8,
+        "action_type": "view",
+        "dwell_time": 57.3,
+        "timestamp": "2026-01-31T03:07:04.523"
+    },
+    {
+        "log_id": "e18dcf34-94cc-40e8-8b71-24ca2819b08e",
+        "customer_id": 7,
+        "product_id": 17,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T07:07:04.523"
+    },
+    {
+        "log_id": "c5a26efe-7561-4c04-b7ab-231837a3c093",
+        "customer_id": 7,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T06:07:04.523"
+    },
+    {
+        "log_id": "0f48f924-4357-49c6-9ab8-eb3712527c1c",
+        "customer_id": 7,
+        "product_id": 31,
+        "action_type": "view",
+        "dwell_time": 7.9,
+        "timestamp": "2026-02-12T17:07:04.523"
+    },
+    {
+        "log_id": "1d4a22d8-1a15-4517-8999-afe723051461",
+        "customer_id": 7,
+        "product_id": 15,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T05:07:04.523"
+    },
+    {
+        "log_id": "ceaf004f-9dc7-49ca-82fc-43eec6ed9fc9",
+        "customer_id": 7,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T06:07:04.523"
+    },
+    {
+        "log_id": "c707fa0e-3f42-46fb-bd26-633a162ff408",
+        "customer_id": 7,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T06:07:04.523"
+    },
+    {
+        "log_id": "61afa871-fad7-4f6c-8a50-7edaafc7e766",
+        "customer_id": 7,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 40.0,
+        "timestamp": "2026-01-26T11:07:04.523"
+    },
+    {
+        "log_id": "3b82f630-7e9f-4368-80ce-e682584a6441",
+        "customer_id": 7,
+        "product_id": 16,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T13:07:04.523"
+    },
+    {
+        "log_id": "934c074d-30dc-49f9-86d0-ca54ba6897e2",
+        "customer_id": 7,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T22:07:04.523"
+    },
+    {
+        "log_id": "7f75fc40-c399-4af7-bc5a-6681c5dc71de",
+        "customer_id": 8,
+        "product_id": 47,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T09:07:04.523"
+    },
+    {
+        "log_id": "8be89bb0-4914-4e32-88bb-581fe7fe0a4e",
+        "customer_id": 8,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 16.4,
+        "timestamp": "2026-02-19T23:07:04.523"
+    },
+    {
+        "log_id": "12c4b69d-fc94-4de3-a8e9-2389c9beb4c1",
+        "customer_id": 8,
+        "product_id": 18,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T23:07:04.523"
+    },
+    {
+        "log_id": "c5b040db-1a15-4e20-90e0-b804fc3b5ab3",
+        "customer_id": 8,
+        "product_id": 14,
+        "action_type": "view",
+        "dwell_time": 56.0,
+        "timestamp": "2026-02-13T21:07:04.523"
+    },
+    {
+        "log_id": "6bfba4b5-9de3-4d8c-be9d-992a13509dac",
+        "customer_id": 8,
+        "product_id": 7,
+        "action_type": "view",
+        "dwell_time": 117.8,
+        "timestamp": "2026-02-18T21:07:04.523"
+    },
+    {
+        "log_id": "f53f6e7a-c43e-4acb-9304-b6e1acc9932f",
+        "customer_id": 8,
+        "product_id": 23,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T06:07:04.523"
+    },
+    {
+        "log_id": "415790c0-20e6-46ac-98c9-88707ce7c110",
+        "customer_id": 8,
+        "product_id": 13,
+        "action_type": "view",
+        "dwell_time": 116.3,
+        "timestamp": "2026-02-03T18:07:04.523"
+    },
+    {
+        "log_id": "1e80d4cf-4ba2-459b-99f8-86687e4dd227",
+        "customer_id": 8,
+        "product_id": 14,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T07:07:04.523"
+    },
+    {
+        "log_id": "3fe28add-dd65-4469-add5-fdb42b9b9825",
+        "customer_id": 8,
+        "product_id": 2,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T05:07:04.523"
+    },
+    {
+        "log_id": "3f1510f1-1a78-41e6-a6d0-f337b62f856f",
+        "customer_id": 8,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 118.7,
+        "timestamp": "2026-02-16T20:07:04.523"
+    },
+    {
+        "log_id": "cdeb79c1-c56c-42a9-8ff5-d6cf08a7146a",
+        "customer_id": 8,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T12:07:04.523"
+    },
+    {
+        "log_id": "23ab7f20-653f-48b1-8ce9-25ac12c4786e",
+        "customer_id": 8,
+        "product_id": 15,
+        "action_type": "view",
+        "dwell_time": 42.8,
+        "timestamp": "2026-02-09T16:07:04.523"
+    },
+    {
+        "log_id": "e29b2def-7cd5-4f33-9657-53ba455147aa",
+        "customer_id": 8,
+        "product_id": 1,
+        "action_type": "view",
+        "dwell_time": 36.9,
+        "timestamp": "2026-02-17T05:07:04.523"
+    },
+    {
+        "log_id": "f68c3520-9073-45a6-8dba-dc3762877b22",
+        "customer_id": 8,
+        "product_id": 17,
+        "action_type": "view",
+        "dwell_time": 96.8,
+        "timestamp": "2026-01-27T03:07:04.523"
+    },
+    {
+        "log_id": "1681f9ad-8540-44d7-ad35-7adcee05df30",
+        "customer_id": 8,
+        "product_id": 9,
+        "action_type": "view",
+        "dwell_time": 6.7,
+        "timestamp": "2026-02-12T10:07:04.523"
+    },
+    {
+        "log_id": "40cd242e-3329-4ef7-8966-81196f5556a9",
+        "customer_id": 8,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 25.0,
+        "timestamp": "2026-02-09T20:07:04.523"
+    },
+    {
+        "log_id": "b11c104a-f13d-4fb5-b769-5da98aa927ed",
+        "customer_id": 8,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 65.5,
+        "timestamp": "2026-01-27T09:07:04.523"
+    },
+    {
+        "log_id": "e4f58b1e-96ee-45cb-9e87-248a7f579e32",
+        "customer_id": 8,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T01:07:04.523"
+    },
+    {
+        "log_id": "5eaffa41-70d9-471e-a099-c71a8edf4c3b",
+        "customer_id": 9,
+        "product_id": 40,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T17:07:04.523"
+    },
+    {
+        "log_id": "20961705-5fa7-4122-9fe0-23b7bf107883",
+        "customer_id": 9,
+        "product_id": 34,
+        "action_type": "view",
+        "dwell_time": 39.7,
+        "timestamp": "2026-02-15T07:07:04.523"
+    },
+    {
+        "log_id": "51b6e0d8-6373-4be6-9474-1f206aad816f",
+        "customer_id": 9,
+        "product_id": 31,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T11:07:04.523"
+    },
+    {
+        "log_id": "78feabdb-fb8e-4a5a-b078-719139c6dc2f",
+        "customer_id": 9,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T07:07:04.523"
+    },
+    {
+        "log_id": "4a04823d-81e3-45b7-9bf9-3711b70b5818",
+        "customer_id": 9,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T00:07:04.523"
+    },
+    {
+        "log_id": "27c00411-f919-44f7-bd15-39e2770235fa",
+        "customer_id": 9,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 12.6,
+        "timestamp": "2026-02-02T05:07:04.523"
+    },
+    {
+        "log_id": "96ce8167-8b0e-4305-bd1c-2735881648e8",
+        "customer_id": 9,
+        "product_id": 38,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T06:07:04.523"
+    },
+    {
+        "log_id": "64f96bed-2374-4e4d-84de-514ac9979ad1",
+        "customer_id": 9,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T20:07:04.523"
+    },
+    {
+        "log_id": "fd3faf65-55db-4b9f-93ae-b7f8990926fa",
+        "customer_id": 9,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T19:07:04.523"
+    },
+    {
+        "log_id": "3bc0f5ac-52a4-41d3-b5e3-636bae4694dd",
+        "customer_id": 9,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T23:07:04.523"
+    },
+    {
+        "log_id": "02643d2b-d41b-4831-9be0-30c41c444d69",
+        "customer_id": 9,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T06:07:04.523"
+    },
+    {
+        "log_id": "7f98724b-e170-4101-bd83-c037d2ed84cf",
+        "customer_id": 10,
+        "product_id": 27,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T17:07:04.523"
+    },
+    {
+        "log_id": "22961b5d-f49e-4bfd-b9c1-9063d6a338b7",
+        "customer_id": 10,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T00:07:04.523"
+    },
+    {
+        "log_id": "d9ff948f-4cf6-4edc-a6ba-5fdcddad845e",
+        "customer_id": 10,
+        "product_id": 21,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T13:07:04.523"
+    },
+    {
+        "log_id": "de6a8045-a5aa-4c5b-9bfa-91eb198ea924",
+        "customer_id": 10,
+        "product_id": 17,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T07:07:04.523"
+    },
+    {
+        "log_id": "966ca365-b16a-4b96-9206-20bf7734e8f7",
+        "customer_id": 10,
+        "product_id": 31,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T07:07:04.523"
+    },
+    {
+        "log_id": "1696c601-b713-4d13-8a55-8d5f656cef71",
+        "customer_id": 10,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 54.7,
+        "timestamp": "2026-01-24T12:07:04.523"
+    },
+    {
+        "log_id": "0836aed3-4d96-42f6-8d79-5d5d06675b07",
+        "customer_id": 10,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T21:07:04.523"
+    },
+    {
+        "log_id": "0e2cb365-d653-4090-a640-2592d329fdc3",
+        "customer_id": 10,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T04:07:04.523"
+    },
+    {
+        "log_id": "27cfdac2-e50e-4f74-a57a-82a949f6c2e5",
+        "customer_id": 10,
+        "product_id": 8,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T07:07:04.523"
+    },
+    {
+        "log_id": "dbf545f9-1205-4c2b-af79-fd781926debe",
+        "customer_id": 10,
+        "product_id": 28,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T07:07:04.523"
+    },
+    {
+        "log_id": "bba76ced-8bee-41b9-874a-301677bed43b",
+        "customer_id": 10,
+        "product_id": 39,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T19:07:04.523"
+    },
+    {
+        "log_id": "4aa35e55-a87f-485d-82d7-7407574827a5",
+        "customer_id": 10,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T13:07:04.523"
+    },
+    {
+        "log_id": "31413150-d610-43cb-bb43-e04580c95269",
+        "customer_id": 10,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T14:07:04.523"
+    },
+    {
+        "log_id": "f8e795c8-da29-45d5-b11f-5051f0d577d9",
+        "customer_id": 11,
+        "product_id": 18,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T13:07:04.523"
+    },
+    {
+        "log_id": "a46c2df6-4031-41a0-a848-3a6b76d9f8ec",
+        "customer_id": 11,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T23:07:04.523"
+    },
+    {
+        "log_id": "8005cc8e-ffdb-4ad8-8912-c48efb787a1f",
+        "customer_id": 11,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T07:07:04.523"
+    },
+    {
+        "log_id": "7e22f577-13aa-42d2-b61a-40a6b7a4b4a9",
+        "customer_id": 11,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T05:07:04.523"
+    },
+    {
+        "log_id": "48fcd3e1-3130-42a6-9a53-a47541141a94",
+        "customer_id": 11,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T10:07:04.523"
+    },
+    {
+        "log_id": "dc162d49-3127-4603-b599-9b9536caf057",
+        "customer_id": 11,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T19:07:04.523"
+    },
+    {
+        "log_id": "c9aefc95-0adb-447f-a727-4d208d2f0b4f",
+        "customer_id": 11,
+        "product_id": 10,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T15:07:04.523"
+    },
+    {
+        "log_id": "542423dd-5f7a-46ba-a7e2-7bb68b8b5978",
+        "customer_id": 11,
+        "product_id": 5,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T22:07:04.523"
+    },
+    {
+        "log_id": "04beb700-0df9-46c2-a7bf-74ab446a59da",
+        "customer_id": 11,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 15.6,
+        "timestamp": "2026-02-15T06:07:04.523"
+    },
+    {
+        "log_id": "f3e20037-e747-4ebb-af7e-b1594860167b",
+        "customer_id": 11,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T22:07:04.523"
+    },
+    {
+        "log_id": "20140141-e514-413f-97a5-c97898cb6412",
+        "customer_id": 11,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T15:07:04.523"
+    },
+    {
+        "log_id": "d1d13ae5-10e4-4606-945f-334fe459610a",
+        "customer_id": 11,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T20:07:04.523"
+    },
+    {
+        "log_id": "21044dd0-01c6-4461-b3cf-00da5e8fe120",
+        "customer_id": 11,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T11:07:04.523"
+    },
+    {
+        "log_id": "808d4162-2904-40d5-8c74-c0456ca47876",
+        "customer_id": 11,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 82.5,
+        "timestamp": "2026-02-16T05:07:04.523"
+    },
+    {
+        "log_id": "0f854754-e3db-4e33-be92-cb27a993a0c5",
+        "customer_id": 11,
+        "product_id": 28,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T07:07:04.523"
+    },
+    {
+        "log_id": "ad7e3554-ad15-4426-b71d-5e0a767204f3",
+        "customer_id": 12,
+        "product_id": 8,
+        "action_type": "view",
+        "dwell_time": 44.7,
+        "timestamp": "2026-02-16T02:07:04.523"
+    },
+    {
+        "log_id": "f3a9e0eb-020d-47a1-841b-c6e0c2027cd2",
+        "customer_id": 12,
+        "product_id": 44,
+        "action_type": "view",
+        "dwell_time": 73.2,
+        "timestamp": "2026-02-01T07:07:04.523"
+    },
+    {
+        "log_id": "6c97ed90-3e48-4a7e-bf0a-8ae85cad873e",
+        "customer_id": 12,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T19:07:04.523"
+    },
+    {
+        "log_id": "79728d1b-6a06-440c-8f40-6639a8c1fc42",
+        "customer_id": 12,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 5.9,
+        "timestamp": "2026-02-04T05:07:04.523"
+    },
+    {
+        "log_id": "68ec19a4-0cef-4aa7-83e4-4780b6e0561d",
+        "customer_id": 12,
+        "product_id": 17,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T14:07:04.523"
+    },
+    {
+        "log_id": "42ed260b-d751-4134-afa9-4c737a8d322d",
+        "customer_id": 12,
+        "product_id": 1,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T13:07:04.523"
+    },
+    {
+        "log_id": "66eb27fc-8cc5-4334-ac85-97b8ff2f8fae",
+        "customer_id": 12,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T23:07:04.523"
+    },
+    {
+        "log_id": "6871416a-dad9-46e5-be41-f9abb54121ac",
+        "customer_id": 12,
+        "product_id": 46,
+        "action_type": "view",
+        "dwell_time": 31.5,
+        "timestamp": "2026-02-04T03:07:04.523"
+    },
+    {
+        "log_id": "c8a4be06-a3a7-4919-bc9d-cdf43ae56de7",
+        "customer_id": 12,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T07:07:04.523"
+    },
+    {
+        "log_id": "3f5ee115-c93c-4bde-814d-68f08c5b55eb",
+        "customer_id": 12,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 55.2,
+        "timestamp": "2026-02-04T09:07:04.523"
+    },
+    {
+        "log_id": "d15c4855-4093-4c08-a1de-46f170e0ce24",
+        "customer_id": 12,
+        "product_id": 21,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T12:07:04.523"
+    },
+    {
+        "log_id": "36300218-d645-482b-83b5-318ffb988bf6",
+        "customer_id": 12,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T04:07:04.523"
+    },
+    {
+        "log_id": "5a5e33a0-facc-4ba8-acb1-2e6cc5148389",
+        "customer_id": 12,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T23:07:04.523"
+    },
+    {
+        "log_id": "f2eec2d7-22c3-4045-90f9-488cc065e57f",
+        "customer_id": 12,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 24.8,
+        "timestamp": "2026-02-03T10:07:04.523"
+    },
+    {
+        "log_id": "d20917d8-9461-49b5-92dc-5297d97fd592",
+        "customer_id": 13,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 55.1,
+        "timestamp": "2026-02-04T13:07:04.523"
+    },
+    {
+        "log_id": "dcaee08a-cbab-471f-956e-387c97482f3c",
+        "customer_id": 13,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T12:07:04.523"
+    },
+    {
+        "log_id": "d825b1c8-a759-45f5-b40a-88e6fe01789b",
+        "customer_id": 13,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T20:07:04.523"
+    },
+    {
+        "log_id": "adf5eaf7-4468-44da-a56d-90de28c3f025",
+        "customer_id": 13,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T15:07:04.523"
+    },
+    {
+        "log_id": "e2cccaac-7ac1-4c54-abb5-ac05385a9847",
+        "customer_id": 13,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T13:07:04.523"
+    },
+    {
+        "log_id": "36dd9c43-99e0-4606-810d-e4f316f7347c",
+        "customer_id": 13,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T21:07:04.523"
+    },
+    {
+        "log_id": "eb2eaa7d-4a62-472c-a516-8681e0f659dd",
+        "customer_id": 13,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T06:07:04.523"
+    },
+    {
+        "log_id": "905c367a-b0f9-4f92-9b71-c5b5746412fa",
+        "customer_id": 13,
+        "product_id": 17,
+        "action_type": "view",
+        "dwell_time": 27.7,
+        "timestamp": "2026-01-25T14:07:04.523"
+    },
+    {
+        "log_id": "f8c98fb3-01a2-417d-b2af-0931aebcabb2",
+        "customer_id": 13,
+        "product_id": 5,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T06:07:04.523"
+    },
+    {
+        "log_id": "f2ae9c18-f2d2-4805-8f69-7c63eed24516",
+        "customer_id": 13,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 58.4,
+        "timestamp": "2026-02-16T06:07:04.523"
+    },
+    {
+        "log_id": "b17fbd77-ae49-467c-b3b5-0cb69e01b792",
+        "customer_id": 13,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T04:07:04.523"
+    },
+    {
+        "log_id": "dd795dcc-348e-4fc7-91ec-17b2b866714f",
+        "customer_id": 13,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T04:07:04.523"
+    },
+    {
+        "log_id": "2aec5664-bb2f-47b2-a329-51f918c3e9c1",
+        "customer_id": 13,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T20:07:04.523"
+    },
+    {
+        "log_id": "350d4913-998c-411b-a062-e0a42b153268",
+        "customer_id": 13,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T00:07:04.523"
+    },
+    {
+        "log_id": "1c8b74bf-d7f8-4200-861c-a10d8104aefb",
+        "customer_id": 13,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T06:07:04.523"
+    },
+    {
+        "log_id": "9564821d-ec1e-4b71-8c8d-f54dabc0d8ea",
+        "customer_id": 14,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T19:07:04.523"
+    },
+    {
+        "log_id": "ec491235-e0a9-4165-b344-5cbb064e311c",
+        "customer_id": 14,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T11:07:04.523"
+    },
+    {
+        "log_id": "c26da946-519e-489e-9183-8541b9bde96c",
+        "customer_id": 14,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T06:07:04.523"
+    },
+    {
+        "log_id": "ad290476-8ef8-4ef9-b5cc-0967b65f7a4f",
+        "customer_id": 14,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T02:07:04.523"
+    },
+    {
+        "log_id": "18954dbf-40eb-4fdc-88f4-201a3d67a10e",
+        "customer_id": 14,
+        "product_id": 48,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T03:07:04.523"
+    },
+    {
+        "log_id": "e116fe8d-7aa1-4517-b380-49383dc79e3b",
+        "customer_id": 14,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 26.6,
+        "timestamp": "2026-02-06T04:07:04.523"
+    },
+    {
+        "log_id": "9c4fd30e-0a38-45c3-88d1-230954f343ea",
+        "customer_id": 14,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T02:07:04.523"
+    },
+    {
+        "log_id": "70437606-0671-41c9-a534-e3836a90b215",
+        "customer_id": 14,
+        "product_id": 22,
+        "action_type": "view",
+        "dwell_time": 118.0,
+        "timestamp": "2026-02-05T13:07:04.523"
+    },
+    {
+        "log_id": "477068c3-f527-40b4-8e78-48f46699b084",
+        "customer_id": 14,
+        "product_id": 12,
+        "action_type": "view",
+        "dwell_time": 9.5,
+        "timestamp": "2026-02-08T06:07:04.523"
+    },
+    {
+        "log_id": "45774682-80a1-411a-8387-c75ef5a1a02a",
+        "customer_id": 14,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T00:07:04.523"
+    },
+    {
+        "log_id": "60ceae04-fce2-42ab-b8db-3dbfb512d155",
+        "customer_id": 14,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T15:07:04.523"
+    },
+    {
+        "log_id": "b954e090-6cfc-4a33-8228-9712e3fb540d",
+        "customer_id": 14,
+        "product_id": 25,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T19:07:04.523"
+    },
+    {
+        "log_id": "46ed4a04-ba8b-4fde-b9cf-dc6e1d0312fd",
+        "customer_id": 14,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T20:07:04.523"
+    },
+    {
+        "log_id": "646623de-4b21-4dcc-875a-6741babc1625",
+        "customer_id": 14,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T06:07:04.523"
+    },
+    {
+        "log_id": "1a87db72-a8bb-468b-8d49-ddd37a0c7ef9",
+        "customer_id": 14,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T20:07:04.523"
+    },
+    {
+        "log_id": "054d0119-2baf-4497-b8fe-4c2aec8f07c8",
+        "customer_id": 15,
+        "product_id": 39,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T07:07:04.523"
+    },
+    {
+        "log_id": "a15db683-1cf1-4bc8-aa38-5793452225de",
+        "customer_id": 15,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 81.3,
+        "timestamp": "2026-02-01T12:07:04.523"
+    },
+    {
+        "log_id": "a09d9396-372c-47c6-9e6d-a2e98566b6a8",
+        "customer_id": 15,
+        "product_id": 45,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T06:07:04.523"
+    },
+    {
+        "log_id": "79d214e8-eab7-4b27-a5c4-f6a2b8fde6d1",
+        "customer_id": 15,
+        "product_id": 39,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T14:07:04.523"
+    },
+    {
+        "log_id": "417ba805-c148-4dd0-bf43-27698534c925",
+        "customer_id": 15,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T19:07:04.523"
+    },
+    {
+        "log_id": "e2c0dcbe-9ab1-40b2-87f1-3d1ca09d0e6d",
+        "customer_id": 15,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T20:07:04.523"
+    },
+    {
+        "log_id": "8b2a93ad-de27-4474-abae-9a2e775e7a26",
+        "customer_id": 15,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T09:07:04.523"
+    },
+    {
+        "log_id": "7847b93b-f8ab-403c-9ffc-6dc96c3917e7",
+        "customer_id": 15,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T06:07:04.523"
+    },
+    {
+        "log_id": "59a976e2-ea9e-4c5b-8161-71eee9e48e7d",
+        "customer_id": 15,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T21:07:04.523"
+    },
+    {
+        "log_id": "34dc8573-fde9-4f11-8000-5b780615d19b",
+        "customer_id": 15,
+        "product_id": 14,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T15:07:04.523"
+    },
+    {
+        "log_id": "474e2b96-bf36-4a3f-8906-531f16bd58be",
+        "customer_id": 15,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T01:07:04.523"
+    },
+    {
+        "log_id": "12320d54-c9c6-463d-98a4-32493f5ae5c7",
+        "customer_id": 15,
+        "product_id": 5,
+        "action_type": "view",
+        "dwell_time": 39.0,
+        "timestamp": "2026-01-26T14:07:04.523"
+    },
+    {
+        "log_id": "3711f860-5113-4119-81dd-8a3f1faf3995",
+        "customer_id": 15,
+        "product_id": 48,
+        "action_type": "view",
+        "dwell_time": 106.6,
+        "timestamp": "2026-02-08T03:07:04.523"
+    },
+    {
+        "log_id": "962efcd1-8ce8-4e3c-8a98-da474a93cb3c",
+        "customer_id": 15,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 20.1,
+        "timestamp": "2026-02-12T20:07:04.523"
+    },
+    {
+        "log_id": "2832f15a-1c42-4dd0-8511-c98a2e8af81c",
+        "customer_id": 15,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T10:07:04.523"
+    },
+    {
+        "log_id": "586147d1-2fe0-4b2b-89f4-57a25a4a171b",
+        "customer_id": 15,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T10:07:04.523"
+    },
+    {
+        "log_id": "f29640bb-9b92-4ba9-8040-aa7f4c60d23c",
+        "customer_id": 16,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 52.2,
+        "timestamp": "2026-02-15T00:07:04.523"
+    },
+    {
+        "log_id": "87486721-ddcc-4582-ab8b-52a658391d8d",
+        "customer_id": 16,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T17:07:04.523"
+    },
+    {
+        "log_id": "807746ad-498c-4835-a57c-a2f5b147a7b9",
+        "customer_id": 16,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T09:07:04.523"
+    },
+    {
+        "log_id": "20e23e2c-d784-4406-8ba1-74e827c5984e",
+        "customer_id": 16,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 116.0,
+        "timestamp": "2026-02-08T17:07:04.523"
+    },
+    {
+        "log_id": "c723e8ae-7d08-4ec8-b7e2-e79697567d24",
+        "customer_id": 16,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T16:07:04.523"
+    },
+    {
+        "log_id": "c963fc1f-77c3-4f00-bd1b-5dba25599ba4",
+        "customer_id": 16,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T00:07:04.523"
+    },
+    {
+        "log_id": "a28c9d5d-c61b-4f15-9d52-8fff80947af8",
+        "customer_id": 16,
+        "product_id": 33,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T22:07:04.523"
+    },
+    {
+        "log_id": "783fe4c0-1d08-4fce-b348-bdb6db852c32",
+        "customer_id": 16,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "798b2b7b-d571-4a78-9e34-c45c2b25a8e8",
+        "customer_id": 16,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T18:07:04.523"
+    },
+    {
+        "log_id": "dfe7a57e-a1f9-4b4a-8311-3b0ecd6c7861",
+        "customer_id": 16,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T21:07:04.523"
+    },
+    {
+        "log_id": "672a17c8-a603-45ca-b44a-af9e818cc365",
+        "customer_id": 16,
+        "product_id": 8,
+        "action_type": "view",
+        "dwell_time": 37.8,
+        "timestamp": "2026-02-14T02:07:04.523"
+    },
+    {
+        "log_id": "1179e9f2-ca39-4b2d-a056-26b4f56a2e84",
+        "customer_id": 16,
+        "product_id": 33,
+        "action_type": "view",
+        "dwell_time": 21.9,
+        "timestamp": "2026-01-31T00:07:04.523"
+    },
+    {
+        "log_id": "c50ecb8a-d15c-4b21-9aed-045ffb02b493",
+        "customer_id": 16,
+        "product_id": 29,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T17:07:04.523"
+    },
+    {
+        "log_id": "dd7e6380-7a57-4b4d-a863-ba8da4159dc4",
+        "customer_id": 16,
+        "product_id": 27,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T10:07:04.523"
+    },
+    {
+        "log_id": "d3555a1c-2b6a-4629-86da-b52bded0ee60",
+        "customer_id": 16,
+        "product_id": 24,
+        "action_type": "view",
+        "dwell_time": 32.1,
+        "timestamp": "2026-02-04T02:07:04.523"
+    },
+    {
+        "log_id": "67b19c73-f146-496b-9277-eace40c797b7",
+        "customer_id": 16,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 41.6,
+        "timestamp": "2026-02-02T17:07:04.523"
+    },
+    {
+        "log_id": "c8132a45-1429-411b-a28d-498106fcfb89",
+        "customer_id": 16,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 43.6,
+        "timestamp": "2026-02-18T08:07:04.523"
+    },
+    {
+        "log_id": "152c6e6f-6b91-4fda-8047-342619dd9ffe",
+        "customer_id": 16,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 110.5,
+        "timestamp": "2026-01-26T11:07:04.523"
+    },
+    {
+        "log_id": "3fb8e233-9cb8-4f7e-bd57-63272f70e724",
+        "customer_id": 16,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T14:07:04.523"
+    },
+    {
+        "log_id": "d36ed4a1-cf5a-43fc-ada2-ddb7a70ddc6f",
+        "customer_id": 17,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 68.1,
+        "timestamp": "2026-01-30T16:07:04.523"
+    },
+    {
+        "log_id": "785dbda1-fa06-4c7b-8034-b2a7d4cf341b",
+        "customer_id": 17,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T02:07:04.523"
+    },
+    {
+        "log_id": "76b3384a-98aa-444c-83e3-81857b8e9396",
+        "customer_id": 17,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 39.6,
+        "timestamp": "2026-02-15T19:07:04.523"
+    },
+    {
+        "log_id": "7dcf2075-e1ad-44de-9fe0-eb36c96da200",
+        "customer_id": 17,
+        "product_id": 41,
+        "action_type": "view",
+        "dwell_time": 96.3,
+        "timestamp": "2026-01-29T23:07:04.523"
+    },
+    {
+        "log_id": "4861ea46-79e7-4a47-b98b-0b67818a7f01",
+        "customer_id": 17,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T13:07:04.523"
+    },
+    {
+        "log_id": "66dd5708-2815-484d-9652-2b7f7f25c4d6",
+        "customer_id": 17,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T10:07:04.523"
+    },
+    {
+        "log_id": "3f6fe54c-3122-42bc-9968-d2937c249947",
+        "customer_id": 17,
+        "product_id": 46,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T17:07:04.523"
+    },
+    {
+        "log_id": "8ccce39e-71c6-4395-9a70-a83240982d9c",
+        "customer_id": 17,
+        "product_id": 1,
+        "action_type": "view",
+        "dwell_time": 75.7,
+        "timestamp": "2026-01-31T23:07:04.523"
+    },
+    {
+        "log_id": "a4ae13aa-f9a8-4810-923d-cfcd2ce34d4b",
+        "customer_id": 17,
+        "product_id": 12,
+        "action_type": "view",
+        "dwell_time": 81.4,
+        "timestamp": "2026-02-09T23:07:04.523"
+    },
+    {
+        "log_id": "b5bf5805-5d9a-4ac3-a3bd-96bb76fe4b39",
+        "customer_id": 17,
+        "product_id": 5,
+        "action_type": "view",
+        "dwell_time": 114.6,
+        "timestamp": "2026-02-07T21:07:04.523"
+    },
+    {
+        "log_id": "e530355c-9766-4b57-bc91-524762331c9d",
+        "customer_id": 17,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T02:07:04.523"
+    },
+    {
+        "log_id": "6f71e18b-7117-43c5-8a19-8640e24546df",
+        "customer_id": 17,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "5ae48c28-f143-454d-9071-55db0c200651",
+        "customer_id": 17,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "55bea873-34fd-4ced-9389-3d83b1d3dae1",
+        "customer_id": 18,
+        "product_id": 48,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T18:07:04.523"
+    },
+    {
+        "log_id": "68a61abb-df8b-4377-b822-c96a44f68a4e",
+        "customer_id": 18,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 32.7,
+        "timestamp": "2026-02-02T12:07:04.523"
+    },
+    {
+        "log_id": "14c1d872-b025-4266-9ddf-7512f336cae9",
+        "customer_id": 18,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T13:07:04.523"
+    },
+    {
+        "log_id": "1fa18d4f-cf3f-4260-ada0-9a06a837b6fd",
+        "customer_id": 18,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T20:07:04.523"
+    },
+    {
+        "log_id": "2078967c-e066-4bf1-be5e-0d78a0800ba6",
+        "customer_id": 18,
+        "product_id": 22,
+        "action_type": "view",
+        "dwell_time": 98.6,
+        "timestamp": "2026-02-03T03:07:04.523"
+    },
+    {
+        "log_id": "0fb2f377-ebed-4245-8a68-3123bee89e1b",
+        "customer_id": 18,
+        "product_id": 30,
+        "action_type": "view",
+        "dwell_time": 117.8,
+        "timestamp": "2026-02-18T07:07:04.523"
+    },
+    {
+        "log_id": "35798828-f880-46d3-a808-4c69ca0b4843",
+        "customer_id": 18,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T15:07:04.523"
+    },
+    {
+        "log_id": "65857eb9-98ed-45e6-814d-7f9f7a0cdbf6",
+        "customer_id": 18,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 38.7,
+        "timestamp": "2026-02-14T00:07:04.523"
+    },
+    {
+        "log_id": "b7da3cb2-6f1a-4c21-81e9-b203ab1af671",
+        "customer_id": 18,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 41.3,
+        "timestamp": "2026-02-16T16:07:04.523"
+    },
+    {
+        "log_id": "108c5cff-eb39-41b0-8310-a9f82329144e",
+        "customer_id": 18,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T22:07:04.523"
+    },
+    {
+        "log_id": "72d236ac-0b5d-462e-bd19-d0b0cbfdaea4",
+        "customer_id": 18,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T11:07:04.523"
+    },
+    {
+        "log_id": "d0f7a576-661a-45da-a81c-c0b433c86068",
+        "customer_id": 18,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 104.6,
+        "timestamp": "2026-01-31T21:07:04.523"
+    },
+    {
+        "log_id": "08ac4e27-f349-4b51-aaa2-e66826a1c06f",
+        "customer_id": 18,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T13:07:04.523"
+    },
+    {
+        "log_id": "d4a4607d-f391-4baf-9887-7733f0b32dcb",
+        "customer_id": 18,
+        "product_id": 48,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T22:07:04.523"
+    },
+    {
+        "log_id": "7cbf4e81-9775-4632-a4f0-6a45ef7d559b",
+        "customer_id": 18,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T22:07:04.523"
+    },
+    {
+        "log_id": "a66f3a6a-ff3c-4087-8ae7-22e3e6ed4352",
+        "customer_id": 18,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 47.2,
+        "timestamp": "2026-02-07T08:07:04.523"
+    },
+    {
+        "log_id": "828a2e85-a4eb-4eb1-9e54-6bd90e18e8dd",
+        "customer_id": 18,
+        "product_id": 47,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T12:07:04.523"
+    },
+    {
+        "log_id": "3c0dfdd6-460a-4227-8628-17c3dc6e995a",
+        "customer_id": 18,
+        "product_id": 39,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T23:07:04.523"
+    },
+    {
+        "log_id": "ed5723f6-f466-4aa4-8cd8-46ffbad47ce3",
+        "customer_id": 18,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 16.8,
+        "timestamp": "2026-02-08T19:07:04.523"
+    },
+    {
+        "log_id": "7cc50782-a772-41cc-8371-5a89e37b3d74",
+        "customer_id": 18,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T19:07:04.523"
+    },
+    {
+        "log_id": "3302e4be-16ab-4c0b-b128-f6cc08347bf9",
+        "customer_id": 19,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T21:07:04.523"
+    },
+    {
+        "log_id": "de51018c-1202-4f2b-ab7d-1597b164f185",
+        "customer_id": 19,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 119.8,
+        "timestamp": "2026-02-14T21:07:04.523"
+    },
+    {
+        "log_id": "aedd7eb7-91c5-4abb-8130-49f197108a35",
+        "customer_id": 19,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T11:07:04.523"
+    },
+    {
+        "log_id": "62870a10-e98b-48fc-8ed9-d81c98179eca",
+        "customer_id": 19,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T22:07:04.523"
+    },
+    {
+        "log_id": "3a72c56c-2f29-4aa2-97d4-b6e1205eca99",
+        "customer_id": 19,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T09:07:04.523"
+    },
+    {
+        "log_id": "c6788c3e-d82f-413f-935c-ca0c42eb9083",
+        "customer_id": 19,
+        "product_id": 39,
+        "action_type": "view",
+        "dwell_time": 83.0,
+        "timestamp": "2026-01-22T14:07:04.523"
+    },
+    {
+        "log_id": "452bc26b-4598-41c9-a9b8-bd67e5448c77",
+        "customer_id": 19,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T14:07:04.523"
+    },
+    {
+        "log_id": "21e03177-0d53-490b-bde3-01b4831e1437",
+        "customer_id": 19,
+        "product_id": 24,
+        "action_type": "view",
+        "dwell_time": 46.6,
+        "timestamp": "2026-02-16T06:07:04.523"
+    },
+    {
+        "log_id": "a264265d-727f-4b1f-91b2-c9dc4f798b8d",
+        "customer_id": 19,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T05:07:04.523"
+    },
+    {
+        "log_id": "30baa319-e20b-453e-9ef1-286054061c68",
+        "customer_id": 19,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T21:07:04.523"
+    },
+    {
+        "log_id": "18364d99-d097-4514-b05f-e2e18d66f6b8",
+        "customer_id": 19,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T12:07:04.523"
+    },
+    {
+        "log_id": "52625c39-e007-4bd2-90d1-9ac91bd8dc42",
+        "customer_id": 19,
+        "product_id": 26,
+        "action_type": "view",
+        "dwell_time": 41.2,
+        "timestamp": "2026-02-07T21:07:04.523"
+    },
+    {
+        "log_id": "8ac3643e-c4a6-4a02-aa26-fd910fa0e998",
+        "customer_id": 20,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T01:07:04.523"
+    },
+    {
+        "log_id": "2873d931-bb7b-4c13-b672-77132ed9fa34",
+        "customer_id": 20,
+        "product_id": 8,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T03:07:04.523"
+    },
+    {
+        "log_id": "8074ecad-550a-4540-9fff-70b6538ca4b1",
+        "customer_id": 20,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T18:07:04.523"
+    },
+    {
+        "log_id": "0419ddc5-7643-43d2-a359-6188754f2f84",
+        "customer_id": 20,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T05:07:04.523"
+    },
+    {
+        "log_id": "3c06b321-d763-4510-99e4-216dd77b3a10",
+        "customer_id": 20,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T01:07:04.523"
+    },
+    {
+        "log_id": "ae696ae0-b059-4ace-b32d-fab60d4cda74",
+        "customer_id": 20,
+        "product_id": 29,
+        "action_type": "view",
+        "dwell_time": 24.9,
+        "timestamp": "2026-01-26T12:07:04.523"
+    },
+    {
+        "log_id": "99426500-b896-4ac4-947b-6b971a48af28",
+        "customer_id": 20,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T12:07:04.523"
+    },
+    {
+        "log_id": "34f4300f-05c0-47e9-ab0f-8b7b7b8683fd",
+        "customer_id": 20,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T21:07:04.523"
+    },
+    {
+        "log_id": "10a58fe1-50f6-46c0-b0b2-87b14209af0b",
+        "customer_id": 20,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 107.5,
+        "timestamp": "2026-02-09T03:07:04.523"
+    },
+    {
+        "log_id": "ae295072-f962-43ff-ae26-3db947850ccb",
+        "customer_id": 20,
+        "product_id": 45,
+        "action_type": "view",
+        "dwell_time": 78.3,
+        "timestamp": "2026-02-14T08:07:04.523"
+    },
+    {
+        "log_id": "01beea6c-1bc6-45c8-8958-88d695adf78b",
+        "customer_id": 21,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 95.9,
+        "timestamp": "2026-02-16T14:07:04.523"
+    },
+    {
+        "log_id": "64700397-e103-485b-8f64-f0f460bc867e",
+        "customer_id": 21,
+        "product_id": 37,
+        "action_type": "view",
+        "dwell_time": 47.4,
+        "timestamp": "2026-02-03T03:07:04.523"
+    },
+    {
+        "log_id": "27fa3324-78fb-4b34-ad18-6bd387571a0e",
+        "customer_id": 21,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T05:07:04.523"
+    },
+    {
+        "log_id": "da7e26e0-de17-4557-a0f1-b7f2590ccba9",
+        "customer_id": 21,
+        "product_id": 46,
+        "action_type": "view",
+        "dwell_time": 87.7,
+        "timestamp": "2026-01-31T22:07:04.523"
+    },
+    {
+        "log_id": "36593381-fba4-4a51-af71-4f1fbd4ece9a",
+        "customer_id": 21,
+        "product_id": 37,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T23:07:04.523"
+    },
+    {
+        "log_id": "895e31ce-e9c2-4c9f-9b4b-629390868980",
+        "customer_id": 21,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 13.5,
+        "timestamp": "2026-01-26T20:07:04.523"
+    },
+    {
+        "log_id": "48dd6dfe-5519-4a8d-b49d-030376c8047f",
+        "customer_id": 21,
+        "product_id": 23,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T02:07:04.523"
+    },
+    {
+        "log_id": "4f44306f-9136-4637-8edb-f867902bef06",
+        "customer_id": 21,
+        "product_id": 41,
+        "action_type": "view",
+        "dwell_time": 72.6,
+        "timestamp": "2026-02-20T03:07:04.523"
+    },
+    {
+        "log_id": "8ac4e00d-c9b6-42c1-9762-6193235ff78e",
+        "customer_id": 21,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 100.6,
+        "timestamp": "2026-02-05T02:07:04.523"
+    },
+    {
+        "log_id": "6d04f667-57ff-4f0e-9e22-e3a198f81151",
+        "customer_id": 21,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T19:07:04.523"
+    },
+    {
+        "log_id": "02178417-ebf1-4cc3-bcd0-127276877c73",
+        "customer_id": 21,
+        "product_id": 15,
+        "action_type": "view",
+        "dwell_time": 44.8,
+        "timestamp": "2026-02-02T08:07:04.523"
+    },
+    {
+        "log_id": "1cdd6d46-045f-49b7-9f67-297e90911217",
+        "customer_id": 22,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T06:07:04.523"
+    },
+    {
+        "log_id": "0abaf22a-f43d-4a24-b793-955fce59eedf",
+        "customer_id": 22,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T06:07:04.523"
+    },
+    {
+        "log_id": "7b2f2d19-8829-4cd6-b7fc-67dfedb429bd",
+        "customer_id": 22,
+        "product_id": 33,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T12:07:04.523"
+    },
+    {
+        "log_id": "3ddad240-d5b9-4efa-851b-ae45f8320f95",
+        "customer_id": 22,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T04:07:04.523"
+    },
+    {
+        "log_id": "8856cc90-f273-4a94-9760-458824d8c252",
+        "customer_id": 22,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 87.9,
+        "timestamp": "2026-01-28T07:07:04.523"
+    },
+    {
+        "log_id": "45d3d103-4c55-4f99-9445-8253226fd29b",
+        "customer_id": 22,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T04:07:04.523"
+    },
+    {
+        "log_id": "e759ce64-192b-4850-ad7e-d4a487827b77",
+        "customer_id": 22,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 93.7,
+        "timestamp": "2026-01-24T11:07:04.523"
+    },
+    {
+        "log_id": "a48e92dd-e4b2-4cbd-8190-f171f8ebb848",
+        "customer_id": 22,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T16:07:04.523"
+    },
+    {
+        "log_id": "fb6f24b8-c528-47c0-884b-8850ae55d0e8",
+        "customer_id": 22,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T06:07:04.523"
+    },
+    {
+        "log_id": "626bdde0-46c7-4eef-adc3-b928f5211386",
+        "customer_id": 22,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T06:07:04.523"
+    },
+    {
+        "log_id": "774fc858-d4ba-4c67-a9b3-3c76d598d6a7",
+        "customer_id": 22,
+        "product_id": 31,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T19:07:04.523"
+    },
+    {
+        "log_id": "7318e96b-279f-4e46-9e34-aff686cc0e1e",
+        "customer_id": 23,
+        "product_id": 45,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T12:07:04.523"
+    },
+    {
+        "log_id": "087c7153-224a-44f4-a074-79b739fc2093",
+        "customer_id": 23,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 60.7,
+        "timestamp": "2026-01-28T00:07:04.523"
+    },
+    {
+        "log_id": "770f6294-6579-483e-9c23-e8a44c30b060",
+        "customer_id": 23,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 40.9,
+        "timestamp": "2026-02-02T05:07:04.523"
+    },
+    {
+        "log_id": "728ba753-9e1e-45c5-8554-7a91c343875c",
+        "customer_id": 23,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T09:07:04.523"
+    },
+    {
+        "log_id": "4e256105-5dd2-4b07-958b-8d19fcafa480",
+        "customer_id": 23,
+        "product_id": 33,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T21:07:04.523"
+    },
+    {
+        "log_id": "72cae71d-5734-4e26-8cb8-f9dce85a4fe5",
+        "customer_id": 23,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T20:07:04.523"
+    },
+    {
+        "log_id": "cbcf8649-9c36-4cfb-8d9c-8d3ac53716b7",
+        "customer_id": 23,
+        "product_id": 29,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T18:07:04.523"
+    },
+    {
+        "log_id": "594e0e03-1425-4804-8277-15e00afd62ed",
+        "customer_id": 23,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 38.4,
+        "timestamp": "2026-01-26T13:07:04.523"
+    },
+    {
+        "log_id": "4c09366c-e77e-40c7-9bcd-c8c7a317390d",
+        "customer_id": 23,
+        "product_id": 27,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T05:07:04.523"
+    },
+    {
+        "log_id": "78a1e8ca-6ee5-4395-87bb-da904358fc7c",
+        "customer_id": 23,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 112.4,
+        "timestamp": "2026-02-18T15:07:04.523"
+    },
+    {
+        "log_id": "931768b1-31e6-495e-b393-c25c324221b9",
+        "customer_id": 23,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T16:07:04.523"
+    },
+    {
+        "log_id": "6f041af7-0d3b-4f7e-8b6d-0f6e09748773",
+        "customer_id": 23,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T00:07:04.523"
+    },
+    {
+        "log_id": "53864c4d-e296-428e-b278-225be0e50607",
+        "customer_id": 23,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T10:07:04.523"
+    },
+    {
+        "log_id": "7641ee05-fdf3-47df-9e10-ae727675894f",
+        "customer_id": 23,
+        "product_id": 16,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T00:07:04.523"
+    },
+    {
+        "log_id": "7c54765f-1afe-4359-b4ae-8c70b5d93cdd",
+        "customer_id": 23,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 10.8,
+        "timestamp": "2026-02-09T21:07:04.523"
+    },
+    {
+        "log_id": "f2a9540c-3e2a-40fb-8f8d-86b6dd43d55c",
+        "customer_id": 23,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T06:07:04.523"
+    },
+    {
+        "log_id": "53a072c8-0e26-4c50-8d5d-dd863a705c1d",
+        "customer_id": 24,
+        "product_id": 47,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T18:07:04.523"
+    },
+    {
+        "log_id": "ff68fbed-8f72-4a68-af94-c296caf2308f",
+        "customer_id": 24,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T22:07:04.523"
+    },
+    {
+        "log_id": "f011c2e1-f715-4ed4-90d3-8d2415c6d61a",
+        "customer_id": 24,
+        "product_id": 37,
+        "action_type": "view",
+        "dwell_time": 69.6,
+        "timestamp": "2026-02-03T11:07:04.523"
+    },
+    {
+        "log_id": "9f654b58-c6b1-4a9a-8cb4-7927907a43a4",
+        "customer_id": 24,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T19:07:04.523"
+    },
+    {
+        "log_id": "a1ddfbef-7437-4a88-a0d3-6ebcd7777a86",
+        "customer_id": 24,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T00:07:04.523"
+    },
+    {
+        "log_id": "c0e478d7-8b6f-4bed-84ad-3025da9535dd",
+        "customer_id": 24,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T05:07:04.523"
+    },
+    {
+        "log_id": "5963d4cc-0f42-4182-ab17-8b48aaf626a7",
+        "customer_id": 24,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T14:07:04.523"
+    },
+    {
+        "log_id": "dec42176-a271-4b19-b13e-e9a7c843faf7",
+        "customer_id": 24,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T20:07:04.523"
+    },
+    {
+        "log_id": "097e2747-aecf-4084-a8ca-248934dbc079",
+        "customer_id": 24,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T14:07:04.523"
+    },
+    {
+        "log_id": "ae26b653-41c1-471d-9528-eea0be0e1dd6",
+        "customer_id": 24,
+        "product_id": 33,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T22:07:04.523"
+    },
+    {
+        "log_id": "6fd5f6b5-34a0-4b5d-aa7c-acf8d997fd1a",
+        "customer_id": 24,
+        "product_id": 9,
+        "action_type": "view",
+        "dwell_time": 87.1,
+        "timestamp": "2026-01-23T11:07:04.523"
+    },
+    {
+        "log_id": "a0693f40-183a-44cb-933a-f4a23ff8a5b0",
+        "customer_id": 25,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T02:07:04.523"
+    },
+    {
+        "log_id": "483527e0-798b-458b-9fc8-56f2cab8ce88",
+        "customer_id": 25,
+        "product_id": 21,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T05:07:04.523"
+    },
+    {
+        "log_id": "0e49fb62-968e-4a6e-9ce8-f70b3d7a17e3",
+        "customer_id": 25,
+        "product_id": 48,
+        "action_type": "view",
+        "dwell_time": 101.9,
+        "timestamp": "2026-02-04T05:07:04.523"
+    },
+    {
+        "log_id": "6d8d4952-ccad-4615-b712-5c913b336f71",
+        "customer_id": 25,
+        "product_id": 33,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T02:07:04.523"
+    },
+    {
+        "log_id": "fa910dd6-4413-4adb-9c48-422e74ffcfa4",
+        "customer_id": 25,
+        "product_id": 37,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T08:07:04.523"
+    },
+    {
+        "log_id": "09da45b8-771a-4b17-aa30-5a9eb3d53ad9",
+        "customer_id": 25,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T10:07:04.523"
+    },
+    {
+        "log_id": "d52c3abc-aa00-43b6-a1c9-707c4dd2d318",
+        "customer_id": 25,
+        "product_id": 27,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T13:07:04.523"
+    },
+    {
+        "log_id": "7719d182-e06f-42d3-bda6-33ee8129bdfc",
+        "customer_id": 25,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T09:07:04.523"
+    },
+    {
+        "log_id": "de0c7648-e1af-46a2-92e5-60d28c8a509a",
+        "customer_id": 25,
+        "product_id": 31,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T05:07:04.523"
+    },
+    {
+        "log_id": "ccd5e8ae-c3fd-4f31-8428-93f47e414212",
+        "customer_id": 25,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T04:07:04.523"
+    },
+    {
+        "log_id": "c5fae393-0f2f-457e-87e4-c75ea2e7ceb9",
+        "customer_id": 25,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 60.3,
+        "timestamp": "2026-02-14T11:07:04.523"
+    },
+    {
+        "log_id": "3bad7dfd-f372-410a-98be-03510b968643",
+        "customer_id": 25,
+        "product_id": 40,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T09:07:04.523"
+    },
+    {
+        "log_id": "9c7c2f9a-12a9-48d8-bf05-ff148bf99ce0",
+        "customer_id": 26,
+        "product_id": 45,
+        "action_type": "view",
+        "dwell_time": 17.6,
+        "timestamp": "2026-01-24T04:07:04.523"
+    },
+    {
+        "log_id": "f392e934-a4fd-411a-aecb-6ca88344b14d",
+        "customer_id": 26,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 22.4,
+        "timestamp": "2026-02-05T20:07:04.523"
+    },
+    {
+        "log_id": "68193093-f8a3-491b-9224-f1e9e175d8dd",
+        "customer_id": 26,
+        "product_id": 33,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T23:07:04.523"
+    },
+    {
+        "log_id": "d6b4b016-8990-43fd-b099-4ae2e50c2ed6",
+        "customer_id": 26,
+        "product_id": 48,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T01:07:04.523"
+    },
+    {
+        "log_id": "6c323a2a-0a33-4cae-b392-5fa25de07eaf",
+        "customer_id": 26,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T08:07:04.523"
+    },
+    {
+        "log_id": "fe38bd92-29ee-4b4f-ac0a-f7def00c6844",
+        "customer_id": 26,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T03:07:04.523"
+    },
+    {
+        "log_id": "14ff2e02-a33f-49fe-ae84-474014f50877",
+        "customer_id": 26,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T02:07:04.523"
+    },
+    {
+        "log_id": "dd01faf0-0d55-418e-9f28-c87a09225b4c",
+        "customer_id": 26,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T00:07:04.523"
+    },
+    {
+        "log_id": "4be74f3c-1bc4-42d5-a0b4-f8f401189d76",
+        "customer_id": 26,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T21:07:04.523"
+    },
+    {
+        "log_id": "237336a5-f54b-46b5-9697-5476ca334479",
+        "customer_id": 26,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T06:07:04.523"
+    },
+    {
+        "log_id": "20edbe1f-b783-4daf-a60e-07e33cbf070a",
+        "customer_id": 26,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T01:07:04.523"
+    },
+    {
+        "log_id": "7972e39d-1fe1-4377-9805-4c38efcf8232",
+        "customer_id": 26,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 30.9,
+        "timestamp": "2026-01-31T03:07:04.523"
+    },
+    {
+        "log_id": "5241fe96-2a08-4809-8d07-3a388bcbf12e",
+        "customer_id": 26,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T19:07:04.523"
+    },
+    {
+        "log_id": "678c8822-d92a-4582-8695-fae3431808c6",
+        "customer_id": 26,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 41.5,
+        "timestamp": "2026-02-14T08:07:04.523"
+    },
+    {
+        "log_id": "6dbdb194-b605-4097-b051-523f10bf4b03",
+        "customer_id": 26,
+        "product_id": 18,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T09:07:04.523"
+    },
+    {
+        "log_id": "93e8f58b-4b65-40b0-ad8b-c04f51db07d3",
+        "customer_id": 26,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T04:07:04.523"
+    },
+    {
+        "log_id": "665b9aa9-0a94-4601-bbd5-3bd8d6b150df",
+        "customer_id": 26,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T22:07:04.523"
+    },
+    {
+        "log_id": "56f2be10-592f-4685-a915-0f24368e2d10",
+        "customer_id": 26,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 114.9,
+        "timestamp": "2026-01-31T11:07:04.523"
+    },
+    {
+        "log_id": "16ea2610-c652-4a0b-bf33-76766e6389d5",
+        "customer_id": 26,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 34.5,
+        "timestamp": "2026-02-03T00:07:04.523"
+    },
+    {
+        "log_id": "53e751f7-df25-407c-84cd-b0286574e303",
+        "customer_id": 26,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T16:07:04.523"
+    },
+    {
+        "log_id": "fb3de3da-962b-43b2-a9d6-1e2e7120af6a",
+        "customer_id": 27,
+        "product_id": 48,
+        "action_type": "view",
+        "dwell_time": 72.5,
+        "timestamp": "2026-01-26T05:07:04.523"
+    },
+    {
+        "log_id": "e2481058-1453-4979-9934-34a1933d30a2",
+        "customer_id": 27,
+        "product_id": 34,
+        "action_type": "view",
+        "dwell_time": 31.0,
+        "timestamp": "2026-01-24T07:07:04.523"
+    },
+    {
+        "log_id": "40c18636-cb0e-4706-a134-d152d9f4c59c",
+        "customer_id": 27,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 43.0,
+        "timestamp": "2026-01-23T13:07:04.523"
+    },
+    {
+        "log_id": "801d4076-4108-4dc0-932c-e098f9ba087e",
+        "customer_id": 27,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T07:07:04.523"
+    },
+    {
+        "log_id": "05e9e7f6-2203-426d-af63-99247cbfbf6f",
+        "customer_id": 27,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 80.1,
+        "timestamp": "2026-02-08T15:07:04.523"
+    },
+    {
+        "log_id": "fe706786-2f16-4e8d-ae5f-224d43e8e7e7",
+        "customer_id": 27,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T06:07:04.523"
+    },
+    {
+        "log_id": "a496384d-f103-4ecd-bfb3-565040dcfc3b",
+        "customer_id": 27,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T19:07:04.523"
+    },
+    {
+        "log_id": "e029cb1e-d0d1-41fe-85be-50cb67a5f390",
+        "customer_id": 27,
+        "product_id": 42,
+        "action_type": "view",
+        "dwell_time": 71.0,
+        "timestamp": "2026-02-20T12:07:04.523"
+    },
+    {
+        "log_id": "e81493fc-a9c6-40b5-8610-01318226310a",
+        "customer_id": 27,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T09:07:04.523"
+    },
+    {
+        "log_id": "1edfa2b8-08d0-470e-b6d8-8e978823c5f5",
+        "customer_id": 27,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 119.7,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "2cb499c8-22ed-42ac-8728-a9c46710da06",
+        "customer_id": 27,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T01:07:04.523"
+    },
+    {
+        "log_id": "23452e9d-b9bb-460f-9a32-4d87892f927c",
+        "customer_id": 27,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T19:07:04.523"
+    },
+    {
+        "log_id": "aa9dca12-9e01-4973-95ef-912a4ab7ee1d",
+        "customer_id": 27,
+        "product_id": 39,
+        "action_type": "view",
+        "dwell_time": 17.3,
+        "timestamp": "2026-02-01T04:07:04.523"
+    },
+    {
+        "log_id": "df98184a-e8a9-47e2-9cfe-705a1a1a2fb9",
+        "customer_id": 27,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T00:07:04.523"
+    },
+    {
+        "log_id": "b83c0552-7794-4da7-85e8-cbc172f3bbde",
+        "customer_id": 28,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T18:07:04.523"
+    },
+    {
+        "log_id": "08678282-0f2f-4e50-aba9-5694d3bda5b1",
+        "customer_id": 28,
+        "product_id": 47,
+        "action_type": "view",
+        "dwell_time": 57.8,
+        "timestamp": "2026-02-01T15:07:04.523"
+    },
+    {
+        "log_id": "15f4bbaa-5065-4889-b967-06f3b6a5c265",
+        "customer_id": 28,
+        "product_id": 1,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T15:07:04.523"
+    },
+    {
+        "log_id": "a7f3f11c-08b8-43af-a0d5-c5739114eadd",
+        "customer_id": 28,
+        "product_id": 37,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T19:07:04.523"
+    },
+    {
+        "log_id": "fe896de2-a853-4206-b285-d3b707631d5f",
+        "customer_id": 28,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T16:07:04.523"
+    },
+    {
+        "log_id": "950670be-9ecf-4a82-b3d1-1d59f0d72997",
+        "customer_id": 28,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T06:07:04.523"
+    },
+    {
+        "log_id": "13e65b8c-5af7-417f-9cf4-5d7ec9581c4c",
+        "customer_id": 28,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T20:07:04.523"
+    },
+    {
+        "log_id": "889ccde4-ced2-4520-a8af-2fae679546a9",
+        "customer_id": 28,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T13:07:04.523"
+    },
+    {
+        "log_id": "781a6739-4187-4d8c-b975-c8e65ebc67c6",
+        "customer_id": 28,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 5.8,
+        "timestamp": "2026-02-06T20:07:04.523"
+    },
+    {
+        "log_id": "20ed2384-91e1-4c97-9010-8b75e2674c51",
+        "customer_id": 28,
+        "product_id": 18,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T00:07:04.523"
+    },
+    {
+        "log_id": "0cc7c450-9f97-42ac-ae03-698ae426a12b",
+        "customer_id": 28,
+        "product_id": 47,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T04:07:04.523"
+    },
+    {
+        "log_id": "8d45013f-2338-40b7-b028-ba87b30d4038",
+        "customer_id": 28,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T18:07:04.523"
+    },
+    {
+        "log_id": "1fa58f55-7022-4091-9a44-b2866ee15926",
+        "customer_id": 29,
+        "product_id": 11,
+        "action_type": "view",
+        "dwell_time": 51.6,
+        "timestamp": "2026-02-05T19:07:04.523"
+    },
+    {
+        "log_id": "5333bcf0-6105-4bd0-958e-b8aeaf3e45ba",
+        "customer_id": 29,
+        "product_id": 20,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T08:07:04.523"
+    },
+    {
+        "log_id": "3983cc78-a310-4cc9-a2db-e49e1bb8d508",
+        "customer_id": 29,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T06:07:04.523"
+    },
+    {
+        "log_id": "a4f9f8c1-b4a1-42fc-8e50-b39a55a7c468",
+        "customer_id": 29,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T17:07:04.523"
+    },
+    {
+        "log_id": "b74afad6-7d16-45ce-a681-5e2113c29b12",
+        "customer_id": 29,
+        "product_id": 30,
+        "action_type": "view",
+        "dwell_time": 91.0,
+        "timestamp": "2026-02-06T14:07:04.523"
+    },
+    {
+        "log_id": "f6e08a78-d270-4fdf-84aa-41411e789833",
+        "customer_id": 29,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T23:07:04.523"
+    },
+    {
+        "log_id": "c4506281-46f8-4f62-bee4-479d1b4eba51",
+        "customer_id": 29,
+        "product_id": 35,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T01:07:04.523"
+    },
+    {
+        "log_id": "7aef251f-7c59-442f-8df1-31606a561160",
+        "customer_id": 29,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T16:07:04.523"
+    },
+    {
+        "log_id": "389743d9-ef5d-4882-8a30-f4beff22e0f1",
+        "customer_id": 29,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T05:07:04.523"
+    },
+    {
+        "log_id": "87b907c6-65de-4754-8c0d-82a1eb641fea",
+        "customer_id": 29,
+        "product_id": 46,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T02:07:04.523"
+    },
+    {
+        "log_id": "66b43695-c411-4871-b6f9-d55a87bb72b1",
+        "customer_id": 29,
+        "product_id": 8,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T04:07:04.523"
+    },
+    {
+        "log_id": "9106cdad-1ca0-4eaf-bc47-d5ba836809f1",
+        "customer_id": 29,
+        "product_id": 33,
+        "action_type": "view",
+        "dwell_time": 28.2,
+        "timestamp": "2026-02-18T03:07:04.523"
+    },
+    {
+        "log_id": "b3394926-3eb7-49cd-a51e-e0e4e04bae5f",
+        "customer_id": 29,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T15:07:04.523"
+    },
+    {
+        "log_id": "c58a7d35-ba19-42e9-b71c-6c2757438ef2",
+        "customer_id": 29,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T13:07:04.523"
+    },
+    {
+        "log_id": "207ff820-de7d-44e3-ba47-6ca2510310ae",
+        "customer_id": 29,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 15.5,
+        "timestamp": "2026-02-14T04:07:04.523"
+    },
+    {
+        "log_id": "4212124f-082d-484d-89b9-8621857c05cb",
+        "customer_id": 29,
+        "product_id": 30,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T11:07:04.523"
+    },
+    {
+        "log_id": "7c3e7211-9d4c-49a5-8ca6-0a0011115b7f",
+        "customer_id": 29,
+        "product_id": 30,
+        "action_type": "view",
+        "dwell_time": 69.8,
+        "timestamp": "2026-02-07T23:07:04.523"
+    },
+    {
+        "log_id": "36b856b0-8f90-4661-9bd7-254c9799a79a",
+        "customer_id": 29,
+        "product_id": 20,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T07:07:04.523"
+    },
+    {
+        "log_id": "9c298110-0c42-4900-9159-6ef860e8b5f6",
+        "customer_id": 29,
+        "product_id": 17,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T22:07:04.523"
+    },
+    {
+        "log_id": "355355fe-6d7a-4976-82da-b6b8ee3c314c",
+        "customer_id": 29,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 13.4,
+        "timestamp": "2026-02-14T16:07:04.523"
+    },
+    {
+        "log_id": "0e611698-bd17-42f5-8b6a-151e001f54b6",
+        "customer_id": 30,
+        "product_id": 31,
+        "action_type": "view",
+        "dwell_time": 8.6,
+        "timestamp": "2026-02-20T12:07:04.523"
+    },
+    {
+        "log_id": "3a136440-8b3e-4276-b09c-2eb7f9bd73fb",
+        "customer_id": 30,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T14:07:04.523"
+    },
+    {
+        "log_id": "86810735-68ad-4402-b35d-1941379508b8",
+        "customer_id": 30,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T23:07:04.523"
+    },
+    {
+        "log_id": "4950bef5-9b87-48c4-829a-0af1c3a2f35b",
+        "customer_id": 30,
+        "product_id": 25,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T22:07:04.523"
+    },
+    {
+        "log_id": "82b3a5eb-83a0-461b-9c38-464c168528cf",
+        "customer_id": 30,
+        "product_id": 35,
+        "action_type": "view",
+        "dwell_time": 20.3,
+        "timestamp": "2026-02-13T07:07:04.523"
+    },
+    {
+        "log_id": "bfe25dba-f090-4ab9-8f08-dfdf209532ff",
+        "customer_id": 30,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T15:07:04.523"
+    },
+    {
+        "log_id": "c67dd996-ec9b-4c54-912c-c81f6d2b8a1d",
+        "customer_id": 30,
+        "product_id": 47,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T14:07:04.523"
+    },
+    {
+        "log_id": "b43d0aee-de05-421e-a559-edb93eeddd44",
+        "customer_id": 30,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 117.5,
+        "timestamp": "2026-02-17T10:07:04.523"
+    },
+    {
+        "log_id": "4328ef4b-d777-46f1-b033-c922f3728c2e",
+        "customer_id": 30,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T09:07:04.523"
+    },
+    {
+        "log_id": "d49d3fcd-7285-4b55-9650-6d13380f75de",
+        "customer_id": 30,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T22:07:04.523"
+    },
+    {
+        "log_id": "15600689-4bd7-43d0-b34a-32effe75e99c",
+        "customer_id": 30,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 36.7,
+        "timestamp": "2026-02-05T21:07:04.523"
+    },
+    {
+        "log_id": "0630d296-88a8-456c-91a2-eb82775cd6e8",
+        "customer_id": 30,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T13:07:04.523"
+    },
+    {
+        "log_id": "c552e563-d1ef-4600-b81e-b0b72358fe2e",
+        "customer_id": 30,
+        "product_id": 2,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T05:07:04.523"
+    },
+    {
+        "log_id": "6740c09e-8cec-4876-8bd5-e07b8d22acf9",
+        "customer_id": 30,
+        "product_id": 7,
+        "action_type": "view",
+        "dwell_time": 73.3,
+        "timestamp": "2026-01-28T12:07:04.523"
+    },
+    {
+        "log_id": "ad005003-79cf-4c29-b75a-74c88f9ebc8f",
+        "customer_id": 30,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T07:07:04.523"
+    },
+    {
+        "log_id": "ba979a48-f402-43ee-ae2d-3a7ade7d3431",
+        "customer_id": 30,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 51.3,
+        "timestamp": "2026-01-30T09:07:04.523"
+    },
+    {
+        "log_id": "32466a92-3d2a-4661-8ef2-0451f8a8ce02",
+        "customer_id": 30,
+        "product_id": 4,
+        "action_type": "view",
+        "dwell_time": 21.1,
+        "timestamp": "2026-02-08T16:07:04.523"
+    },
+    {
+        "log_id": "ef0c75cf-61f7-4032-9583-bc401eb8bf86",
+        "customer_id": 30,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T09:07:04.523"
+    },
+    {
+        "log_id": "c30f4395-dbbd-4429-9fb7-077ac2c8cdfe",
+        "customer_id": 31,
+        "product_id": 10,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T19:07:04.523"
+    },
+    {
+        "log_id": "6baa98fd-2afd-4cf4-9ffd-45684be3e51c",
+        "customer_id": 31,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T17:07:04.523"
+    },
+    {
+        "log_id": "effcfb65-5492-4252-94cd-85934c2f1d98",
+        "customer_id": 31,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T11:07:04.523"
+    },
+    {
+        "log_id": "8b804eae-2fa6-4239-8ac8-b308f43f9989",
+        "customer_id": 31,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T09:07:04.523"
+    },
+    {
+        "log_id": "345a8213-cace-4474-8cce-1573bc3ca68d",
+        "customer_id": 31,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T23:07:04.523"
+    },
+    {
+        "log_id": "c428503d-0c75-4504-bd74-b271d5d4bcba",
+        "customer_id": 31,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T21:07:04.523"
+    },
+    {
+        "log_id": "446d9457-0192-4649-bfdf-09083c817080",
+        "customer_id": 31,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T02:07:04.523"
+    },
+    {
+        "log_id": "851f5831-12f9-4113-b49b-06ac52cfce48",
+        "customer_id": 31,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T23:07:04.523"
+    },
+    {
+        "log_id": "60986dcb-842f-4573-9e32-6a0ee77c13de",
+        "customer_id": 31,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T15:07:04.523"
+    },
+    {
+        "log_id": "f3861520-c0eb-47a3-a92b-27b3298e0f4f",
+        "customer_id": 31,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T17:07:04.523"
+    },
+    {
+        "log_id": "52b7cfe5-e259-481d-a8b7-9e224decaeb6",
+        "customer_id": 31,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T00:07:04.523"
+    },
+    {
+        "log_id": "5c6be866-42c8-455f-b926-53065dd09b86",
+        "customer_id": 31,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T23:07:04.523"
+    },
+    {
+        "log_id": "b5adea3b-48c0-47d2-98ed-6698c52f3628",
+        "customer_id": 31,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T22:07:04.523"
+    },
+    {
+        "log_id": "8bfbfab2-b9c3-49e3-816b-5965661ad884",
+        "customer_id": 31,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T20:07:04.523"
+    },
+    {
+        "log_id": "4f9a4593-7d22-4a26-9ebb-78508f95f123",
+        "customer_id": 31,
+        "product_id": 24,
+        "action_type": "view",
+        "dwell_time": 15.6,
+        "timestamp": "2026-02-21T00:07:04.523"
+    },
+    {
+        "log_id": "6b8fe067-3b9d-4c79-8ca9-6d98d888bbc6",
+        "customer_id": 31,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T16:07:04.523"
+    },
+    {
+        "log_id": "9c131b59-2e15-4165-a900-88e91d3400a8",
+        "customer_id": 31,
+        "product_id": 39,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T07:07:04.523"
+    },
+    {
+        "log_id": "d1195496-1fcc-420e-b5bf-4b9007fca687",
+        "customer_id": 31,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T12:07:04.523"
+    },
+    {
+        "log_id": "7f81eef3-351f-4fef-b686-c852758687d3",
+        "customer_id": 31,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T07:07:04.523"
+    },
+    {
+        "log_id": "b9e811c1-b652-499a-aeb0-570edfd5dfaa",
+        "customer_id": 31,
+        "product_id": 22,
+        "action_type": "view",
+        "dwell_time": 39.9,
+        "timestamp": "2026-02-06T16:07:04.523"
+    },
+    {
+        "log_id": "462ea716-192e-4a17-ba46-49267ef20cdb",
+        "customer_id": 32,
+        "product_id": 31,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T09:07:04.523"
+    },
+    {
+        "log_id": "5fd250e7-6155-46e2-afbc-48928377bc7f",
+        "customer_id": 32,
+        "product_id": 46,
+        "action_type": "view",
+        "dwell_time": 28.5,
+        "timestamp": "2026-02-14T05:07:04.523"
+    },
+    {
+        "log_id": "d156b0ac-3013-47f5-8762-eeb901df911c",
+        "customer_id": 32,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 48.8,
+        "timestamp": "2026-02-08T20:07:04.523"
+    },
+    {
+        "log_id": "b415cbb4-272f-46a3-a232-c633ec0d2e92",
+        "customer_id": 32,
+        "product_id": 20,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T21:07:04.523"
+    },
+    {
+        "log_id": "38bd5d50-b0ab-40b8-8794-631cd150e707",
+        "customer_id": 32,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T02:07:04.523"
+    },
+    {
+        "log_id": "f35e3a04-184c-4382-a325-b3de3faea6b0",
+        "customer_id": 32,
+        "product_id": 31,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T09:07:04.523"
+    },
+    {
+        "log_id": "818d775f-5d27-4e60-b9c3-10405a0b43b2",
+        "customer_id": 32,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T16:07:04.523"
+    },
+    {
+        "log_id": "5bf6a196-4f74-4791-b6f0-cd1026abf938",
+        "customer_id": 32,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T11:07:04.523"
+    },
+    {
+        "log_id": "5b67ae6b-98af-4618-9943-0065d46886fd",
+        "customer_id": 32,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 35.0,
+        "timestamp": "2026-02-14T14:07:04.523"
+    },
+    {
+        "log_id": "aa7ba91a-6163-4917-8931-c17b2b09f207",
+        "customer_id": 32,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T09:07:04.523"
+    },
+    {
+        "log_id": "0ecdcd43-6aca-4b5c-bae6-e4ce7381a1ee",
+        "customer_id": 32,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T16:07:04.523"
+    },
+    {
+        "log_id": "d303474f-ee43-4bf3-8745-d7a196fcd440",
+        "customer_id": 32,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 62.4,
+        "timestamp": "2026-02-04T04:07:04.523"
+    },
+    {
+        "log_id": "bf087ef9-541b-42e5-a567-66965d2d95ae",
+        "customer_id": 32,
+        "product_id": 17,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T20:07:04.523"
+    },
+    {
+        "log_id": "947d1161-e04d-4db2-b9a0-382f4bf29f14",
+        "customer_id": 33,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T00:07:04.523"
+    },
+    {
+        "log_id": "64650e99-b873-4a4f-aac1-c86cd6ab63d9",
+        "customer_id": 33,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T21:07:04.523"
+    },
+    {
+        "log_id": "7948153e-fac9-47c4-92b8-19a7239c770b",
+        "customer_id": 33,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 26.2,
+        "timestamp": "2026-02-15T03:07:04.523"
+    },
+    {
+        "log_id": "303776ab-3d14-406b-b9a4-fbdef4cf77cd",
+        "customer_id": 33,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T11:07:04.523"
+    },
+    {
+        "log_id": "22b98c92-a5fe-4e2f-83fb-6e859b32140b",
+        "customer_id": 33,
+        "product_id": 43,
+        "action_type": "view",
+        "dwell_time": 10.6,
+        "timestamp": "2026-02-17T12:07:04.523"
+    },
+    {
+        "log_id": "6dd9e537-6e81-4273-a222-bf483dbd3737",
+        "customer_id": 33,
+        "product_id": 41,
+        "action_type": "view",
+        "dwell_time": 31.6,
+        "timestamp": "2026-02-04T14:07:04.523"
+    },
+    {
+        "log_id": "450efd5a-8d24-44c8-820f-1ca491caa5bc",
+        "customer_id": 33,
+        "product_id": 14,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T10:07:04.523"
+    },
+    {
+        "log_id": "f3b620b4-3b65-4ae4-99d0-1458807a04a1",
+        "customer_id": 33,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T21:07:04.523"
+    },
+    {
+        "log_id": "93488452-6819-4444-8ed9-a100283bf061",
+        "customer_id": 33,
+        "product_id": 40,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T07:07:04.523"
+    },
+    {
+        "log_id": "1b22f693-22c1-4de2-9d93-d40346c3008f",
+        "customer_id": 33,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T01:07:04.523"
+    },
+    {
+        "log_id": "a93bc71e-c270-4f2a-a4e8-59e9a2f0836a",
+        "customer_id": 33,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 6.4,
+        "timestamp": "2026-02-09T03:07:04.523"
+    },
+    {
+        "log_id": "8ce02429-1a2c-4140-87a4-519449af6c24",
+        "customer_id": 33,
+        "product_id": 35,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T18:07:04.523"
+    },
+    {
+        "log_id": "cfafe3f9-6d95-4cfa-b27f-21d0bf93f92b",
+        "customer_id": 33,
+        "product_id": 45,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T02:07:04.523"
+    },
+    {
+        "log_id": "337f3f49-c917-4ef4-80c4-31201077bf1b",
+        "customer_id": 33,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "f9c74f1b-1899-4b9d-b1de-77715bfcda1e",
+        "customer_id": 33,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 27.1,
+        "timestamp": "2026-02-07T14:07:04.523"
+    },
+    {
+        "log_id": "c56e368e-ec0c-490f-afe5-54315f89e130",
+        "customer_id": 33,
+        "product_id": 18,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T21:07:04.523"
+    },
+    {
+        "log_id": "673d597e-8d14-42ff-8304-baca9e4b66fd",
+        "customer_id": 33,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T21:07:04.523"
+    },
+    {
+        "log_id": "44e2bfc5-9310-4c19-8668-c3eda3667e6f",
+        "customer_id": 33,
+        "product_id": 45,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T17:07:04.523"
+    },
+    {
+        "log_id": "6a7a3df7-e70d-49c3-99e3-5af97e568a12",
+        "customer_id": 33,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 80.2,
+        "timestamp": "2026-02-01T07:07:04.523"
+    },
+    {
+        "log_id": "6069b206-7cb0-4543-b8a3-348c729792be",
+        "customer_id": 33,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T11:07:04.523"
+    },
+    {
+        "log_id": "270b446c-cde6-4463-bdb5-4872b175ab91",
+        "customer_id": 34,
+        "product_id": 45,
+        "action_type": "view",
+        "dwell_time": 24.7,
+        "timestamp": "2026-02-11T10:07:04.523"
+    },
+    {
+        "log_id": "e2fe0dfe-1032-49d1-8897-25c568bc74d8",
+        "customer_id": 34,
+        "product_id": 42,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T23:07:04.523"
+    },
+    {
+        "log_id": "080a590e-ce21-43f2-a049-60e68eff7aa1",
+        "customer_id": 34,
+        "product_id": 34,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T13:07:04.523"
+    },
+    {
+        "log_id": "5e256a2e-020d-4378-b93b-7ad2d1a9fe96",
+        "customer_id": 34,
+        "product_id": 45,
+        "action_type": "view",
+        "dwell_time": 107.1,
+        "timestamp": "2026-01-29T16:07:04.523"
+    },
+    {
+        "log_id": "eef1b15b-b1b3-4262-8d29-3d5d571c6b4c",
+        "customer_id": 34,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T11:07:04.523"
+    },
+    {
+        "log_id": "8e144f84-c27e-4a8c-909c-a93e0010a48d",
+        "customer_id": 34,
+        "product_id": 35,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T18:07:04.523"
+    },
+    {
+        "log_id": "d272c2f6-1a33-40c3-8f31-66129cc94904",
+        "customer_id": 34,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T11:07:04.523"
+    },
+    {
+        "log_id": "cfb7c775-f102-4552-9cce-111b38129d99",
+        "customer_id": 34,
+        "product_id": 38,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T16:07:04.523"
+    },
+    {
+        "log_id": "d4af87ce-47a4-494a-ae35-34740647c15d",
+        "customer_id": 34,
+        "product_id": 26,
+        "action_type": "view",
+        "dwell_time": 111.8,
+        "timestamp": "2026-02-16T08:07:04.523"
+    },
+    {
+        "log_id": "ffbd3344-2130-4043-89b7-b70fb64452f2",
+        "customer_id": 34,
+        "product_id": 16,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T04:07:04.523"
+    },
+    {
+        "log_id": "b5bad00e-3679-4769-a8a1-5bd1d66adc12",
+        "customer_id": 34,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T22:07:04.523"
+    },
+    {
+        "log_id": "d10ef016-ccfe-4fbb-accc-8e92d4083857",
+        "customer_id": 34,
+        "product_id": 48,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T22:07:04.523"
+    },
+    {
+        "log_id": "e5ac6020-ddda-4c83-8f8d-15bef829aced",
+        "customer_id": 34,
+        "product_id": 47,
+        "action_type": "view",
+        "dwell_time": 14.0,
+        "timestamp": "2026-02-17T08:07:04.523"
+    },
+    {
+        "log_id": "a04ac31f-b51b-47d3-a1d4-157b615b7886",
+        "customer_id": 34,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T11:07:04.523"
+    },
+    {
+        "log_id": "3a1663dc-91c2-47e6-bd57-0dc3b78b2f12",
+        "customer_id": 34,
+        "product_id": 22,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T12:07:04.523"
+    },
+    {
+        "log_id": "94b9c083-1557-4832-9ff3-a63553edc404",
+        "customer_id": 34,
+        "product_id": 39,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T05:07:04.523"
+    },
+    {
+        "log_id": "2cc38639-da03-425f-86fa-9334104053f1",
+        "customer_id": 34,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T20:07:04.523"
+    },
+    {
+        "log_id": "c700ebad-509e-465d-b5b7-d533ac9c3214",
+        "customer_id": 35,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T21:07:04.523"
+    },
+    {
+        "log_id": "8e1e8c73-dedd-4331-b915-5a85aa22ce66",
+        "customer_id": 35,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "c7de8817-c0bd-42fd-8015-8912ab51a8e6",
+        "customer_id": 35,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T22:07:04.523"
+    },
+    {
+        "log_id": "6f4516c1-c589-42bd-9b4c-5342e44034fa",
+        "customer_id": 35,
+        "product_id": 46,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T17:07:04.523"
+    },
+    {
+        "log_id": "42122b36-d5de-40ee-b863-b005a899b245",
+        "customer_id": 35,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 48.7,
+        "timestamp": "2026-01-24T18:07:04.523"
+    },
+    {
+        "log_id": "d9aa6929-deeb-4a94-9b19-eecce28be236",
+        "customer_id": 35,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T09:07:04.523"
+    },
+    {
+        "log_id": "c95d379a-6d22-4964-abe0-7c8e34d91d5a",
+        "customer_id": 35,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T13:07:04.523"
+    },
+    {
+        "log_id": "85736ccb-f1de-4483-b476-05e5a023e9fe",
+        "customer_id": 35,
+        "product_id": 24,
+        "action_type": "view",
+        "dwell_time": 92.6,
+        "timestamp": "2026-02-01T00:07:04.523"
+    },
+    {
+        "log_id": "bf145ceb-c9c6-4273-9772-5b376122f5fa",
+        "customer_id": 35,
+        "product_id": 12,
+        "action_type": "view",
+        "dwell_time": 54.6,
+        "timestamp": "2026-01-26T12:07:04.523"
+    },
+    {
+        "log_id": "e1771f01-519b-4772-8cda-30e834edb1a0",
+        "customer_id": 35,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T02:07:04.523"
+    },
+    {
+        "log_id": "6f525f81-549d-4a29-ab55-1142b2ca78d7",
+        "customer_id": 35,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 68.7,
+        "timestamp": "2026-01-22T12:07:04.523"
+    },
+    {
+        "log_id": "f772268b-913b-42ca-82a3-73d9b6e5daee",
+        "customer_id": 35,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T20:07:04.523"
+    },
+    {
+        "log_id": "b5d1834e-9fd3-4ea2-a11c-060e1b7f9b98",
+        "customer_id": 35,
+        "product_id": 25,
+        "action_type": "view",
+        "dwell_time": 94.6,
+        "timestamp": "2026-01-31T23:07:04.523"
+    },
+    {
+        "log_id": "667f27d3-33cf-4dc3-a241-21fb627e646a",
+        "customer_id": 35,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T03:07:04.523"
+    },
+    {
+        "log_id": "8a0a3c11-8e6b-4841-ba06-22bf842a3681",
+        "customer_id": 35,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T15:07:04.523"
+    },
+    {
+        "log_id": "aeea3ec0-0afb-4de8-8610-ff698476a12a",
+        "customer_id": 35,
+        "product_id": 18,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T14:07:04.523"
+    },
+    {
+        "log_id": "aab88772-0d74-4d4f-b51d-50cf58f00614",
+        "customer_id": 35,
+        "product_id": 10,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T01:07:04.523"
+    },
+    {
+        "log_id": "46ad5170-2231-48fb-a1a9-e40e106a988c",
+        "customer_id": 35,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T10:07:04.523"
+    },
+    {
+        "log_id": "a71aa1d5-623a-46a8-a418-c017bed74ac6",
+        "customer_id": 35,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T10:07:04.523"
+    },
+    {
+        "log_id": "b234f965-2f12-48d5-a8e4-e7c451c0b4a7",
+        "customer_id": 36,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T12:07:04.523"
+    },
+    {
+        "log_id": "989e7b8f-4d8c-4909-bbe7-6c22e115277a",
+        "customer_id": 36,
+        "product_id": 41,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T09:07:04.523"
+    },
+    {
+        "log_id": "6492f9bc-6848-4d8f-a288-6a3ee3a39f38",
+        "customer_id": 36,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T05:07:04.523"
+    },
+    {
+        "log_id": "e7560337-85b5-43ba-b593-180b42fdd5b1",
+        "customer_id": 36,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T14:07:04.523"
+    },
+    {
+        "log_id": "7671a223-7334-41e6-8674-b950e9be3db9",
+        "customer_id": 36,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 48.7,
+        "timestamp": "2026-02-03T20:07:04.523"
+    },
+    {
+        "log_id": "ee805a32-4b7e-43eb-9c95-7c3d483d4920",
+        "customer_id": 36,
+        "product_id": 28,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T20:07:04.523"
+    },
+    {
+        "log_id": "7c8509e5-d127-41b1-b436-3c6a07245a05",
+        "customer_id": 36,
+        "product_id": 20,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T14:07:04.523"
+    },
+    {
+        "log_id": "99708b8e-7ac6-4ec5-9a29-06b19fb95ded",
+        "customer_id": 36,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T08:07:04.523"
+    },
+    {
+        "log_id": "a43e1841-2889-4710-bc31-3b8e11530b3e",
+        "customer_id": 36,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T15:07:04.523"
+    },
+    {
+        "log_id": "00f047f6-06dd-46d5-a80a-261359e472d0",
+        "customer_id": 36,
+        "product_id": 45,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T09:07:04.523"
+    },
+    {
+        "log_id": "0650ce01-896a-41f3-a9da-42102d360ab4",
+        "customer_id": 36,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T04:07:04.523"
+    },
+    {
+        "log_id": "143fb482-dfe3-4023-949c-e7deddcb4d59",
+        "customer_id": 36,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T18:07:04.523"
+    },
+    {
+        "log_id": "59e7d124-797f-4f2a-b987-3af3649577eb",
+        "customer_id": 36,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T04:07:04.523"
+    },
+    {
+        "log_id": "fcc7518a-0856-4ec0-993a-f9fdbf45e7a8",
+        "customer_id": 36,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T15:07:04.523"
+    },
+    {
+        "log_id": "cb794bc3-9318-4402-b225-65b993840d29",
+        "customer_id": 36,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T10:07:04.523"
+    },
+    {
+        "log_id": "e34e7d52-943a-4ebd-b617-c09f773f6f11",
+        "customer_id": 36,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T10:07:04.523"
+    },
+    {
+        "log_id": "d00b1c13-6468-4e18-bb4a-a9c3789cf2a0",
+        "customer_id": 37,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T00:07:04.523"
+    },
+    {
+        "log_id": "8c02ee60-38a9-4e61-bb50-f58315c605b0",
+        "customer_id": 37,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T23:07:04.523"
+    },
+    {
+        "log_id": "27d5d5bd-8bab-42d1-ae1c-cb1a24a47034",
+        "customer_id": 37,
+        "product_id": 20,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T06:07:04.523"
+    },
+    {
+        "log_id": "657a553c-529c-4e74-b0e9-466a888187ab",
+        "customer_id": 37,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 87.3,
+        "timestamp": "2026-01-31T07:07:04.523"
+    },
+    {
+        "log_id": "b660bcb4-0415-450e-b563-36071161636b",
+        "customer_id": 37,
+        "product_id": 39,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T00:07:04.523"
+    },
+    {
+        "log_id": "48a09e32-8c2a-448d-a872-062d2f7f98ee",
+        "customer_id": 37,
+        "product_id": 35,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T22:07:04.523"
+    },
+    {
+        "log_id": "20427184-ade6-4e20-98bd-0599aaa9a2a6",
+        "customer_id": 37,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-21T08:07:04.523"
+    },
+    {
+        "log_id": "1a89df3d-43bd-4b5b-b3f8-fc698955a066",
+        "customer_id": 37,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T21:07:04.523"
+    },
+    {
+        "log_id": "a7fa7491-0fa6-4edc-8151-4265984e9f5a",
+        "customer_id": 37,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T06:07:04.523"
+    },
+    {
+        "log_id": "161bc545-734f-4704-8028-e85e24bcb53a",
+        "customer_id": 37,
+        "product_id": 43,
+        "action_type": "view",
+        "dwell_time": 81.4,
+        "timestamp": "2026-02-15T17:07:04.523"
+    },
+    {
+        "log_id": "772f34be-2b93-433f-91ec-3b29b7f1249b",
+        "customer_id": 37,
+        "product_id": 3,
+        "action_type": "view",
+        "dwell_time": 69.8,
+        "timestamp": "2026-02-12T05:07:04.523"
+    },
+    {
+        "log_id": "df10d30e-f010-42a6-a37f-3efef5b9acfa",
+        "customer_id": 37,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T06:07:04.523"
+    },
+    {
+        "log_id": "1b9da370-1f99-481b-943e-8f90a28c27a3",
+        "customer_id": 37,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T23:07:04.523"
+    },
+    {
+        "log_id": "f1445240-aada-4e62-8b2a-16b26ac49c6c",
+        "customer_id": 37,
+        "product_id": 15,
+        "action_type": "view",
+        "dwell_time": 63.7,
+        "timestamp": "2026-01-25T18:07:04.523"
+    },
+    {
+        "log_id": "c12d1c06-855a-4ee4-9eb8-c01f3fa3fd55",
+        "customer_id": 37,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T04:07:04.523"
+    },
+    {
+        "log_id": "ce7cf79f-d6dd-454b-9cc7-76aeacd522ab",
+        "customer_id": 37,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T00:07:04.523"
+    },
+    {
+        "log_id": "1e077fc3-d31c-4f9f-9d6c-d9e6b77aec2a",
+        "customer_id": 37,
+        "product_id": 38,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T07:07:04.523"
+    },
+    {
+        "log_id": "884996d5-07af-4c7f-9f56-0a7c1e3aae3f",
+        "customer_id": 37,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T10:07:04.523"
+    },
+    {
+        "log_id": "0a742375-a7b1-4064-9251-0e54b7a513f2",
+        "customer_id": 37,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T10:07:04.523"
+    },
+    {
+        "log_id": "3e69cc0a-192d-4be2-ae76-cfb8ef67e171",
+        "customer_id": 38,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 18.3,
+        "timestamp": "2026-01-31T23:07:04.523"
+    },
+    {
+        "log_id": "112f8501-d7be-4859-8657-58db0f62f653",
+        "customer_id": 38,
+        "product_id": 20,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T21:07:04.523"
+    },
+    {
+        "log_id": "3c000f76-f731-4da3-abe1-dda9a4d33d90",
+        "customer_id": 38,
+        "product_id": 34,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T16:07:04.523"
+    },
+    {
+        "log_id": "70e481ea-af4d-4b02-92bc-7b44c3dc7007",
+        "customer_id": 38,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T01:07:04.523"
+    },
+    {
+        "log_id": "7deb8888-51ed-4e3c-8994-5455fa3aacf0",
+        "customer_id": 38,
+        "product_id": 29,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T08:07:04.523"
+    },
+    {
+        "log_id": "dec401e2-f39e-42dc-999f-b8a6cc7d0a9e",
+        "customer_id": 38,
+        "product_id": 3,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T19:07:04.523"
+    },
+    {
+        "log_id": "70bfb65e-ced6-41db-bf8e-cb2a8ea6199c",
+        "customer_id": 38,
+        "product_id": 22,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T10:07:04.523"
+    },
+    {
+        "log_id": "1f303887-300e-4f5c-a14e-92ad04afbbcc",
+        "customer_id": 38,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T07:07:04.523"
+    },
+    {
+        "log_id": "d1140e5e-ab4f-4bc3-a6a0-48e3f8440600",
+        "customer_id": 38,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T02:07:04.523"
+    },
+    {
+        "log_id": "c50d77eb-d596-4e4f-85c4-31e2aeaf89ad",
+        "customer_id": 38,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T20:07:04.523"
+    },
+    {
+        "log_id": "2129082b-b745-4cc4-9e04-a3d54c0771d6",
+        "customer_id": 38,
+        "product_id": 26,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T17:07:04.523"
+    },
+    {
+        "log_id": "4b095afe-4e03-4d4f-b0be-70456f05c729",
+        "customer_id": 38,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T15:07:04.523"
+    },
+    {
+        "log_id": "0ebe5f96-8f7d-4cb2-8cda-2d2a98d03718",
+        "customer_id": 38,
+        "product_id": 2,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T22:07:04.523"
+    },
+    {
+        "log_id": "85d35035-6abf-4706-af53-43a4ef53fd40",
+        "customer_id": 38,
+        "product_id": 29,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T16:07:04.523"
+    },
+    {
+        "log_id": "5f4966f6-0dbf-4484-b3ba-f813faa029a2",
+        "customer_id": 38,
+        "product_id": 1,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T22:07:04.523"
+    },
+    {
+        "log_id": "9e1e0628-e61a-4b2c-ab31-112b56b8496e",
+        "customer_id": 38,
+        "product_id": 18,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T16:07:04.523"
+    },
+    {
+        "log_id": "08ae5726-476e-404c-8e6e-b66070d6f350",
+        "customer_id": 38,
+        "product_id": 37,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T12:07:04.523"
+    },
+    {
+        "log_id": "e59b68cf-1c7f-4d63-baf6-17107d90a74f",
+        "customer_id": 38,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "be3c6935-d876-4968-9aa4-112f906dbfb9",
+        "customer_id": 38,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "52715b8f-83d8-4c5c-8e21-f84dfcfb70ee",
+        "customer_id": 39,
+        "product_id": 8,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T00:07:04.523"
+    },
+    {
+        "log_id": "c11f58d0-61b6-4f97-8d5f-43d90030a9fa",
+        "customer_id": 39,
+        "product_id": 34,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T01:07:04.523"
+    },
+    {
+        "log_id": "de36751e-d026-47d6-a86d-0fbaf6183b4b",
+        "customer_id": 39,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T05:07:04.523"
+    },
+    {
+        "log_id": "7a8787cf-460b-44b5-8e21-030eac5c0e5d",
+        "customer_id": 39,
+        "product_id": 8,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T04:07:04.523"
+    },
+    {
+        "log_id": "027c7edd-e986-4cea-833a-56e1be3975f3",
+        "customer_id": 39,
+        "product_id": 40,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T00:07:04.523"
+    },
+    {
+        "log_id": "766d5f03-0955-47c1-ae09-ee5fbdbb36c6",
+        "customer_id": 39,
+        "product_id": 46,
+        "action_type": "view",
+        "dwell_time": 97.1,
+        "timestamp": "2026-02-18T07:07:04.523"
+    },
+    {
+        "log_id": "c1213ed5-d768-40b3-bc7b-bd0793d49875",
+        "customer_id": 39,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T12:07:04.523"
+    },
+    {
+        "log_id": "d2e6950c-f4c1-4380-9969-5b8e4c0c7835",
+        "customer_id": 39,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 40.1,
+        "timestamp": "2026-02-01T13:07:04.523"
+    },
+    {
+        "log_id": "34ea73a9-dcc0-44f0-8d23-98a5c2539101",
+        "customer_id": 39,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 63.7,
+        "timestamp": "2026-02-03T08:07:04.523"
+    },
+    {
+        "log_id": "72e26390-f146-472f-894e-2f243dfef0d7",
+        "customer_id": 39,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T14:07:04.523"
+    },
+    {
+        "log_id": "6c3b66d8-88cd-484e-92a3-c6adc60ddff7",
+        "customer_id": 39,
+        "product_id": 32,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "e924f618-bc92-4a78-b5f3-53c4c94b42c1",
+        "customer_id": 39,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T08:07:04.523"
+    },
+    {
+        "log_id": "10ad1cb9-69b7-4582-bd4a-6074ab3e93b7",
+        "customer_id": 39,
+        "product_id": 32,
+        "action_type": "view",
+        "dwell_time": 38.2,
+        "timestamp": "2026-02-08T15:07:04.523"
+    },
+    {
+        "log_id": "1a144a43-f4cb-4b9b-93bb-694d69e79c17",
+        "customer_id": 39,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 11.2,
+        "timestamp": "2026-02-02T00:07:04.523"
+    },
+    {
+        "log_id": "b66b32ca-c6a8-40ce-8e41-2570a7ffe63d",
+        "customer_id": 39,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T01:07:04.523"
+    },
+    {
+        "log_id": "dda214ec-2424-4d62-afe8-ee169ab42b39",
+        "customer_id": 39,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T10:07:04.523"
+    },
+    {
+        "log_id": "e544a9a1-5bce-4232-9011-21831421e018",
+        "customer_id": 39,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T10:07:04.523"
+    },
+    {
+        "log_id": "6939bf5b-5eb9-46a1-ac20-2268c0fa9c3a",
+        "customer_id": 40,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T23:07:04.523"
+    },
+    {
+        "log_id": "19b7c603-f1e7-4fd8-86a6-c36ca35bbf91",
+        "customer_id": 40,
+        "product_id": 29,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T08:07:04.523"
+    },
+    {
+        "log_id": "4c6a295f-d9f4-415c-8978-6204a441e782",
+        "customer_id": 40,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T12:07:04.523"
+    },
+    {
+        "log_id": "7d02197f-8623-455b-bba6-56ac62df0ee5",
+        "customer_id": 40,
+        "product_id": 19,
+        "action_type": "view",
+        "dwell_time": 8.8,
+        "timestamp": "2026-02-16T17:07:04.523"
+    },
+    {
+        "log_id": "85d31ee2-783c-42f9-92ad-613a72ef8e33",
+        "customer_id": 40,
+        "product_id": 11,
+        "action_type": "view",
+        "dwell_time": 94.8,
+        "timestamp": "2026-02-08T19:07:04.523"
+    },
+    {
+        "log_id": "72cf085c-8f62-47a7-9a31-7a4b3fcb4cfc",
+        "customer_id": 40,
+        "product_id": 36,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T01:07:04.523"
+    },
+    {
+        "log_id": "0fc51579-1838-4eb2-b619-c7fa2917dbda",
+        "customer_id": 40,
+        "product_id": 8,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T04:07:04.523"
+    },
+    {
+        "log_id": "4d6cb248-b728-4c58-aa3c-891949c00ead",
+        "customer_id": 40,
+        "product_id": 24,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T03:07:04.523"
+    },
+    {
+        "log_id": "5f59fbe3-b02e-4726-ab7c-084145175efd",
+        "customer_id": 40,
+        "product_id": 47,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T11:07:04.523"
+    },
+    {
+        "log_id": "c27a22ce-cd9f-4e02-ad3b-ac91e9538ff4",
+        "customer_id": 40,
+        "product_id": 28,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T16:07:04.523"
+    },
+    {
+        "log_id": "77fb661d-d683-46a6-a376-57ad64991480",
+        "customer_id": 40,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 39.2,
+        "timestamp": "2026-02-15T06:07:04.523"
+    },
+    {
+        "log_id": "0fcbd715-1a9f-46ce-96d8-f920125d4437",
+        "customer_id": 40,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 104.2,
+        "timestamp": "2026-02-05T18:07:04.523"
+    },
+    {
+        "log_id": "b5c3a473-819f-464d-8f3b-230eddaee905",
+        "customer_id": 40,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 29.1,
+        "timestamp": "2026-02-05T13:07:04.523"
+    },
+    {
+        "log_id": "5b53b3c5-7566-4656-a6cf-7d6cfbcaf53c",
+        "customer_id": 40,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T08:07:04.523"
+    },
+    {
+        "log_id": "73589c18-0ae7-4597-8132-655f157e2be7",
+        "customer_id": 40,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T06:07:04.523"
+    },
+    {
+        "log_id": "976cf25f-6597-4503-80ce-02cfa3e06b46",
+        "customer_id": 40,
+        "product_id": 14,
+        "action_type": "view",
+        "dwell_time": 98.6,
+        "timestamp": "2026-02-10T14:07:04.523"
+    },
+    {
+        "log_id": "0ce3e538-7a78-42bb-aa50-135734fc40f0",
+        "customer_id": 40,
+        "product_id": 35,
+        "action_type": "view",
+        "dwell_time": 37.3,
+        "timestamp": "2026-02-09T21:07:04.523"
+    },
+    {
+        "log_id": "57aa8971-2434-4fae-8c48-d95b55062cb4",
+        "customer_id": 40,
+        "product_id": 46,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T20:07:04.523"
+    },
+    {
+        "log_id": "dc9eb5ea-d142-4992-a9ae-f85137ba8249",
+        "customer_id": 41,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T13:07:04.523"
+    },
+    {
+        "log_id": "72cd26e9-a5db-4d03-a1cd-9477b6af789c",
+        "customer_id": 41,
+        "product_id": 18,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T11:07:04.523"
+    },
+    {
+        "log_id": "02812193-ef78-4fcf-a1b0-b90df2f8df9d",
+        "customer_id": 41,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T08:07:04.523"
+    },
+    {
+        "log_id": "4a87379b-caf8-4dc7-b6cf-0c5e80f5e5d1",
+        "customer_id": 41,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 100.3,
+        "timestamp": "2026-01-27T08:07:04.523"
+    },
+    {
+        "log_id": "8294f436-da44-4b90-8286-618fef75f2fa",
+        "customer_id": 41,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T01:07:04.523"
+    },
+    {
+        "log_id": "e5e33873-86d3-4129-91d9-bb878ba6a21b",
+        "customer_id": 41,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T18:07:04.523"
+    },
+    {
+        "log_id": "8c3d72c6-5059-4d58-91f9-b7e8ed1882d8",
+        "customer_id": 41,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T00:07:04.523"
+    },
+    {
+        "log_id": "a1a5c929-c19a-4fad-9558-2d1b7ded4f39",
+        "customer_id": 41,
+        "product_id": 26,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T12:07:04.523"
+    },
+    {
+        "log_id": "2b59e7e4-d0a0-4893-a8c7-340a4b3c90e9",
+        "customer_id": 41,
+        "product_id": 45,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T18:07:04.523"
+    },
+    {
+        "log_id": "e1e8b691-4a29-4b65-841f-8f766e1fb65a",
+        "customer_id": 41,
+        "product_id": 21,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T01:07:04.523"
+    },
+    {
+        "log_id": "f148009e-b9b6-4a0e-9705-30885c8e2336",
+        "customer_id": 41,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T09:07:04.523"
+    },
+    {
+        "log_id": "636b65eb-b8fb-4256-a5f7-1d6cb97aa23c",
+        "customer_id": 41,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T06:07:04.523"
+    },
+    {
+        "log_id": "37817b05-68a7-424f-88be-99f1285fe3a8",
+        "customer_id": 41,
+        "product_id": 35,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-02T12:07:04.523"
+    },
+    {
+        "log_id": "11e1c565-511e-4916-a17f-9f3060674f79",
+        "customer_id": 41,
+        "product_id": 14,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-28T23:07:04.523"
+    },
+    {
+        "log_id": "ace12c6f-4afe-4077-a609-fbab181bbc33",
+        "customer_id": 41,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T20:07:04.523"
+    },
+    {
+        "log_id": "5528b091-1a6f-484f-8291-4bfcbd8abaff",
+        "customer_id": 41,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T04:07:04.523"
+    },
+    {
+        "log_id": "18755ed6-79d5-4d08-87e5-8f0bb9a51158",
+        "customer_id": 41,
+        "product_id": 22,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T01:07:04.523"
+    },
+    {
+        "log_id": "8a1bdcb7-90c7-4cc7-9644-65360d6bcd65",
+        "customer_id": 41,
+        "product_id": 3,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-15T11:07:04.523"
+    },
+    {
+        "log_id": "3d30c25e-c59c-4f68-8906-0a911a7ff670",
+        "customer_id": 41,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T10:07:04.523"
+    },
+    {
+        "log_id": "344930bd-087d-4077-b218-8e9594485910",
+        "customer_id": 41,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T10:07:04.523"
+    },
+    {
+        "log_id": "a153b531-b754-4d1a-b3f2-eb2936730cf6",
+        "customer_id": 42,
+        "product_id": 29,
+        "action_type": "view",
+        "dwell_time": 57.5,
+        "timestamp": "2026-02-20T15:07:04.523"
+    },
+    {
+        "log_id": "853de174-0b91-4698-8b08-b517c3d1c36f",
+        "customer_id": 42,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-29T08:07:04.523"
+    },
+    {
+        "log_id": "34e78d7d-df86-4f0d-a215-2df90d1df1b2",
+        "customer_id": 42,
+        "product_id": 18,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T15:07:04.523"
+    },
+    {
+        "log_id": "85917b76-90dc-475d-a49b-dc0118f11d8b",
+        "customer_id": 42,
+        "product_id": 17,
+        "action_type": "view",
+        "dwell_time": 14.5,
+        "timestamp": "2026-02-11T21:07:04.523"
+    },
+    {
+        "log_id": "a0742947-8ae1-4145-8216-b5ec35172caf",
+        "customer_id": 42,
+        "product_id": 11,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T06:07:04.523"
+    },
+    {
+        "log_id": "0d2ce4a2-6c75-402d-94cd-929f57ea433a",
+        "customer_id": 42,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 88.5,
+        "timestamp": "2026-02-04T06:07:04.523"
+    },
+    {
+        "log_id": "445fb2c5-ad05-460f-934b-4298e0da8999",
+        "customer_id": 42,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 85.9,
+        "timestamp": "2026-02-05T06:07:04.523"
+    },
+    {
+        "log_id": "4d2f556e-beae-443c-96b9-714abdeb88c5",
+        "customer_id": 42,
+        "product_id": 5,
+        "action_type": "view",
+        "dwell_time": 20.3,
+        "timestamp": "2026-01-29T01:07:04.523"
+    },
+    {
+        "log_id": "c90602be-4e2b-4a53-81d3-6abf61b86228",
+        "customer_id": 42,
+        "product_id": 29,
+        "action_type": "view",
+        "dwell_time": 6.1,
+        "timestamp": "2026-02-08T07:07:04.523"
+    },
+    {
+        "log_id": "8d4d78f3-be69-4685-92eb-2918ce287684",
+        "customer_id": 42,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T13:07:04.523"
+    },
+    {
+        "log_id": "6dbd66da-3e36-4163-afde-6a318b0a077a",
+        "customer_id": 43,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T09:07:04.523"
+    },
+    {
+        "log_id": "27984a29-0537-499e-a011-b937a46341a6",
+        "customer_id": 43,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 20.8,
+        "timestamp": "2026-02-01T21:07:04.523"
+    },
+    {
+        "log_id": "8a9525ac-8bad-4cba-9930-817f42867713",
+        "customer_id": 43,
+        "product_id": 10,
+        "action_type": "view",
+        "dwell_time": 12.9,
+        "timestamp": "2026-02-12T07:07:04.523"
+    },
+    {
+        "log_id": "dda451d4-8836-497f-ad42-e73e44055509",
+        "customer_id": 43,
+        "product_id": 42,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T05:07:04.523"
+    },
+    {
+        "log_id": "66d59ad4-fe9d-4e20-af41-0d41b53d0683",
+        "customer_id": 43,
+        "product_id": 47,
+        "action_type": "view",
+        "dwell_time": 29.5,
+        "timestamp": "2026-02-05T21:07:04.523"
+    },
+    {
+        "log_id": "e39f9f06-2603-4d3a-b6ae-d91c3a5ca3ae",
+        "customer_id": 43,
+        "product_id": 40,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T23:07:04.523"
+    },
+    {
+        "log_id": "24cf1452-41ef-4c3d-97a9-c8dbdc3ac2f1",
+        "customer_id": 43,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T16:07:04.523"
+    },
+    {
+        "log_id": "06f59b58-5f01-499c-a67a-a4f6071a231d",
+        "customer_id": 43,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 89.0,
+        "timestamp": "2026-01-26T13:07:04.523"
+    },
+    {
+        "log_id": "84330240-530b-47f6-b350-4471febb127c",
+        "customer_id": 43,
+        "product_id": 9,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T20:07:04.523"
+    },
+    {
+        "log_id": "70b20f9f-e10a-4cda-8eb7-98229b090a72",
+        "customer_id": 43,
+        "product_id": 6,
+        "action_type": "view",
+        "dwell_time": 33.5,
+        "timestamp": "2026-01-31T06:07:04.523"
+    },
+    {
+        "log_id": "d6d96f5b-e6e2-468d-a8f4-100f48981b2c",
+        "customer_id": 43,
+        "product_id": 39,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T09:07:04.523"
+    },
+    {
+        "log_id": "87494c9c-ec3e-41b0-8996-cddaaf73cf12",
+        "customer_id": 43,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T08:07:04.523"
+    },
+    {
+        "log_id": "41c8d916-1daa-4e20-a6c4-772f8570e490",
+        "customer_id": 43,
+        "product_id": 14,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T19:07:04.523"
+    },
+    {
+        "log_id": "c4efd45a-118c-4ba6-a315-7c5819201435",
+        "customer_id": 44,
+        "product_id": 16,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-11T11:07:04.523"
+    },
+    {
+        "log_id": "8f39bf1f-abf7-4f9d-ad49-cb472ea647f0",
+        "customer_id": 44,
+        "product_id": 16,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T13:07:04.523"
+    },
+    {
+        "log_id": "e2c21eb7-e607-4a45-ac27-15af3d2a849b",
+        "customer_id": 44,
+        "product_id": 5,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T05:07:04.523"
+    },
+    {
+        "log_id": "21f1f12a-3484-43c4-9f9c-b5c6ed6b00aa",
+        "customer_id": 44,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T10:07:04.523"
+    },
+    {
+        "log_id": "e05675b5-d8bc-45da-a784-196376057633",
+        "customer_id": 44,
+        "product_id": 37,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T22:07:04.523"
+    },
+    {
+        "log_id": "66317b39-6b39-4e89-b0ca-b4c6a7cf0413",
+        "customer_id": 44,
+        "product_id": 44,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T03:07:04.523"
+    },
+    {
+        "log_id": "ff09a2fa-f501-4a02-84ea-7517970b1a5e",
+        "customer_id": 44,
+        "product_id": 5,
+        "action_type": "view",
+        "dwell_time": 6.9,
+        "timestamp": "2026-02-16T01:07:04.523"
+    },
+    {
+        "log_id": "2a753e43-9f35-4119-8b11-95a612e8235b",
+        "customer_id": 44,
+        "product_id": 14,
+        "action_type": "view",
+        "dwell_time": 9.6,
+        "timestamp": "2026-01-22T18:07:04.523"
+    },
+    {
+        "log_id": "92e1936a-aa60-42b1-a698-0cd5c603c556",
+        "customer_id": 44,
+        "product_id": 33,
+        "action_type": "view",
+        "dwell_time": 37.9,
+        "timestamp": "2026-02-16T22:07:04.523"
+    },
+    {
+        "log_id": "68309b56-b102-4c7e-8a8d-23b40adacbdb",
+        "customer_id": 44,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-07T23:07:04.523"
+    },
+    {
+        "log_id": "40e61b20-a21b-4d60-a29b-32bea044f464",
+        "customer_id": 44,
+        "product_id": 41,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T12:07:04.523"
+    },
+    {
+        "log_id": "5be14db0-96be-4b1b-950d-4831469107c3",
+        "customer_id": 44,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T05:07:04.523"
+    },
+    {
+        "log_id": "2e6b696c-c046-462b-ac14-c2366a471b68",
+        "customer_id": 44,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T19:07:04.523"
+    },
+    {
+        "log_id": "fb7bb9dc-858f-43ba-b274-c63c0eba6341",
+        "customer_id": 44,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T16:07:04.523"
+    },
+    {
+        "log_id": "b0751031-28f9-407b-ade2-c40d662b7f44",
+        "customer_id": 44,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T22:07:04.523"
+    },
+    {
+        "log_id": "e4737c81-7d13-4bb7-ad7b-68643be57fa5",
+        "customer_id": 44,
+        "product_id": 44,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T06:07:04.523"
+    },
+    {
+        "log_id": "283c18b9-06bf-4d6f-bac7-689457988f33",
+        "customer_id": 45,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T17:07:04.523"
+    },
+    {
+        "log_id": "c3889e4b-108c-4ed1-87d4-56a276f1ef84",
+        "customer_id": 45,
+        "product_id": 8,
+        "action_type": "view",
+        "dwell_time": 57.1,
+        "timestamp": "2026-01-24T23:07:04.523"
+    },
+    {
+        "log_id": "fdc2c26f-3bd1-4b07-ba6a-9e9c33174720",
+        "customer_id": 45,
+        "product_id": 43,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T19:07:04.523"
+    },
+    {
+        "log_id": "32793acd-221a-42c0-ae9d-05447a74bf3f",
+        "customer_id": 45,
+        "product_id": 12,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T09:07:04.523"
+    },
+    {
+        "log_id": "9f8b013a-0229-4c6c-af25-18697aa46f02",
+        "customer_id": 45,
+        "product_id": 9,
+        "action_type": "view",
+        "dwell_time": 85.7,
+        "timestamp": "2026-01-23T08:07:04.523"
+    },
+    {
+        "log_id": "c13688e1-89dd-4385-9b4c-b6db879f0dbc",
+        "customer_id": 45,
+        "product_id": 34,
+        "action_type": "view",
+        "dwell_time": 64.5,
+        "timestamp": "2026-02-06T21:07:04.523"
+    },
+    {
+        "log_id": "815a869e-388e-4271-ad80-0f752fa82ff0",
+        "customer_id": 45,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T15:07:04.523"
+    },
+    {
+        "log_id": "221e667a-479c-484d-9f8c-0ccddcfd8717",
+        "customer_id": 45,
+        "product_id": 47,
+        "action_type": "view",
+        "dwell_time": 106.9,
+        "timestamp": "2026-02-14T18:07:04.523"
+    },
+    {
+        "log_id": "2c4cf2fe-dd0c-4565-a147-973924db0fcf",
+        "customer_id": 45,
+        "product_id": 18,
+        "action_type": "view",
+        "dwell_time": 65.2,
+        "timestamp": "2026-02-01T23:07:04.523"
+    },
+    {
+        "log_id": "89f364da-0b0a-49b2-a0ef-07284e8d7e95",
+        "customer_id": 45,
+        "product_id": 41,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T04:07:04.523"
+    },
+    {
+        "log_id": "712c77bc-2d23-4c74-922a-573a40ef83a6",
+        "customer_id": 45,
+        "product_id": 33,
+        "action_type": "view",
+        "dwell_time": 46.4,
+        "timestamp": "2026-02-07T00:07:04.523"
+    },
+    {
+        "log_id": "dcbe49eb-a375-485c-8339-193b2c1d9554",
+        "customer_id": 45,
+        "product_id": 11,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T04:07:04.523"
+    },
+    {
+        "log_id": "d211f63f-04dc-4d82-ae8a-5103e194ed0f",
+        "customer_id": 45,
+        "product_id": 7,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T18:07:04.523"
+    },
+    {
+        "log_id": "4bd71e56-b1e6-41f3-82f6-7d3901087356",
+        "customer_id": 45,
+        "product_id": 8,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T09:07:04.523"
+    },
+    {
+        "log_id": "cffb40ff-61be-4b51-9e1a-f7acb9e90f97",
+        "customer_id": 45,
+        "product_id": 1,
+        "action_type": "view",
+        "dwell_time": 10.1,
+        "timestamp": "2026-02-15T02:07:04.523"
+    },
+    {
+        "log_id": "db2572c3-62f2-4381-9408-43627c1bf6ff",
+        "customer_id": 45,
+        "product_id": 31,
+        "action_type": "view",
+        "dwell_time": 46.9,
+        "timestamp": "2026-01-29T11:07:04.523"
+    },
+    {
+        "log_id": "94cc9071-a6c3-48bb-a4f2-0647d879fe0f",
+        "customer_id": 45,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "c0f941cb-346b-4c01-9860-098a86a847a5",
+        "customer_id": 45,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T10:07:04.523"
+    },
+    {
+        "log_id": "ee660c21-9e0e-4183-be03-eb6027a47364",
+        "customer_id": 46,
+        "product_id": 48,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T08:07:04.523"
+    },
+    {
+        "log_id": "1a4ba40b-5de1-41a1-874f-84f6baf7d2b6",
+        "customer_id": 46,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T17:07:04.523"
+    },
+    {
+        "log_id": "9c78291b-8448-477e-8be7-ee10c93b7f0c",
+        "customer_id": 46,
+        "product_id": 21,
+        "action_type": "view",
+        "dwell_time": 36.2,
+        "timestamp": "2026-02-05T09:07:04.523"
+    },
+    {
+        "log_id": "8dd2d65b-b874-4f51-a57c-fbc296fffaa1",
+        "customer_id": 46,
+        "product_id": 8,
+        "action_type": "view",
+        "dwell_time": 62.7,
+        "timestamp": "2026-02-09T21:07:04.523"
+    },
+    {
+        "log_id": "cbd27629-0ff5-40eb-8f66-95b1af2711e0",
+        "customer_id": 46,
+        "product_id": 34,
+        "action_type": "view",
+        "dwell_time": 117.9,
+        "timestamp": "2026-01-27T17:07:04.523"
+    },
+    {
+        "log_id": "242c50f5-6518-40a0-88f9-c985aa67607d",
+        "customer_id": 46,
+        "product_id": 19,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T00:07:04.523"
+    },
+    {
+        "log_id": "8b3b9317-7329-4845-96f0-508e75f56407",
+        "customer_id": 46,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T12:07:04.523"
+    },
+    {
+        "log_id": "1bba3971-aa44-488b-8815-2a3e0dec40ec",
+        "customer_id": 46,
+        "product_id": 13,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-22T21:07:04.523"
+    },
+    {
+        "log_id": "3e71eddf-5801-4782-860e-e8448367c5c2",
+        "customer_id": 46,
+        "product_id": 48,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T19:07:04.523"
+    },
+    {
+        "log_id": "478bd0d9-26cb-4a65-96ae-eb7f014c83da",
+        "customer_id": 46,
+        "product_id": 24,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T00:07:04.523"
+    },
+    {
+        "log_id": "921e7bd6-e8d0-4ab8-88ec-60b73ea96bed",
+        "customer_id": 47,
+        "product_id": 16,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-20T03:07:04.523"
+    },
+    {
+        "log_id": "b231e8ca-2284-479b-8c24-4c09c3a587c8",
+        "customer_id": 47,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 31.8,
+        "timestamp": "2026-01-22T23:07:04.523"
+    },
+    {
+        "log_id": "b15b1208-5420-4c95-868f-58841b42972b",
+        "customer_id": 47,
+        "product_id": 1,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-12T08:07:04.523"
+    },
+    {
+        "log_id": "74b8595e-223c-4f6e-b86c-fa8916fae221",
+        "customer_id": 47,
+        "product_id": 25,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T07:07:04.523"
+    },
+    {
+        "log_id": "d23164a1-fa2b-423d-90d9-e21bea21455c",
+        "customer_id": 47,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-14T19:07:04.523"
+    },
+    {
+        "log_id": "d80a011d-03fa-411d-a16a-7cdbc71d55b0",
+        "customer_id": 47,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 61.6,
+        "timestamp": "2026-02-07T17:07:04.523"
+    },
+    {
+        "log_id": "0b664eb5-bc79-4b7d-a96e-35753c08ed77",
+        "customer_id": 47,
+        "product_id": 18,
+        "action_type": "view",
+        "dwell_time": 15.7,
+        "timestamp": "2026-01-27T08:07:04.523"
+    },
+    {
+        "log_id": "f76013ca-2af1-4e9f-83ea-e73bfee25b2f",
+        "customer_id": 47,
+        "product_id": 27,
+        "action_type": "view",
+        "dwell_time": 85.6,
+        "timestamp": "2026-02-20T02:07:04.523"
+    },
+    {
+        "log_id": "b5114476-8bd8-4cc9-9173-b5a9222be710",
+        "customer_id": 47,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T09:07:04.523"
+    },
+    {
+        "log_id": "66915dae-b0d3-47b2-b86d-8b449bb5f84d",
+        "customer_id": 47,
+        "product_id": 9,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T02:07:04.523"
+    },
+    {
+        "log_id": "ce5c1c35-ae69-4220-b8f0-dc05385e6356",
+        "customer_id": 47,
+        "product_id": 5,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-17T22:07:04.523"
+    },
+    {
+        "log_id": "3fbe31eb-bb0c-4898-9900-bbb980db3e11",
+        "customer_id": 47,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T11:07:04.523"
+    },
+    {
+        "log_id": "f5fb9f44-8e70-424e-bbcd-0c02c09b28cb",
+        "customer_id": 47,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T17:07:04.523"
+    },
+    {
+        "log_id": "0524e1b2-3ada-4883-8d3c-e6be40b54464",
+        "customer_id": 48,
+        "product_id": 21,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T09:07:04.523"
+    },
+    {
+        "log_id": "49874117-ec2f-432e-995c-b8803dca95fa",
+        "customer_id": 48,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-05T18:07:04.523"
+    },
+    {
+        "log_id": "3eb17e4e-9e07-4a67-abef-2611ccab578c",
+        "customer_id": 48,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 17.5,
+        "timestamp": "2026-01-28T14:07:04.523"
+    },
+    {
+        "log_id": "85a859b4-bff0-43fe-9902-f461ba861708",
+        "customer_id": 48,
+        "product_id": 30,
+        "action_type": "view",
+        "dwell_time": 41.1,
+        "timestamp": "2026-01-28T00:07:04.523"
+    },
+    {
+        "log_id": "e9bdedbf-13c8-4104-b7b0-f86ae49448ae",
+        "customer_id": 48,
+        "product_id": 14,
+        "action_type": "view",
+        "dwell_time": 57.0,
+        "timestamp": "2026-02-08T21:07:04.523"
+    },
+    {
+        "log_id": "30db1ca6-a014-4b3e-b5c2-71f0906d9a71",
+        "customer_id": 48,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T13:07:04.523"
+    },
+    {
+        "log_id": "f5494951-faf5-4711-9e72-25862bc4ac5d",
+        "customer_id": 48,
+        "product_id": 20,
+        "action_type": "view",
+        "dwell_time": 100.0,
+        "timestamp": "2026-02-17T07:07:04.523"
+    },
+    {
+        "log_id": "af5c9664-d13b-4046-aa8d-9f94aee6e316",
+        "customer_id": 48,
+        "product_id": 14,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-10T11:07:04.523"
+    },
+    {
+        "log_id": "b012bd91-78be-420d-a9a8-d1233b85ef15",
+        "customer_id": 48,
+        "product_id": 46,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-26T12:07:04.523"
+    },
+    {
+        "log_id": "a5c18d65-bbf6-4275-ba85-314d7a63b1da",
+        "customer_id": 48,
+        "product_id": 33,
+        "action_type": "view",
+        "dwell_time": 10.6,
+        "timestamp": "2026-02-02T22:07:04.523"
+    },
+    {
+        "log_id": "7c8e2f19-d443-4add-8d82-a1baf8cb3ba6",
+        "customer_id": 48,
+        "product_id": 2,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-30T15:07:04.523"
+    },
+    {
+        "log_id": "c6212b2f-e0fd-4cd0-9340-75d3da9113ae",
+        "customer_id": 48,
+        "product_id": 36,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-19T00:07:04.523"
+    },
+    {
+        "log_id": "086bee9f-2286-4a21-b2d5-c5b2100ccd91",
+        "customer_id": 48,
+        "product_id": 7,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T17:07:04.523"
+    },
+    {
+        "log_id": "db31e69e-26b4-4119-b21a-c300b7c35804",
+        "customer_id": 48,
+        "product_id": 8,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T14:07:04.523"
+    },
+    {
+        "log_id": "6d28e3a1-398f-4e06-8d89-e26c06c0d20f",
+        "customer_id": 48,
+        "product_id": 9,
+        "action_type": "view",
+        "dwell_time": 27.8,
+        "timestamp": "2026-01-23T17:07:04.523"
+    },
+    {
+        "log_id": "cb453b9c-b2bf-4760-b204-273b872b2082",
+        "customer_id": 48,
+        "product_id": 41,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T07:07:04.523"
+    },
+    {
+        "log_id": "3de5203c-e786-4d76-a123-8b5f7a4eb190",
+        "customer_id": 48,
+        "product_id": 28,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T10:07:04.523"
+    },
+    {
+        "log_id": "d0b5d680-69ff-46fa-8921-3a4000234140",
+        "customer_id": 48,
+        "product_id": 34,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-09T10:07:04.523"
+    },
+    {
+        "log_id": "b8961931-d030-49e5-9e40-bbbce7ccaa14",
+        "customer_id": 49,
+        "product_id": 13,
+        "action_type": "view",
+        "dwell_time": 108.8,
+        "timestamp": "2026-01-22T12:07:04.523"
+    },
+    {
+        "log_id": "93028e71-149e-451c-b62e-8d2b7804e8c0",
+        "customer_id": 49,
+        "product_id": 6,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T14:07:04.523"
+    },
+    {
+        "log_id": "7dc71127-753c-4cab-9b47-da5080a6db7a",
+        "customer_id": 49,
+        "product_id": 30,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-25T11:07:04.523"
+    },
+    {
+        "log_id": "630b6162-325d-4f4b-b60c-d9c79b35a1d4",
+        "customer_id": 49,
+        "product_id": 28,
+        "action_type": "view",
+        "dwell_time": 99.5,
+        "timestamp": "2026-01-28T04:07:04.523"
+    },
+    {
+        "log_id": "74f63adb-a905-4e95-9043-a3c12627d8bd",
+        "customer_id": 49,
+        "product_id": 25,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T10:07:04.523"
+    },
+    {
+        "log_id": "c2e85f97-0029-456f-bc73-c592105b31e4",
+        "customer_id": 49,
+        "product_id": 23,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-04T15:07:04.523"
+    },
+    {
+        "log_id": "dacbb646-73e7-4615-9dd6-1f9517eed7cd",
+        "customer_id": 49,
+        "product_id": 18,
+        "action_type": "view",
+        "dwell_time": 37.2,
+        "timestamp": "2026-02-20T15:07:04.523"
+    },
+    {
+        "log_id": "c3d710fa-4b3c-44e5-8466-e0e93eddadb3",
+        "customer_id": 49,
+        "product_id": 40,
+        "action_type": "view",
+        "dwell_time": 76.0,
+        "timestamp": "2026-01-24T05:07:04.523"
+    },
+    {
+        "log_id": "ee39d1ca-c106-4cf6-910d-a7dc83b99e80",
+        "customer_id": 49,
+        "product_id": 27,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T01:07:04.523"
+    },
+    {
+        "log_id": "178014e9-5abd-4ba7-a85f-612c6e846838",
+        "customer_id": 49,
+        "product_id": 6,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-06T11:07:04.523"
+    },
+    {
+        "log_id": "3fa399b9-6be0-4857-bc84-44ec1e2f031c",
+        "customer_id": 49,
+        "product_id": 27,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T14:07:04.523"
+    },
+    {
+        "log_id": "fbf9a5f0-3507-4eba-8e18-1b89338261bb",
+        "customer_id": 49,
+        "product_id": 16,
+        "action_type": "view",
+        "dwell_time": 77.5,
+        "timestamp": "2026-02-12T02:07:04.523"
+    },
+    {
+        "log_id": "5e739e5c-1e30-45e3-8fc9-95bcdd49f15a",
+        "customer_id": 49,
+        "product_id": 25,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T10:07:04.523"
+    },
+    {
+        "log_id": "7cd4b35b-d38d-4e7c-be13-622e315a5eb1",
+        "customer_id": 49,
+        "product_id": 35,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-03T01:07:04.523"
+    },
+    {
+        "log_id": "c6a46dee-fb6d-4779-97fa-06c75faa1c50",
+        "customer_id": 50,
+        "product_id": 18,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-01T22:07:04.523"
+    },
+    {
+        "log_id": "c9298511-db8a-4d2f-94db-723395b570dc",
+        "customer_id": 50,
+        "product_id": 39,
+        "action_type": "view",
+        "dwell_time": 30.2,
+        "timestamp": "2026-01-22T20:07:04.523"
+    },
+    {
+        "log_id": "ce3c92f0-b3a6-44a2-8948-e8c2f7c3e711",
+        "customer_id": 50,
+        "product_id": 34,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-24T01:07:04.523"
+    },
+    {
+        "log_id": "bd234ebd-058b-4dad-bd95-bed109081af0",
+        "customer_id": 50,
+        "product_id": 15,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-16T04:07:04.523"
+    },
+    {
+        "log_id": "32a3c7fe-8761-40f6-9570-432bb990d307",
+        "customer_id": 50,
+        "product_id": 43,
+        "action_type": "view",
+        "dwell_time": 32.7,
+        "timestamp": "2026-01-25T17:07:04.523"
+    },
+    {
+        "log_id": "44ea41e7-ac99-49aa-9604-9d88f3877df3",
+        "customer_id": 50,
+        "product_id": 4,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-18T09:07:04.523"
+    },
+    {
+        "log_id": "9ebcbdeb-e997-4c81-a0f6-77d742b779ec",
+        "customer_id": 50,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 112.5,
+        "timestamp": "2026-02-09T22:07:04.523"
+    },
+    {
+        "log_id": "168ad1a2-967b-4472-8dbf-72cdc2dc96cf",
+        "customer_id": 50,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 41.6,
+        "timestamp": "2026-01-27T17:07:04.523"
+    },
+    {
+        "log_id": "077416f8-81f7-47d8-a0ed-a59f25b77167",
+        "customer_id": 50,
+        "product_id": 38,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T21:07:04.523"
+    },
+    {
+        "log_id": "88b7748a-3c10-4371-bf81-f42263831573",
+        "customer_id": 50,
+        "product_id": 23,
+        "action_type": "view",
+        "dwell_time": 114.0,
+        "timestamp": "2026-02-14T08:07:04.523"
+    },
+    {
+        "log_id": "4be9f5ab-6998-4bc3-a10e-c4412fa1d965",
+        "customer_id": 50,
+        "product_id": 13,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-27T04:07:04.523"
+    },
+    {
+        "log_id": "7e4860d6-bb1e-4f1d-a819-9ec7b8bd810e",
+        "customer_id": 50,
+        "product_id": 12,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-08T19:07:04.523"
+    },
+    {
+        "log_id": "ac2ca26a-cde8-43e3-ae8d-b8e33f459fda",
+        "customer_id": 50,
+        "product_id": 4,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-23T12:07:04.523"
+    },
+    {
+        "log_id": "4b8ae1a2-01e3-45f9-80d1-51103c212be3",
+        "customer_id": 50,
+        "product_id": 2,
+        "action_type": "view",
+        "dwell_time": 65.5,
+        "timestamp": "2026-02-10T17:07:04.523"
+    },
+    {
+        "log_id": "8d5c193d-2ec4-4685-8d39-7d362b8a067c",
+        "customer_id": 50,
+        "product_id": 13,
+        "action_type": "view",
+        "dwell_time": 97.7,
+        "timestamp": "2026-02-02T05:07:04.523"
+    },
+    {
+        "log_id": "a28cf601-41e2-4dc9-a418-c03a706b0904",
+        "customer_id": 50,
+        "product_id": 21,
+        "action_type": "cart",
+        "dwell_time": 0.0,
+        "timestamp": "2026-02-13T15:07:04.523"
+    },
+    {
+        "log_id": "029f948e-ae46-490c-a1a7-7509ff859223",
+        "customer_id": 50,
+        "product_id": 38,
+        "action_type": "view",
+        "dwell_time": 86.0,
+        "timestamp": "2026-01-22T14:07:04.523"
+    },
+    {
+        "log_id": "840f0999-1115-4f32-9a67-db019d6b42ef",
+        "customer_id": 50,
+        "product_id": 34,
+        "action_type": "view",
+        "dwell_time": 104.0,
+        "timestamp": "2026-02-15T13:07:04.523"
+    },
+    {
+        "log_id": "33334a93-3112-4eb2-a801-e98ae9c63a76",
+        "customer_id": 50,
+        "product_id": 43,
+        "action_type": "view",
+        "dwell_time": 50.5,
+        "timestamp": "2026-02-03T08:07:04.523"
+    },
+    {
+        "log_id": "9e4b75e0-8428-4309-af9e-c021d8ebe5b3",
+        "customer_id": 50,
+        "product_id": 10,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T10:07:04.523"
+    },
+    {
+        "log_id": "c5033266-adcc-4e83-88b4-00bee404a983",
+        "customer_id": 50,
+        "product_id": 19,
+        "action_type": "purchase",
+        "dwell_time": 0.0,
+        "timestamp": "2026-01-31T10:07:04.523"
+    }
+]

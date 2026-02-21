@@ -1,0 +1,844 @@
+[
+    {
+        "product_id": 1,
+        "product_name": "Mock Cleansing Foam 01",
+        "brand": "Brand_A",
+        "price": 78000,
+        "stock": 119,
+        "product_type": "cleansing_foam",
+        "target_skin_types": [
+            "normal",
+            "oily",
+            "dry"
+        ],
+        "target_concerns": [
+            "wrinkles_aging"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 2,
+        "product_name": "Mock Cleansing Foam 02",
+        "brand": "Brand_B",
+        "price": 66000,
+        "stock": 436,
+        "product_type": "cleansing_foam",
+        "target_skin_types": [
+            "dehydrated_oily",
+            "dry",
+            "oily"
+        ],
+        "target_concerns": [
+            "wrinkles_aging",
+            "severe_dryness",
+            "acne_trouble"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 3,
+        "product_name": "Mock Cleansing Foam 03",
+        "brand": "Brand_C",
+        "price": 24000,
+        "stock": 465,
+        "product_type": "cleansing_foam",
+        "target_skin_types": [
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "wrinkles_aging"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 4,
+        "product_name": "Mock Cleansing Oil Water 01",
+        "brand": "Brand_E",
+        "price": 36000,
+        "stock": 377,
+        "product_type": "cleansing_oil_water",
+        "target_skin_types": [
+            "normal",
+            "oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "wrinkles_aging",
+            "acne_trouble"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 5,
+        "product_name": "Mock Cleansing Oil Water 02",
+        "brand": "Brand_D",
+        "price": 45000,
+        "stock": 32,
+        "product_type": "cleansing_oil_water",
+        "target_skin_types": [
+            "oily"
+        ],
+        "target_concerns": [
+            "severe_dryness"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 6,
+        "product_name": "Mock Cleansing Oil Water 03",
+        "brand": "Brand_B",
+        "price": 66000,
+        "stock": 292,
+        "product_type": "cleansing_oil_water",
+        "target_skin_types": [
+            "dehydrated_oily",
+            "dry",
+            "combination",
+            "oily"
+        ],
+        "target_concerns": [
+            "pores",
+            "redness",
+            "acne_trouble"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 7,
+        "product_name": "Mock Exfoliator Peeling 01",
+        "brand": "Brand_E",
+        "price": 80000,
+        "stock": 85,
+        "product_type": "exfoliator_peeling",
+        "target_skin_types": [
+            "normal",
+            "dry",
+            "dehydrated_oily",
+            "oily"
+        ],
+        "target_concerns": [
+            "wrinkles_aging"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 8,
+        "product_name": "Mock Exfoliator Peeling 02",
+        "brand": "Brand_B",
+        "price": 23000,
+        "stock": 191,
+        "product_type": "exfoliator_peeling",
+        "target_skin_types": [
+            "dehydrated_oily",
+            "normal",
+            "dry",
+            "oily"
+        ],
+        "target_concerns": [
+            "pigmentation_blemish"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 9,
+        "product_name": "Mock Exfoliator Peeling 03",
+        "brand": "Brand_B",
+        "price": 52000,
+        "stock": 410,
+        "product_type": "exfoliator_peeling",
+        "target_skin_types": [
+            "normal",
+            "oily",
+            "dry",
+            "combination"
+        ],
+        "target_concerns": [
+            "dullness",
+            "acne_trouble"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 10,
+        "product_name": "Mock Toner 01",
+        "brand": "Brand_B",
+        "price": 35000,
+        "stock": 428,
+        "product_type": "toner",
+        "target_skin_types": [
+            "oily",
+            "dehydrated_oily",
+            "dry",
+            "combination"
+        ],
+        "target_concerns": [
+            "severe_dryness"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 11,
+        "product_name": "Mock Toner 02",
+        "brand": "Brand_D",
+        "price": 52000,
+        "stock": 152,
+        "product_type": "toner",
+        "target_skin_types": [
+            "oily"
+        ],
+        "target_concerns": [
+            "severe_dryness",
+            "redness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 12,
+        "product_name": "Mock Toner 03",
+        "brand": "Brand_E",
+        "price": 52000,
+        "stock": 490,
+        "product_type": "toner",
+        "target_skin_types": [
+            "dry"
+        ],
+        "target_concerns": [
+            "pores",
+            "redness"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 13,
+        "product_name": "Mock Toner Pad 01",
+        "brand": "Brand_A",
+        "price": 23000,
+        "stock": 315,
+        "product_type": "toner_pad",
+        "target_skin_types": [
+            "oily",
+            "dehydrated_oily",
+            "normal",
+            "dry"
+        ],
+        "target_concerns": [
+            "redness",
+            "pores"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 14,
+        "product_name": "Mock Toner Pad 02",
+        "brand": "Brand_A",
+        "price": 65000,
+        "stock": 10,
+        "product_type": "toner_pad",
+        "target_skin_types": [
+            "oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "severe_dryness"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 15,
+        "product_name": "Mock Toner Pad 03",
+        "brand": "Brand_E",
+        "price": 50000,
+        "stock": 349,
+        "product_type": "toner_pad",
+        "target_skin_types": [
+            "oily"
+        ],
+        "target_concerns": [
+            "wrinkles_aging",
+            "severe_dryness",
+            "pigmentation_blemish"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 16,
+        "product_name": "Mock Essence 01",
+        "brand": "Brand_D",
+        "price": 47000,
+        "stock": 293,
+        "product_type": "essence",
+        "target_skin_types": [
+            "normal",
+            "combination"
+        ],
+        "target_concerns": [
+            "pigmentation_blemish",
+            "severe_dryness",
+            "pores"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 17,
+        "product_name": "Mock Essence 02",
+        "brand": "Brand_E",
+        "price": 48000,
+        "stock": 217,
+        "product_type": "essence",
+        "target_skin_types": [
+            "oily"
+        ],
+        "target_concerns": [
+            "pores",
+            "pigmentation_blemish"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 18,
+        "product_name": "Mock Essence 03",
+        "brand": "Brand_E",
+        "price": 51000,
+        "stock": 248,
+        "product_type": "essence",
+        "target_skin_types": [
+            "combination",
+            "normal",
+            "oily",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "pores",
+            "severe_dryness",
+            "acne_trouble"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 19,
+        "product_name": "Mock Serum 01",
+        "brand": "Brand_E",
+        "price": 52000,
+        "stock": 57,
+        "product_type": "serum",
+        "target_skin_types": [
+            "oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "pores"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 20,
+        "product_name": "Mock Serum 02",
+        "brand": "Brand_A",
+        "price": 41000,
+        "stock": 253,
+        "product_type": "serum",
+        "target_skin_types": [
+            "combination"
+        ],
+        "target_concerns": [
+            "severe_dryness",
+            "redness"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 21,
+        "product_name": "Mock Serum 03",
+        "brand": "Brand_D",
+        "price": 73000,
+        "stock": 214,
+        "product_type": "serum",
+        "target_skin_types": [
+            "normal",
+            "dry"
+        ],
+        "target_concerns": [
+            "dullness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 22,
+        "product_name": "Mock Ampoule 01",
+        "brand": "Brand_B",
+        "price": 32000,
+        "stock": 421,
+        "product_type": "ampoule",
+        "target_skin_types": [
+            "dry",
+            "normal",
+            "dehydrated_oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "dullness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 23,
+        "product_name": "Mock Ampoule 02",
+        "brand": "Brand_E",
+        "price": 50000,
+        "stock": 496,
+        "product_type": "ampoule",
+        "target_skin_types": [
+            "dehydrated_oily",
+            "combination",
+            "oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "severe_dryness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 24,
+        "product_name": "Mock Ampoule 03",
+        "brand": "Brand_D",
+        "price": 43000,
+        "stock": 394,
+        "product_type": "ampoule",
+        "target_skin_types": [
+            "oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "pores",
+            "wrinkles_aging",
+            "pigmentation_blemish"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 25,
+        "product_name": "Mock Lotion Emulsion 01",
+        "brand": "Brand_C",
+        "price": 40000,
+        "stock": 149,
+        "product_type": "lotion_emulsion",
+        "target_skin_types": [
+            "oily",
+            "dry",
+            "combination"
+        ],
+        "target_concerns": [
+            "pores"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 26,
+        "product_name": "Mock Lotion Emulsion 02",
+        "brand": "Brand_B",
+        "price": 37000,
+        "stock": 42,
+        "product_type": "lotion_emulsion",
+        "target_skin_types": [
+            "combination",
+            "oily",
+            "dehydrated_oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "acne_trouble",
+            "pores"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 27,
+        "product_name": "Mock Lotion Emulsion 03",
+        "brand": "Brand_D",
+        "price": 12000,
+        "stock": 448,
+        "product_type": "lotion_emulsion",
+        "target_skin_types": [
+            "combination",
+            "dry",
+            "normal",
+            "oily"
+        ],
+        "target_concerns": [
+            "dullness",
+            "pigmentation_blemish"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 28,
+        "product_name": "Mock Moisture Cream 01",
+        "brand": "Brand_E",
+        "price": 38000,
+        "stock": 259,
+        "product_type": "moisture_cream",
+        "target_skin_types": [
+            "oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "acne_trouble",
+            "pigmentation_blemish"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 29,
+        "product_name": "Mock Moisture Cream 02",
+        "brand": "Brand_D",
+        "price": 31000,
+        "stock": 440,
+        "product_type": "moisture_cream",
+        "target_skin_types": [
+            "normal",
+            "dry",
+            "dehydrated_oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "severe_dryness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 30,
+        "product_name": "Mock Moisture Cream 03",
+        "brand": "Brand_B",
+        "price": 69000,
+        "stock": 103,
+        "product_type": "moisture_cream",
+        "target_skin_types": [
+            "oily"
+        ],
+        "target_concerns": [
+            "wrinkles_aging",
+            "pores"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 31,
+        "product_name": "Mock Eye Cream 01",
+        "brand": "Brand_C",
+        "price": 53000,
+        "stock": 399,
+        "product_type": "eye_cream",
+        "target_skin_types": [
+            "oily",
+            "combination",
+            "normal",
+            "dry"
+        ],
+        "target_concerns": [
+            "acne_trouble",
+            "severe_dryness"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 32,
+        "product_name": "Mock Eye Cream 02",
+        "brand": "Brand_A",
+        "price": 54000,
+        "stock": 124,
+        "product_type": "eye_cream",
+        "target_skin_types": [
+            "dry"
+        ],
+        "target_concerns": [
+            "pores"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 33,
+        "product_name": "Mock Eye Cream 03",
+        "brand": "Brand_A",
+        "price": 29000,
+        "stock": 132,
+        "product_type": "eye_cream",
+        "target_skin_types": [
+            "combination",
+            "dry"
+        ],
+        "target_concerns": [
+            "pores",
+            "pigmentation_blemish",
+            "wrinkles_aging"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 34,
+        "product_name": "Mock Face Oil 01",
+        "brand": "Brand_B",
+        "price": 24000,
+        "stock": 408,
+        "product_type": "face_oil",
+        "target_skin_types": [
+            "oily",
+            "dry"
+        ],
+        "target_concerns": [
+            "acne_trouble",
+            "wrinkles_aging",
+            "redness"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 35,
+        "product_name": "Mock Face Oil 02",
+        "brand": "Brand_D",
+        "price": 35000,
+        "stock": 48,
+        "product_type": "face_oil",
+        "target_skin_types": [
+            "dry",
+            "oily"
+        ],
+        "target_concerns": [
+            "redness",
+            "acne_trouble",
+            "dullness"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 36,
+        "product_name": "Mock Face Oil 03",
+        "brand": "Brand_C",
+        "price": 78000,
+        "stock": 229,
+        "product_type": "face_oil",
+        "target_skin_types": [
+            "dry",
+            "oily",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "dullness",
+            "pigmentation_blemish"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 37,
+        "product_name": "Mock Sheet Mask 01",
+        "brand": "Brand_D",
+        "price": 56000,
+        "stock": 335,
+        "product_type": "sheet_mask",
+        "target_skin_types": [
+            "normal",
+            "combination",
+            "dry",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "dullness",
+            "redness",
+            "pigmentation_blemish"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 38,
+        "product_name": "Mock Sheet Mask 02",
+        "brand": "Brand_D",
+        "price": 44000,
+        "stock": 175,
+        "product_type": "sheet_mask",
+        "target_skin_types": [
+            "dry",
+            "oily"
+        ],
+        "target_concerns": [
+            "pores",
+            "pigmentation_blemish"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 39,
+        "product_name": "Mock Sheet Mask 03",
+        "brand": "Brand_E",
+        "price": 58000,
+        "stock": 182,
+        "product_type": "sheet_mask",
+        "target_skin_types": [
+            "combination"
+        ],
+        "target_concerns": [
+            "pores",
+            "pigmentation_blemish"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 40,
+        "product_name": "Mock Wash Off Mask 01",
+        "brand": "Brand_C",
+        "price": 43000,
+        "stock": 184,
+        "product_type": "wash_off_mask",
+        "target_skin_types": [
+            "dehydrated_oily",
+            "oily",
+            "combination"
+        ],
+        "target_concerns": [
+            "redness"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 41,
+        "product_name": "Mock Wash Off Mask 02",
+        "brand": "Brand_A",
+        "price": 40000,
+        "stock": 378,
+        "product_type": "wash_off_mask",
+        "target_skin_types": [
+            "combination",
+            "normal",
+            "oily",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "severe_dryness",
+            "pigmentation_blemish",
+            "dullness"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 42,
+        "product_name": "Mock Wash Off Mask 03",
+        "brand": "Brand_A",
+        "price": 47000,
+        "stock": 123,
+        "product_type": "wash_off_mask",
+        "target_skin_types": [
+            "normal",
+            "oily",
+            "combination",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "redness",
+            "dullness"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 43,
+        "product_name": "Mock Sun Care 01",
+        "brand": "Brand_D",
+        "price": 80000,
+        "stock": 179,
+        "product_type": "sun_care",
+        "target_skin_types": [
+            "combination",
+            "oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "pores",
+            "acne_trouble"
+        ],
+        "description": "끈적임 없이 산뜻하게 마무리되어 메이크업 전에도 부담 없이 사용해요."
+    },
+    {
+        "product_id": 44,
+        "product_name": "Mock Sun Care 02",
+        "brand": "Brand_C",
+        "price": 25000,
+        "stock": 390,
+        "product_type": "sun_care",
+        "target_skin_types": [
+            "normal",
+            "dehydrated_oily"
+        ],
+        "target_concerns": [
+            "pigmentation_blemish",
+            "wrinkles_aging",
+            "redness"
+        ],
+        "description": "유분기를 확실히 잡아주면서도 당기지 않아서 수부지에게 인생템입니다."
+    },
+    {
+        "product_id": 45,
+        "product_name": "Mock Sun Care 03",
+        "brand": "Brand_E",
+        "price": 46000,
+        "stock": 61,
+        "product_type": "sun_care",
+        "target_skin_types": [
+            "oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "pores",
+            "wrinkles_aging"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    },
+    {
+        "product_id": 46,
+        "product_name": "Mock Lip Care 01",
+        "brand": "Brand_E",
+        "price": 26000,
+        "stock": 150,
+        "product_type": "lip_care",
+        "target_skin_types": [
+            "dry"
+        ],
+        "target_concerns": [
+            "wrinkles_aging",
+            "severe_dryness",
+            "pores"
+        ],
+        "description": "각질 부각 없이 매끄러운 피부결을 만들어줍니다. 향도 은은해서 좋아요."
+    },
+    {
+        "product_id": 47,
+        "product_name": "Mock Lip Care 02",
+        "brand": "Brand_A",
+        "price": 11000,
+        "stock": 303,
+        "product_type": "lip_care",
+        "target_skin_types": [
+            "combination",
+            "dehydrated_oily",
+            "normal"
+        ],
+        "target_concerns": [
+            "pores",
+            "acne_trouble"
+        ],
+        "description": "일주일 정도 썼는데 붉은기가 많이 진정되었어요. 민감성 피부에 추천합니다."
+    },
+    {
+        "product_id": 48,
+        "product_name": "Mock Lip Care 03",
+        "brand": "Brand_D",
+        "price": 24000,
+        "stock": 430,
+        "product_type": "lip_care",
+        "target_skin_types": [
+            "combination"
+        ],
+        "target_concerns": [
+            "acne_trouble",
+            "redness"
+        ],
+        "description": "피부 속 깊은 곳까지 수분을 채워주는 느낌이에요. 촉촉함이 오래갑니다."
+    }
+]
