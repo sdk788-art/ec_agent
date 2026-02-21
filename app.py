@@ -31,6 +31,10 @@ if "selected_product_id" not in st.session_state:
     st.session_state.selected_product_id = None  # 상세 조회 중인 상품 ID
 if "parsed_params" not in st.session_state:
     st.session_state.parsed_params = None      # Agent가 파싱한 검색 파라미터 dict
+if "last_search_query" not in st.session_state:
+    st.session_state.last_search_query = ""    # 마지막 검색어 (LLM 캐시 무효화 기준)
+if "cart_added" not in st.session_state:
+    st.session_state.cart_added = set()        # 장바구니에 담긴 상품 ID 집합
 
 # ── 피부 타입 / 고민 한국어 매핑 테이블 ────────────────────────────────────
 SKIN_TYPE_KO = {
@@ -305,6 +309,24 @@ def agent_recommend_cross_sell(
     return response.content[0].text.strip()
 
 
+# ── LLM 캐시 관리 유틸리티 ──────────────────────────────────────────────────
+def _clear_llm_caches() -> None:
+    """새로운 검색어 입력 시 세션에 저장된 LLM 결과 캐시를 전부 삭제.
+
+    삭제 대상:
+      - review_summary_{product_id}_{skin_type}  : 리뷰 요약 캐시
+      - cross_msg_{product_id}_{customer_id}     : 크로스셀링 메시지 캐시
+    삭제하지 않는 대상:
+      - current_customer, search_results, selected_product_id 등 핵심 상태
+    """
+    keys_to_delete = [
+        k for k in list(st.session_state.keys())
+        if k.startswith("review_summary_") or k.startswith("cross_msg_")
+    ]
+    for k in keys_to_delete:
+        del st.session_state[k]
+
+
 # ── 사이드바: 고객 선택 및 로그인 ─────────────────────────────────────────
 with st.sidebar:
     st.header("👤 고객 로그인")
@@ -337,10 +359,13 @@ with st.sidebar:
             if not matched.empty:
                 # DataFrame 행을 dict로 변환하여 세션에 저장
                 st.session_state.current_customer = matched.iloc[0].to_dict()
-                # 고객 변경 시 이전 검색 결과 초기화
+                # 고객 변경 시 이전 검색 결과 및 LLM 캐시 전부 초기화
                 st.session_state.search_results = None
                 st.session_state.selected_product_id = None
                 st.session_state.parsed_params = None
+                st.session_state.last_search_query = ""
+                st.session_state.cart_added = set()
+                _clear_llm_caches()
                 st.success(f"고객 {cid:02d}로 로그인되었습니다.")
 
     # 로그아웃 버튼 (로그인 상태일 때만 표시)
@@ -350,6 +375,9 @@ with st.sidebar:
             st.session_state.search_results = None
             st.session_state.selected_product_id = None
             st.session_state.parsed_params = None
+            st.session_state.last_search_query = ""
+            st.session_state.cart_added = set()
+            _clear_llm_caches()
             st.rerun()
 
 
@@ -413,10 +441,19 @@ else:
         if not search_query.strip():
             st.warning("검색어를 입력해주세요.")
         else:
+            new_query = search_query.strip()
+
+            # 요구사항 3: 새로운 검색어일 때만 LLM 캐시 초기화
+            # → 동일 검색어 재검색 시 기존 캐시 재사용, 불필요한 API 호출 방지
+            if new_query != st.session_state.last_search_query:
+                _clear_llm_caches()
+                st.session_state.last_search_query = new_query
+                st.session_state.cart_added = set()  # 장바구니 상태도 초기화
+
             # Micro-task 2: Agent — 자연어 → JSON 파라미터 파싱
             with st.spinner("AI가 검색어를 분석 중입니다..."):
                 try:
-                    parsed = agent_parse_intent(search_query.strip())
+                    parsed = agent_parse_intent(new_query)
                     st.session_state.parsed_params = parsed
                 except (json.JSONDecodeError, Exception) as e:
                     st.error(f"검색어 분석 중 오류가 발생했습니다: {e}")
@@ -614,13 +651,25 @@ else:
                             if cs_row.get("description"):
                                 st.write(f"💬 {cs_row['description']}")
                         with cs_btn_col:
-                            if st.button(
-                                "상품 선택",
-                                key=f"select_cross_{cs_row['product_id']}",
-                                use_container_width=True,
-                            ):
-                                # 시너지 상품 선택 시 해당 상품으로 전환
-                                st.session_state.selected_product_id = int(cs_row["product_id"])
-                                st.rerun()
+                            cs_id = int(cs_row["product_id"])
+                            already_in_cart = cs_id in st.session_state.cart_added
+                            if already_in_cart:
+                                # 이미 담긴 상태: 비활성화 버튼으로 피드백 표시
+                                # selected_product_id 변경 없음 → rerun 시 LLM 캐시 그대로 유지
+                                st.button(
+                                    "✅ 담겼습니다",
+                                    key=f"cart_cross_{cs_id}",
+                                    use_container_width=True,
+                                    disabled=True,
+                                )
+                            else:
+                                if st.button(
+                                    "🛒 장바구니 추가",
+                                    key=f"cart_cross_{cs_id}",
+                                    use_container_width=True,
+                                ):
+                                    # selected_product_id를 변경하지 않으므로
+                                    # rerun 후 동일 캐시 키 사용 → LLM 재호출 없음
+                                    st.session_state.cart_added.add(cs_id)
             else:
                 st.info("이 상품과 함께 구매된 데이터가 충분하지 않아 시너지 추천을 제공할 수 없습니다.")
