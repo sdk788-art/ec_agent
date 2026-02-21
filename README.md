@@ -10,7 +10,7 @@ my-ecommerce-agent/
 │   ├── logs.json          # 로그 데이터 (778 rows)
 │   ├── products.json      # 상품 데이터 (48 rows)
 │   └── reviews.json       # 리뷰 데이터 (205 rows)
-├── docs/                  # 아키텍처 및 기획 문서
+├── docs/                  # 기획 문서
 │   ├── architecture.md    # 아키텍처 메모
 │   └── table_def.md       # 테이블 정의서
 ├── app.py                 # Streamlit 메인 실행 파일
