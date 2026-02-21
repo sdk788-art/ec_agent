@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import json
 import anthropic
+from dotenv import load_dotenv
+
+# .env 파일에서 ANTHROPIC_API_KEY 등 환경변수 로드 (app.py와 동일 폴더 기준)
+load_dotenv()
 
 # ── 데이터 로드 (앱 시작 시 한 번만 실행) ──────────────────────────────────
 @st.cache_data
