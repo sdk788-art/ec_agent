@@ -393,12 +393,23 @@ else:
             components.html(
                 """
                 <script>
-                    // Streamlit은 iframe 안에서 실행되므로 window.parent로 부모 문서에 접근
-                    // setTimeout으로 DOM 렌더링 완료 후 스크롤 실행
-                    setTimeout(function () {
+                    // Streamlit은 iframe 내부에서 실행 → window.parent로 부모 문서에 접근
+                    // setInterval 폴링: 앵커가 DOM에 등장할 때까지 최대 10회(100ms 간격) 재시도
+                    var attempts = 0;
+                    var maxAttempts = 10;
+                    console.log("[AutoScroll] 앵커 탐색 시작...");
+                    var timer = setInterval(function () {
+                        attempts++;
                         var el = window.parent.document.getElementById("review-anchor");
                         if (el) {
+                            clearInterval(timer);
                             el.scrollIntoView({ behavior: "smooth", block: "start" });
+                            console.log("[AutoScroll] 스크롤 실행 완료 (시도 횟수: " + attempts + ")");
+                        } else if (attempts >= maxAttempts) {
+                            clearInterval(timer);
+                            console.log("[AutoScroll] 앵커를 찾지 못했습니다 (" + maxAttempts + "회 시도 후 중단)");
+                        } else {
+                            console.log("[AutoScroll] 앵커 탐색 중... (" + attempts + "/" + maxAttempts + ")");
                         }
                     }, 100);
                 </script>
