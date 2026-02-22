@@ -72,7 +72,7 @@ def agent_parse_intent(query: str) -> dict:
     )
 
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=256,
         system=system_prompt,
         messages=[{"role": "user", "content": query}],
@@ -107,18 +107,21 @@ def agent_summarize_reviews(
         return None  # 텍스트 리뷰 없음 → 호출 불필요
 
     skin_type_ko = SKIN_TYPE_KO.get(skin_type, skin_type)
+    n = len(review_texts)  # 실제 Agent에게 전달되는 샘플 리뷰 건수
     reviews_joined = "\n".join(f"- {text}" for text in review_texts)
 
     prompt = (
         f"다음은 {skin_type_ko} 피부 고객들이 남긴 리뷰입니다.\n"
         f"[정량 지표] 총 {metrics['total_reviews']}건 · 평균 평점 {metrics['avg_rate']}점 · "
         f"만족도(4점 이상) {metrics['satisfaction_pct']}%\n\n"
-        f"[리뷰 목록]\n{reviews_joined}\n\n"
-        "이 고객들의 만족 및 불만족 포인트를 한국어로 자연스럽게 2~3문장으로 요약해 주세요."
+        f"[리뷰 목록] (최신 {n}건 샘플)\n{reviews_joined}\n\n"
+        f"제공된 {n}건의 최신 샘플 리뷰를 바탕으로 {skin_type_ko} 피부 고객들의 전체적인 반응을 "
+        "한국어로 자연스럽게 2~3문장으로 요약해 주세요. "
+        "제공된 정보 이외의 내용은 추측하거나 지어내지 마세요."
     )
 
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=512,
         messages=[{"role": "user", "content": prompt}],
     )
@@ -158,7 +161,7 @@ def agent_recommend_cross_sell(
     )
 
     response = client.messages.create(
-        model="claude-sonnet-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=512,
         messages=[{"role": "user", "content": prompt}],
     )

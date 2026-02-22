@@ -66,7 +66,8 @@ def system_filter_products(params: dict, customer: dict) -> pd.DataFrame:
             )
         ]
 
-    return result.reset_index(drop=True)
+    # 상품 노출 제한: UI 렌더링 부하 및 토큰 비용 절감을 위해 최대 10개만 반환
+    return result.head(10).reset_index(drop=True)
 
 
 # ── Step 3 / Micro-task 5: System — 동일 피부 타입 리뷰 필터링 및 지표 계산 ──
@@ -103,7 +104,23 @@ def system_get_same_skin_reviews(product_id: int, skin_type: str) -> tuple[pd.Da
         "satisfaction_pct": satisfaction_pct,
     }
 
-    return filtered, metrics
+    # Agent에게 전달할 리뷰 샘플링: 최신순 정렬 후 최대 5건만 추출
+    MAX_SAMPLE = 5
+    MAX_REVIEW_LEN = 300
+    sampled = filtered.sort_values("created_at", ascending=False).head(MAX_SAMPLE).copy()
+
+    # 텍스트 방어 로직: 300자 초과 리뷰는 잘라내고 "..." 추가
+    def _truncate_review(text) -> str:
+        if pd.isna(text):
+            return text
+        text_str = str(text)
+        if len(text_str) > MAX_REVIEW_LEN:
+            return text_str[:MAX_REVIEW_LEN] + "..."
+        return text_str
+
+    sampled["review"] = sampled["review"].apply(_truncate_review)
+
+    return sampled, metrics
 
 
 # ── Step 3 / Micro-task 8: System — 함께 구매 빈도 기반 시너지 상품 추출 ─────
