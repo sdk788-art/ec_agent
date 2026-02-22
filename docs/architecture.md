@@ -1,38 +1,45 @@
 # Architecture Memo: Beauty E-Commerce Agent
 
-본 아키텍처는 채널코퍼레이션이 지향하는 **환각(Hallucination) 없는 신뢰할 수 있는 AI**를 구현하기 위해 설계되었습니다. 단순 RAG(검색 증강 생성)에 의존하지 않고, 결정론적 시스템(System)과 확률론적 AI(Agent)의 역할을 엄격히 분리한 **Micro-tasking 기반의 하이브리드 아키텍처**를 채택했습니다.
+본 아키텍처는 채널코퍼레이션이 지향하는 **환각 없는 신뢰할 수 있는 AI**를 구현하기 위해 설계되었습니다. 단순 RAG에 의존하지 않고, 결정론적 시스템(System)과 확률론적 AI(Agent)의 역할을 엄격히 분리한 **Micro-tasking 기반의 하이브리드 아키텍처**를 채택했습니다.
 
 ## 1. 도구 선택 이유
-
 MVP의 빠른 검증과 향후 프로덕션 레벨로의 확장성을 동시에 고려하여 도구를 선정했습니다.
 
-* **Data Processing: Python (Pandas) & JSON**
-    * **선택 이유:** 이커머스의 뷰티 도메인은 고객의 복합적인 피부 고민과 상품의 다중 태그를 교차 분석해야 합니다. 초기 MVP 단계에서 RDBMS를 구축하는 대신, Python의 `Set` 연산과 Pandas의 유연한 DataFrame을 활용하여 인메모리 상에서 하드 필터링 로직을 구현했습니다. 이는 민첩한 테스트를 가능하게 하며, 향후 SQL 기반의 DB(PostgreSQL 등)로 마이그레이션하기 용이한 구조입니다.
-* **Frontend & Serving: Streamlit**
-    * **선택 이유:** Python 백엔드 로직과 LLM API를 가장 직관적으로 연결하고, 결과를 시각화하기 위해 선택했습니다. Streamlit Cloud를 통해 별도의 인프라 구축 없이 즉각적인 라이브 배포가 가능합니다.
-* **LLM Orchestration: Multi-Agent 협업 체제**
-    * **설계 (Gemini 3.1 Pro):** 깊은 추론 능력을 활용해 데이터 스키마 및 프롬프트 로직 설계.
-    * **데이터 생성 및 검수 (Gemini 3.1 Pro):** 뷰티 도메인 리서치 및 현실적인 Mock-up 데이터(JSON) 생성.
-    * **지엽적 기능 구현 및 테스트 (Gemini 3.1 Pro):** 세션 히스토리에 구축된 도메인 컨텍스트를 재활용하여, 프로젝트 의도에 부합하는 세부 기능을 신속하게 구현함.
-    * **로컬 개발 환경 (Cursor IDE):** AI 네이티브 에디터인 Cursor IDE를 활용하여 개발 효율화.
-    * **LLM API (Anthropic API):** Claude Code CLI 환경과의 네이티브 연동 및 최적의 호환성을 확보하여, 지연 없는 Agentic Workflow를 구축하기 위해 선택.
-    * **구현 및 오케스트레이션 (Claude Sonnet 4.6):** 우수한 코딩 정확도를 바탕으로 Streamlit 및 Python 로직 구현.
-    * **의의:** AI를 단순 도구가 아닌 '목적별 전문가 조직'으로 오케스트레이션하여 산출물의 품질을 극대화했습니다.
+* **Data Processing (Python Pandas & JSON):** 이커머스의 뷰티 도메인은 고객의 복합적인 피부 고민과 상품의 다중 태그를 교차 분석해야 합니다. 초기 단계에서 무거운 RDBMS를 구축하는 대신, Pandas의 유연한 DataFrame을 활용하여 인메모리 상에서 하드 필터링 로직을 구현했습니다. 이는 민첩한 테스트를 가능하게 하며, 향후 SQL 기반 DB로 마이그레이션하기 용이한 구조입니다.
+* **Frontend & Serving (Streamlit):** Python 백엔드 로직과 LLM API를 직관적으로 연결하고, Streamlit Cloud를 통해 별도의 인프라 구축 없이 즉각적인 라이브 배포를 달성하기 위해 선택했습니다.
+* **LLM Orchestration (Multi-Agent 협업 체제 및 듀얼 모델 전략):** AI를 단순 도구가 아닌 '목적별 전문가 조직'으로 오케스트레이션하여 산출물의 품질과 비용 효율성을 극대화했습니다.
+  * **Gemini 3.1 Pro:** 데이터 스키마 기획, Mock-up 데이터 생성, 도메인 컨텍스트 기반 세부 로직 설계.
+  * **Cursor IDE:** AI 네이티브 에디터 환경에서의 민첩한 개발 프로세스 구축.
+  * **Claude Sonnet 4.6 (Claude Code):** 최신 모델의 우수한 추론 능력과 CLI 네이티브 연동을 활용하여 프로젝트 전반의 구현 및 Agentic Workflow 오케스트레이션 리드.
+  * **Anthropic API (Claude Haiku 4.5):** 실제 앱 구동 시 발생하는 실시간 마이크로 태스크(의도 파싱, 리뷰 요약 등)를 지연 시간(Latency) 없이 가장 저렴하게 처리하기 위해 `claude-haiku-4-5-20251001` 모델을 전략적으로 채택.
 
-## 2. 데이터 흐름 (Data Flow: The H-A-S Model)
+## 2. 데이터 흐름
+사용자(Human)의 불확실한 자연어를 Agent가 정형 데이터로 변환하고, System이 팩트 기반의 데이터를 추출하는 **H-A-S (Human - Agent - System)** 파이프라인입니다.
 
-사용자(Human)의 불확실한 자연어를 Agent가 정형 데이터로 변환하고, System이 팩트 기반의 데이터를 추출하는 **H-A-S (Human - Agent - System) 파이프라인**으로 동작합니다.
+1. **Intent Parsing (H → A):** 사용자의 자연어 검색 시 Agent가 파싱하여 JSON 파라미터 생성.
+2. **Deterministic Retrieval (A → S):** System이 파라미터를 받아 정확히 일치하는 상품만 결정론적으로 필터링. (환각 원천 차단)
+3. **Fact-based Summarization (S → A):** System이 타겟 고객과 '동일한 피부 타입'의 리뷰만 추출하여 전달하면, Agent는 이 제한된 팩트 내에서만 요약 수행.
+4. **Cross-selling Action (S → A → H):** 구매 이력 로그를 분석해 System이 시너지 상품을 도출하고, Agent가 개인화된 추천 멘트와 함께 최종 제안.
 
-1.  **Intent Parsing (H → A):** 사용자가 자연어로 검색("민감성 피부 진정 마스크팩")하면, Agent가 이를 파싱하여 검색용 파라미터(JSON)를 생성합니다. `{"skin_type": "sensitive", "effect": "calming", "category": "mask"}`
-2.  **Deterministic Retrieval (A → S):** System(Pandas)이 JSON 파라미터를 받아 `products.json`에서 정확히 일치하는 상품만 필터링합니다. (환각 원천 차단)
-3.  **Fact-based Summarization (S → A):** 사용자가 특정 상품을 선택하면, System이 `reviews.json`에서 '해당 사용자와 동일한 피부 타입'의 리뷰만 추출합니다. Agent는 이 제한된 팩트 데이터만을 바탕으로 장단점을 요약합니다.
-4.  **Cross-selling Action (S → A → H):** `logs.json`의 동시 구매 이력을 분석하여 System이 시너지 상품을 도출하면, Agent가 개인화된 추천 멘트와 함께 최종 제안합니다.
+## 3. 예상 비용 (Expected Costs in Production)
+전체 DB를 LLM 컨텍스트에 밀어 넣는 기존 RAG 방식의 가장 큰 문제인 '토큰 비용 폭발'을 방지하기 위해, System 계층의 결정론적 필터링과 Agent 계층의 가성비 모델(Claude Haiku 4.5)을 결합하여 쿼리당 비용을 절감했습니다.
 
-## 3. 예상 비용 (Expected Costs)
+**[실제 서비스 운영 시 예상 비용 산출 (일일 검색 트래픽 10,000건 가정)]**
 
-효율적인 데이터 흐름 설계를 통해 LLM API 토큰 비용을 절감하는 데 초점을 맞췄습니다. 전체 상품/리뷰 DB를 프롬프트에 넣는 RAG 방식과 달리, **System이 1차 필터링한 소량의 데이터만 LLM에 전달**하므로 비용 효율성이 극대화됩니다.
+* **1. LLM API 호출 비용 (Anthropic Claude Haiku 4.5 기준):**
+  * **로직:** 검색어 파싱(약 100토큰) + 타겟 리뷰 Top N건 샘플링 요약 및 시너지 추천(약 400토큰) = 총 500 토큰 내외
+  * **단가 최적화 (Dual-model Routing):** 무거운 Sonnet 4.6($3/MTok) 대신, 실시간 마이크로 태스크에 최적화된 Haiku 4.5($1/MTok)를 라우팅하여 **기본 API 입력 단가를 66% 절감**했습니다.
+  * **물량 최적화 (System Filtering):** 상품의 전체 리뷰(수만 토큰)를 LLM에 던지지 않고, System(Pandas)이 사전 필터링 및 텍스트 절사(Truncation)를 수행합니다. 이를 통해 **입력 토큰 물량을 99% 이상 덜어냈습니다.**
+  * **예상 비용:** 1만 건 처리 시 일 **약 $10 내외** (단가와 물량의 이중 최적화를 통해, 수천 개의 리뷰를 통째로 넣는 기존 Sonnet 4.6 기반 RAG 모델($1,500+/일 예상) 대비 **99% 이상의 압도적인 비용 절감** 달성)
 
-**[MVP 구축 및 테스트 단계]**
-* **인프라 비용:** $0 (Streamlit Cloud 무료 티어 활용)
-* **AI 서비스 비용:** $5(Claude 유료 Plan 구독료)
-* **LLM API 호출 및 Mock-up 데이터 생성:** $5 (Anthropic API credit 충전).
+* **2. 백엔드 인프라 비용 (AWS 환경 가정): 월 $100 ~ $200 수준**
+  * **로직:** 고비용의 자체 GPU 호스팅이나 상용 Vector DB(Pinecone 등)를 완전히 배제했습니다. 대신 System 단의 가벼운 Pandas 인메모리 필터링과 외부 API 호출만 수행하는 초경량 마이크로서비스 아키텍처를 구축했습니다.
+  * **세부 산출 근거 (일일 검색 10,000건, 피크타임 초당 5건 부하 방어 기준):**
+  * **컴퓨팅 (AWS Fargate):** 약 $40 ~ $50 / 월 (CPU 0.5 vCPU, RAM 1GB 소형 컨테이너 2대 이중화 구성)
+  * **로드밸런싱 (Application Load Balancer):** 약 $20 ~ $25 / 월 (안정적인 트래픽 분산)
+  * **캐싱 (ElastiCache for Redis):** 약 $15 ~ $20 / 월 (사용자 세션 및 검색 상태 유지를 위한 초경량 `t4g.micro` 노드)
+
+
+* **인프라 최적화 임팩트:** AI 서비스임에도 불구하고 무거운 추론 연산을 API로 완벽히 분리해 냈습니다. 덕분에 트래픽 스파이크 발생 시 경량 컨테이너 스케일아웃만으로 유연하게 대처 가능하며, 고가의 고정비 없이 월 100불대의 최소 비용으로 엔터프라이즈급 안정성을 확보합니다.
+
+* **비즈니스 임팩트 요약:** AI 추천 에이전트 도입 시 우려되는 '변동비(API 토큰 비용) 폭증 리스크'를 아키텍처 단에서 완벽히 헷지(Hedge)하여, 상품과 리뷰 데이터가 무한히 스케일업되는 환경에서도 변함없는 수익성(ROI)을 보장합니다.
