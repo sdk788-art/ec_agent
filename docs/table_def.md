@@ -26,6 +26,7 @@ AI 추천 에이전트가 고객의 피부 타입/고민과 상품을 빠르게 
 | `product_type` | `category` / `VARCHAR(50)` | 'cleansing_foam', 'cleansing_oil_water', 'exfoliator_peeling', 'toner', 'toner_pad', 'essence', 'serum', 'ampoule', 'lotion_emulsion', 'moisture_cream', 'eye_cream', 'face_oil', 'sheet_mask', 'wash_off_mask', 'sun_care', 'lip_care' | 상품 카테고리 (스킨케어 표준 분류 16종) |
 | `target_skin_types` | `object(list)` / `ARRAY<VARCHAR>` | Customer DB의 `base_skin_type` 허용값과 동일 | 해당 상품이 적합한 타겟 피부 타입들 (배열) |
 | `target_concerns` | `object(list)` / `ARRAY<VARCHAR>` | Customer DB의 `skin_concerns` 허용값과 동일 | 해당 상품이 해결할 수 있는 타겟 피부 고민들 (배열) |
+| `description` | `object(str)` / `TEXT` | Nullable | 상품에 대한 상세 설명 (AI 컨텍스트 및 UI 노출용) |
 ---
 
 #### 3. Log DB (고객 행동 로그 테이블)
