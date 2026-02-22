@@ -24,21 +24,24 @@ from logic import (
 
 # ── 세션 상태 초기화 ───────────────────────────────────────────────────────
 if "current_customer" not in st.session_state:
-    st.session_state.current_customer = None   # 로그인된 고객 정보 (dict)
+    st.session_state.current_customer = None    # 로그인된 고객 정보 (dict)
 if "search_results" not in st.session_state:
-    st.session_state.search_results = None     # 마지막 검색 결과 DataFrame
+    st.session_state.search_results = None      # 마지막 검색 결과 DataFrame
 if "selected_product_id" not in st.session_state:
-    st.session_state.selected_product_id = None  # 상세 조회 중인 상품 ID
+    st.session_state.selected_product_id = None # 상세 조회 중인 상품 ID
 if "parsed_params" not in st.session_state:
-    st.session_state.parsed_params = None      # Agent가 파싱한 검색 파라미터 dict
+    st.session_state.parsed_params = None       # Agent가 파싱한 검색 파라미터 dict
 if "last_search_query" not in st.session_state:
-    st.session_state.last_search_query = ""    # 마지막 검색어 (LLM 캐시 무효화 기준)
+    st.session_state.last_search_query = ""     # 마지막 검색어 (LLM 캐시 무효화 기준)
 if "cart_added" not in st.session_state:
-    st.session_state.cart_added = set()        # 장바구니에 담긴 상품 ID 집합
+    st.session_state.cart_added = set()         # 장바구니에 담긴 상품 ID 집합
 if "current_page" not in st.session_state:
-    st.session_state.current_page = 1          # 검색 결과 현재 페이지 번호
+    # 화면 라우팅 상태: "search"(검색 목록) | "detail"(상품 상세)
+    st.session_state.current_page = "search"
+if "list_page" not in st.session_state:
+    st.session_state.list_page = 1              # 검색 결과 페이지네이션 번호
 if "sort_by" not in st.session_state:
-    st.session_state.sort_by = "평점순"         # 검색 결과 정렬 기준
+    st.session_state.sort_by = "평점순"          # 검색 결과 정렬 기준
 
 
 # ── 정렬 옵션 상수 ──────────────────────────────────────────────────────────
@@ -61,8 +64,6 @@ def _clear_llm_caches() -> None:
     삭제 대상:
       - review_summary_{product_id}_{skin_type}  : 리뷰 요약 캐시
       - cross_msg_{product_id}_{customer_id}     : 크로스셀링 메시지 캐시
-    삭제하지 않는 대상:
-      - current_customer, search_results, selected_product_id 등 핵심 상태
     """
     keys_to_delete = [
         k for k in list(st.session_state.keys())
@@ -74,11 +75,17 @@ def _clear_llm_caches() -> None:
 
 # ── UI 버튼 콜백 함수 ──────────────────────────────────────────────────────
 # on_click 콜백은 스크립트 재실행(rerun) 이전에 실행되므로,
-# 상태 변경이 즉시 반영되어 한 번의 클릭만으로 UI가 업데이트된다.
+# 상태 변경이 즉시 반영되어 한 번의 클릭만으로 UI가 교체된다.
 
 def _cb_select_product(pid: int) -> None:
-    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID를 세션에 저장."""
+    """상품 선택 버튼 콜백: 상품 ID 저장 + 상세 페이지로 전환."""
     st.session_state.selected_product_id = pid
+    st.session_state.current_page = "detail"  # 상세 화면으로 라우팅
+
+
+def _cb_back_to_search() -> None:
+    """'목록으로 돌아가기' 버튼 콜백: 검색 결과 화면으로 복귀."""
+    st.session_state.current_page = "search"  # 검색 화면으로 라우팅
 
 
 def _cb_add_to_cart(pid: int) -> None:
@@ -89,19 +96,19 @@ def _cb_add_to_cart(pid: int) -> None:
 
 def _cb_sort_changed() -> None:
     """정렬 기준 변경 시 페이지 번호를 1로 초기화."""
-    st.session_state.current_page = 1
+    st.session_state.list_page = 1
 
 
 def _cb_prev_page() -> None:
     """이전 페이지 버튼 콜백: 첫 페이지가 아닌 경우 페이지 번호 1 감소."""
-    if st.session_state.current_page > 1:
-        st.session_state.current_page -= 1
+    if st.session_state.list_page > 1:
+        st.session_state.list_page -= 1
 
 
 def _cb_next_page(max_page: int) -> None:
     """다음 페이지 버튼 콜백: 마지막 페이지가 아닌 경우 페이지 번호 1 증가."""
-    if st.session_state.current_page < max_page:
-        st.session_state.current_page += 1
+    if st.session_state.list_page < max_page:
+        st.session_state.list_page += 1
 
 
 # ── 사이드바: 고객 선택 및 로그인 ─────────────────────────────────────────
@@ -136,12 +143,14 @@ with st.sidebar:
             if not matched.empty:
                 # DataFrame 행을 dict로 변환하여 세션에 저장
                 st.session_state.current_customer = matched.iloc[0].to_dict()
-                # 고객 변경 시 이전 검색 결과 및 LLM 캐시 전부 초기화
+                # 고객 변경 시 모든 상태 초기화
                 st.session_state.search_results = None
                 st.session_state.selected_product_id = None
                 st.session_state.parsed_params = None
                 st.session_state.last_search_query = ""
                 st.session_state.cart_added = set()
+                st.session_state.current_page = "search"
+                st.session_state.list_page = 1
                 _clear_llm_caches()
                 st.success(f"고객 {cid:02d}로 로그인되었습니다.")
 
@@ -154,6 +163,8 @@ with st.sidebar:
             st.session_state.parsed_params = None
             st.session_state.last_search_query = ""
             st.session_state.cart_added = set()
+            st.session_state.current_page = "search"
+            st.session_state.list_page = 1
             _clear_llm_caches()
             st.rerun()
 
@@ -170,28 +181,22 @@ if customer is None:
     # 로그인 전 안내 메시지
     st.info("👈 왼쪽 사이드바에서 고객을 선택하고 로그인해주세요.")
 else:
-    # ── 로그인된 고객 피부 정보 표시 ──────────────────────────────────────
+    # ── 로그인된 고객 피부 정보 표시 (공통 헤더) ──────────────────────────
     st.subheader(f"안녕하세요, 고객 {int(customer['customer_id']):02d}님! 👋")
 
     col1, col2, col3 = st.columns(3)
-
     with col1:
         skin_type_ko = SKIN_TYPE_KO.get(customer["base_skin_type"], customer["base_skin_type"])
         st.metric(label="피부 타입", value=skin_type_ko)
-
     with col2:
         sensitive_ko = "예 🔴" if customer["is_sensitive"] else "아니오 🟢"
         st.metric(label="민감성 피부 여부", value=sensitive_ko)
-
     with col3:
         concerns = customer.get("skin_concerns", [])
-        # JSON 로드 시 리스트가 문자열로 저장될 수 있으므로 안전하게 처리
         if isinstance(concerns, str):
             concerns = json.loads(concerns)
-        concern_count = len(concerns) if concerns else 0
-        st.metric(label="피부 고민 수", value=f"{concern_count}가지")
+        st.metric(label="피부 고민 수", value=f"{len(concerns) if concerns else 0}가지")
 
-    # 피부 고민 태그 표시
     if concerns:
         concern_labels = [SKIN_CONCERN_KO.get(c, c) for c in concerns]
         st.write("**나의 피부 고민:**", " · ".join(f"`{label}`" for label in concern_labels))
@@ -200,88 +205,84 @@ else:
 
     st.divider()
 
-    # ── Step 2 / Micro-task 1: Human — 자연어 검색 입력 UI ────────────────
-    st.subheader("🔍 상품 검색")
-    st.caption("자연어로 원하는 상품을 검색해보세요. AI가 내 피부에 맞는 상품을 찾아드립니다.")
+    # ══════════════════════════════════════════════════════════════════════
+    # 라우팅: current_page 값에 따라 검색 화면 또는 상세 화면을 전환
+    # ══════════════════════════════════════════════════════════════════════
 
-    search_query = st.text_input(
-        label="검색어를 입력하세요",
-        placeholder="예) 민감성 피부 진정 마스크팩, 여드름 피부 클렌징폼, 건성 피부 수분크림",
-        max_chars=200,
-        key="search_query_input",
-    )
+    # ── 검색 화면 ─────────────────────────────────────────────────────────
+    if st.session_state.current_page == "search":
 
-    search_btn = st.button("검색", type="primary", use_container_width=False)
+        # Micro-task 1: Human — 자연어 검색 입력 UI
+        st.subheader("🔍 상품 검색")
+        st.caption("자연어로 원하는 상품을 검색해보세요. AI가 내 피부에 맞는 상품을 찾아드립니다.")
 
-    # ── 검색 버튼 클릭 처리 ────────────────────────────────────────────────
-    if search_btn:
-        if not search_query.strip():
-            st.warning("검색어를 입력해주세요.")
-        else:
-            new_query = search_query.strip()
+        search_query = st.text_input(
+            label="검색어를 입력하세요",
+            placeholder="예) 민감성 피부 진정 마스크팩, 여드름 피부 클렌징폼, 건성 피부 수분크림",
+            max_chars=200,
+            key="search_query_input",
+        )
 
-            # 요구사항 3: 새로운 검색어일 때만 LLM 캐시 초기화
-            # → 동일 검색어 재검색 시 기존 캐시 재사용, 불필요한 API 호출 방지
-            if new_query != st.session_state.last_search_query:
-                _clear_llm_caches()
-                st.session_state.last_search_query = new_query
-                st.session_state.cart_added = set()  # 장바구니 상태도 초기화
+        search_btn = st.button("검색", type="primary", use_container_width=False)
 
-            # Micro-task 2: Agent — 자연어 → JSON 파라미터 파싱
-            with st.spinner("AI가 검색어를 분석 중입니다..."):
-                try:
-                    parsed = agent_parse_intent(new_query)
-                    st.session_state.parsed_params = parsed
-                except (json.JSONDecodeError, Exception) as e:
-                    st.error(f"검색어 분석 중 오류가 발생했습니다: {e}")
-                    st.session_state.parsed_params = None
-                    st.stop()
+        # 검색 버튼 클릭 처리
+        if search_btn:
+            if not search_query.strip():
+                st.warning("검색어를 입력해주세요.")
+            else:
+                new_query = search_query.strip()
 
-            # Micro-task 3: System — 결정론적 Pandas 필터링
-            filtered = system_filter_products(st.session_state.parsed_params, customer)
-            st.session_state.search_results = filtered
-            # 상품 선택 상태 및 페이지 번호 초기화
-            st.session_state.selected_product_id = None
-            st.session_state.current_page = 1
+                # 새로운 검색어일 때만 LLM 캐시 초기화
+                if new_query != st.session_state.last_search_query:
+                    _clear_llm_caches()
+                    st.session_state.last_search_query = new_query
+                    st.session_state.cart_added = set()
 
-    # ── 파싱된 파라미터 표시 (검색 투명성 확보) ────────────────────────────
-    if st.session_state.parsed_params is not None:
-        params = st.session_state.parsed_params
-        with st.expander("🤖 AI 분석 결과 보기", expanded=False):
-            pt = params.get("product_type")
-            pt_ko = PRODUCT_TYPE_KO.get(pt, pt) if pt and pt != "null" else "전체 카테고리"
-            concern_ko_list = [SKIN_CONCERN_KO.get(c, c) for c in (params.get("concerns") or [])]
+                # Micro-task 2: Agent — 자연어 → JSON 파라미터 파싱
+                with st.spinner("AI가 검색어를 분석 중입니다..."):
+                    try:
+                        parsed = agent_parse_intent(new_query)
+                        st.session_state.parsed_params = parsed
+                    except (json.JSONDecodeError, Exception) as e:
+                        st.error(f"검색어 분석 중 오류가 발생했습니다: {e}")
+                        st.session_state.parsed_params = None
+                        st.stop()
 
-            col_p, col_c = st.columns(2)
-            with col_p:
-                st.write(f"**추출된 상품 종류:** `{pt_ko}`")
-            with col_c:
-                if concern_ko_list:
-                    st.write("**추출된 피부 고민:**", ", ".join(f"`{c}`" for c in concern_ko_list))
-                else:
-                    st.write("**추출된 피부 고민:** 없음")
+                # Micro-task 3: System — 결정론적 Pandas 필터링
+                filtered = system_filter_products(st.session_state.parsed_params, customer)
+                st.session_state.search_results = filtered
+                st.session_state.selected_product_id = None
+                st.session_state.list_page = 1
 
-    # ── Step 2 + Step 3: 좌우 분할 뷰 ─────────────────────────────────────
-    # 검색 결과(좌측)와 선택 상품 리뷰/추천(우측)을 나란히 렌더링
-    if st.session_state.search_results is not None:
-        result_df = st.session_state.search_results
+        # 파싱된 파라미터 표시 (검색 투명성 확보)
+        if st.session_state.parsed_params is not None:
+            params = st.session_state.parsed_params
+            with st.expander("🤖 AI 분석 결과 보기", expanded=False):
+                pt = params.get("product_type")
+                pt_ko = PRODUCT_TYPE_KO.get(pt, pt) if pt and pt != "null" else "전체 카테고리"
+                concern_ko_list = [SKIN_CONCERN_KO.get(c, c) for c in (params.get("concerns") or [])]
+                col_p, col_c = st.columns(2)
+                with col_p:
+                    st.write(f"**추출된 상품 종류:** `{pt_ko}`")
+                with col_c:
+                    if concern_ko_list:
+                        st.write("**추출된 피부 고민:**", ", ".join(f"`{c}`" for c in concern_ko_list))
+                    else:
+                        st.write("**추출된 피부 고민:** 없음")
 
-        st.divider()
+        # Micro-task 3 & 4: 검색 결과 리스트 렌더링
+        if st.session_state.search_results is not None:
+            result_df = st.session_state.search_results
 
-        if result_df.empty:
-            st.warning(
-                "조건에 맞는 상품이 없습니다. "
-                "검색어를 바꾸거나 더 넓은 조건으로 다시 검색해보세요."
-            )
-        else:
-            total_count = len(result_df)
+            st.divider()
 
-            # 좌우 동일 비율로 화면 분할
-            col_left, col_right = st.columns([1, 1])
-
-            # ── 좌측: 정렬 + 페이지네이션된 상품 목록 ──────────────────────
-            with col_left:
-                st.subheader("🛍️ 검색 결과")
+            if result_df.empty:
+                st.warning(
+                    "조건에 맞는 상품이 없습니다. "
+                    "검색어를 바꾸거나 더 넓은 조건으로 다시 검색해보세요."
+                )
+            else:
+                total_count = len(result_df)
                 st.write(f"**총 {total_count}개의 상품**을 찾았습니다.")
 
                 # 정렬 기준 선택 UI (key로 세션 상태 직접 연동)
@@ -298,16 +299,15 @@ else:
 
                 # 페이지네이션 계산 (올림 나눗셈으로 총 페이지 수 산출)
                 total_pages = max(1, -(-total_count // _PAGE_SIZE))
-                current_page = st.session_state.current_page
+                list_page = st.session_state.list_page
 
                 # 안전장치: 페이지가 범위를 벗어날 경우 조정
-                if current_page > total_pages:
-                    st.session_state.current_page = total_pages
-                    current_page = total_pages
+                if list_page > total_pages:
+                    st.session_state.list_page = total_pages
+                    list_page = total_pages
 
-                start_idx = (current_page - 1) * _PAGE_SIZE
-                end_idx   = start_idx + _PAGE_SIZE
-                page_df   = sorted_df.iloc[start_idx:end_idx]
+                start_idx = (list_page - 1) * _PAGE_SIZE
+                page_df   = sorted_df.iloc[start_idx : start_idx + _PAGE_SIZE]
 
                 # Micro-task 4: 현재 페이지 상품 카드 렌더링
                 for _, row in page_df.iterrows():
@@ -318,36 +318,39 @@ else:
                         # 평점 표시: 리뷰가 있으면 평점 + 건수, 없으면 "리뷰 없음"
                         avg_rating   = float(row.get("avg_rating",   0.0))
                         review_count = int(row.get("review_count", 0))
-                        rating_str = (
+                        rating_str   = (
                             f"⭐ {avg_rating:.1f} ({review_count}건)"
                             if review_count > 0 else "⭐ 리뷰 없음"
                         )
 
-                        # 상품명, 카테고리 태그, 평점 한 줄 표시
-                        st.markdown(
-                            f"**{row['product_name']}**&nbsp;&nbsp;"
-                            f"`{product_type_ko}`&nbsp;&nbsp;"
-                            f"{rating_str}"
-                        )
-                        # 브랜드, 가격, 재고
-                        st.caption(
-                            f"브랜드: {row['brand']} &nbsp;|&nbsp; "
-                            f"가격: {int(row['price']):,}원 &nbsp;|&nbsp; "
-                            f"재고: {int(row['stock'])}개"
-                        )
-
-                        # 상품 선택 버튼 (전체 너비, on_click 콜백 → 단일 클릭 동작)
-                        is_selected = (
-                            st.session_state.selected_product_id == row["product_id"]
-                        )
-                        st.button(
-                            "✅ 선택됨" if is_selected else "상품 선택",
-                            key=f"select_{row['product_id']}",
-                            use_container_width=True,
-                            type="primary" if is_selected else "secondary",
-                            on_click=_cb_select_product,
-                            args=(int(row["product_id"]),),
-                        )
+                        # 상품 정보 (왼쪽) + 선택 버튼 (오른쪽) 2열 배치
+                        info_col, btn_col = st.columns([4, 1])
+                        with info_col:
+                            st.markdown(
+                                f"**{row['product_name']}**&nbsp;&nbsp;"
+                                f"`{product_type_ko}`&nbsp;&nbsp;{rating_str}"
+                            )
+                            st.caption(
+                                f"브랜드: {row['brand']} &nbsp;|&nbsp; "
+                                f"가격: {int(row['price']):,}원 &nbsp;|&nbsp; "
+                                f"재고: {int(row['stock'])}개"
+                            )
+                            # 한 줄 대표 리뷰
+                            if row.get("description"):
+                                st.info(f"💬 {row['description']}")
+                        with btn_col:
+                            is_selected = (
+                                st.session_state.selected_product_id == row["product_id"]
+                            )
+                            # 클릭 즉시 상세 페이지로 전환 (on_click 콜백)
+                            st.button(
+                                "✅ 선택됨" if is_selected else "상품 선택",
+                                key=f"select_{row['product_id']}",
+                                use_container_width=True,
+                                type="primary" if is_selected else "secondary",
+                                on_click=_cb_select_product,
+                                args=(int(row["product_id"]),),
+                            )
 
                 # 페이지 네비게이션 바 (이전 / 페이지 표시 / 다음)
                 nav_l, nav_c, nav_r = st.columns([1, 2, 1])
@@ -355,14 +358,14 @@ else:
                     st.button(
                         "⬅ 이전",
                         on_click=_cb_prev_page,
-                        disabled=(current_page <= 1),
+                        disabled=(list_page <= 1),
                         use_container_width=True,
                         key="btn_prev_page",
                     )
                 with nav_c:
                     st.markdown(
                         f"<div style='text-align:center; padding-top:8px'>"
-                        f"<b>{current_page} / {total_pages} 페이지</b></div>",
+                        f"<b>{list_page} / {total_pages} 페이지</b></div>",
                         unsafe_allow_html=True,
                     )
                 with nav_r:
@@ -370,159 +373,172 @@ else:
                         "다음 ➡",
                         on_click=_cb_next_page,
                         args=(total_pages,),
-                        disabled=(current_page >= total_pages),
+                        disabled=(list_page >= total_pages),
                         use_container_width=True,
                         key="btn_next_page",
                     )
 
-            # ── 우측: 선택된 상품의 상세 정보 / 리뷰 요약 / 시너지 추천 ──────
-            with col_right:
-                if st.session_state.selected_product_id is None:
-                    # 아직 상품을 선택하지 않은 경우 안내 메시지 표시
-                    st.info("👈 좌측에서 상품을 선택하시면 상세 리뷰 분석을 볼 수 있습니다.")
+    # ── 상품 상세 화면 ────────────────────────────────────────────────────
+    elif st.session_state.current_page == "detail":
+        selected_id  = st.session_state.selected_product_id
+        selected_row = products[products["product_id"] == selected_id]
+
+        # 화면 최상단: '목록으로 돌아가기' 버튼
+        st.button(
+            "← 목록으로 돌아가기",
+            on_click=_cb_back_to_search,
+            type="secondary",
+            key="btn_back_top",
+        )
+
+        if not selected_row.empty:
+            p            = selected_row.iloc[0]
+            skin_type    = customer["base_skin_type"]
+            skin_type_ko = SKIN_TYPE_KO.get(skin_type, skin_type)
+
+            st.divider()
+
+            # ── Micro-task 7 (상단): 상품 상세 정보 ────────────────────────
+            st.subheader(f"📦 {p['product_name']}")
+
+            # 전체 너비를 활용하여 4열로 지표 배치
+            d1, d2, d3, d4 = st.columns(4)
+            with d1:
+                st.metric("카테고리", PRODUCT_TYPE_KO.get(p["product_type"], p["product_type"]))
+            with d2:
+                st.metric("브랜드", p["brand"])
+            with d3:
+                st.metric("가격", f"{int(p['price']):,}원")
+            with d4:
+                st.metric("재고", f"{int(p['stock'])}개")
+
+            if p.get("description"):
+                st.info(f"💬 {p['description']}")
+
+            st.divider()
+
+            # ── Micro-task 5: System — 동일 피부 타입 리뷰 필터링 및 지표 계산 ──
+            filtered_reviews_df, metrics = system_get_same_skin_reviews(selected_id, skin_type)
+
+            st.subheader(f"🔍 {skin_type_ko} 피부 고객 리뷰 분석")
+
+            m1, m2, m3 = st.columns(3)
+            with m1:
+                st.metric("동일 피부 타입 리뷰", f"{metrics['total_reviews']}건")
+            with m2:
+                avg_display = f"⭐ {metrics['avg_rate']:.1f} / 5.0" if metrics["total_reviews"] > 0 else "N/A"
+                st.metric("평균 평점", avg_display)
+            with m3:
+                sat_display = f"{metrics['satisfaction_pct']}%" if metrics["total_reviews"] > 0 else "N/A"
+                st.metric("만족도 (4점↑)", sat_display)
+
+            # ── Micro-task 6: Agent — 리뷰 요약 (세션 캐시로 중복 API 호출 방지) ──
+            # 캐시 키에 skin_type 포함 → 다른 피부 타입 고객 로그인 시 재계산
+            review_cache_key = f"review_summary_{selected_id}_{skin_type}"
+
+            if review_cache_key not in st.session_state:
+                if metrics["total_reviews"] > 0:
+                    with st.spinner("AI가 리뷰를 분석하고 요약 중입니다..."):
+                        st.session_state[review_cache_key] = agent_summarize_reviews(
+                            filtered_reviews_df, skin_type, metrics
+                        )
                 else:
-                    selected_id  = st.session_state.selected_product_id
-                    selected_row = products[products["product_id"] == selected_id]
+                    # 리뷰 없음 → API 호출 생략
+                    st.session_state[review_cache_key] = None
 
-                    if not selected_row.empty:
-                        p            = selected_row.iloc[0]
-                        skin_type    = customer["base_skin_type"]
-                        skin_type_ko = SKIN_TYPE_KO.get(skin_type, skin_type)
+            # ── Micro-task 7 (중단): AI 리뷰 요약 출력 ────────────────────────
+            st.subheader("🤖 AI 리뷰 요약")
+            summary = st.session_state.get(review_cache_key)
+            if summary:
+                st.success(summary)
+            else:
+                st.info(f"{skin_type_ko} 피부 타입 고객이 남긴 리뷰가 아직 없습니다.")
 
-                        # ── Micro-task 7 (상단): 상품 상세 정보 ──────────────
-                        st.subheader(f"📦 {p['product_name']}")
+            # ── Micro-task 7 (하단): 장바구니 담기 버튼 ───────────────────────
+            main_pid = int(selected_id)
+            if main_pid in st.session_state.cart_added:
+                st.button(
+                    "✅ 장바구니에 담겼습니다",
+                    type="primary",
+                    key=f"cart_{main_pid}",
+                    disabled=True,
+                )
+            else:
+                st.button(
+                    "🛒 장바구니 담기",
+                    type="primary",
+                    key=f"cart_{main_pid}",
+                    on_click=_cb_add_to_cart,
+                    args=(main_pid,),
+                )
 
-                        # 우측 컬럼 내 2열로 지표 배치 (4열은 너무 좁음)
-                        d1, d2 = st.columns(2)
-                        with d1:
-                            st.metric("카테고리", PRODUCT_TYPE_KO.get(p["product_type"], p["product_type"]))
-                            st.metric("가격", f"{int(p['price']):,}원")
-                        with d2:
-                            st.metric("브랜드", p["brand"])
-                            st.metric("재고", f"{int(p['stock'])}개")
+            st.divider()
 
-                        if p.get("description"):
-                            st.info(f"💬 {p['description']}")
+            # ── Micro-task 8: System — 함께 구매 빈도 기반 시너지 상품 추출 ─────
+            cross_df = system_get_cross_sell_products(selected_id, top_n=2)
 
-                        st.divider()
+            # ── Micro-task 9: Agent — 크로스셀링 메시지 생성 및 UI 출력 ─────────
+            if not cross_df.empty:
+                customer_id   = int(customer["customer_id"])
+                cross_msg_key = f"cross_msg_{selected_id}_{customer_id}"
 
-                        # ── Micro-task 5: System — 동일 피부 타입 리뷰 필터링 ──
-                        filtered_reviews_df, metrics = system_get_same_skin_reviews(
-                            selected_id, skin_type
+                if cross_msg_key not in st.session_state:
+                    with st.spinner("AI가 맞춤 시너지 추천 메시지를 작성 중입니다..."):
+                        st.session_state[cross_msg_key] = agent_recommend_cross_sell(
+                            p, cross_df, customer
                         )
 
-                        st.subheader(f"🔍 {skin_type_ko} 피부 고객 리뷰 분석")
+                st.subheader("✨ 함께 쓰면 더 좋은 시너지 상품")
 
-                        m1, m2, m3 = st.columns(3)
-                        with m1:
-                            st.metric("동일 피부 타입 리뷰", f"{metrics['total_reviews']}건")
-                        with m2:
-                            avg_display = (
-                                f"⭐ {metrics['avg_rate']:.1f}"
-                                if metrics["total_reviews"] > 0 else "N/A"
+                cross_msg = st.session_state.get(cross_msg_key)
+                if cross_msg:
+                    st.info(f"💡 {cross_msg}")
+
+                # 추천 상품 카드 표시
+                for _, cs_row in cross_df.iterrows():
+                    with st.container(border=True):
+                        cs_type_ko = PRODUCT_TYPE_KO.get(
+                            cs_row["product_type"], cs_row["product_type"]
+                        )
+                        cs_info_col, cs_btn_col = st.columns([4, 1])
+                        with cs_info_col:
+                            st.markdown(
+                                f"**{cs_row['product_name']}**&nbsp;&nbsp;`{cs_type_ko}`"
                             )
-                            st.metric("평균 평점", avg_display)
-                        with m3:
-                            sat_display = (
-                                f"{metrics['satisfaction_pct']}%"
-                                if metrics["total_reviews"] > 0 else "N/A"
+                            st.caption(
+                                f"브랜드: {cs_row['brand']} &nbsp;|&nbsp; "
+                                f"가격: {int(cs_row['price']):,}원 &nbsp;|&nbsp; "
+                                f"재고: {int(cs_row['stock'])}개"
                             )
-                            st.metric("만족도 (4점↑)", sat_display)
-
-                        # ── Micro-task 6: Agent — 리뷰 요약 ──────────────────
-                        # 캐시 키에 skin_type 포함 → 다른 피부 타입 고객 로그인 시 재계산
-                        review_cache_key = f"review_summary_{selected_id}_{skin_type}"
-
-                        if review_cache_key not in st.session_state:
-                            if metrics["total_reviews"] > 0:
-                                with st.spinner("AI가 리뷰를 분석하고 요약 중입니다..."):
-                                    st.session_state[review_cache_key] = agent_summarize_reviews(
-                                        filtered_reviews_df, skin_type, metrics
-                                    )
+                            if cs_row.get("description"):
+                                st.write(f"💬 {cs_row['description']}")
+                        with cs_btn_col:
+                            cs_id = int(cs_row["product_id"])
+                            if cs_id in st.session_state.cart_added:
+                                st.button(
+                                    "✅ 담겼습니다",
+                                    key=f"cart_cross_{cs_id}",
+                                    use_container_width=True,
+                                    disabled=True,
+                                )
                             else:
-                                # 리뷰 없음 → API 호출 생략
-                                st.session_state[review_cache_key] = None
+                                # on_click 콜백 패턴: 단일 클릭으로 즉시 상태 반영
+                                st.button(
+                                    "🛒 장바구니 추가",
+                                    key=f"cart_cross_{cs_id}",
+                                    use_container_width=True,
+                                    on_click=_cb_add_to_cart,
+                                    args=(cs_id,),
+                                )
+            else:
+                st.info("이 상품과 함께 구매된 데이터가 충분하지 않아 시너지 추천을 제공할 수 없습니다.")
 
-                        # ── Micro-task 7 (중단): AI 리뷰 요약 출력 ───────────
-                        st.subheader("🤖 AI 리뷰 요약")
-                        summary = st.session_state.get(review_cache_key)
-                        if summary:
-                            st.success(summary)
-                        else:
-                            st.info(f"{skin_type_ko} 피부 타입 고객이 남긴 리뷰가 아직 없습니다.")
+            st.divider()
 
-                        # ── Micro-task 7 (하단): 장바구니 담기 버튼 ──────────
-                        main_pid = int(selected_id)
-                        if main_pid in st.session_state.cart_added:
-                            st.button(
-                                "✅ 장바구니에 담겼습니다",
-                                type="primary",
-                                key=f"cart_{main_pid}",
-                                disabled=True,
-                            )
-                        else:
-                            st.button(
-                                "🛒 장바구니 담기",
-                                type="primary",
-                                key=f"cart_{main_pid}",
-                                on_click=_cb_add_to_cart,
-                                args=(main_pid,),
-                            )
-
-                        st.divider()
-
-                        # ── Micro-task 8: System — 시너지 상품 추출 ──────────
-                        cross_df = system_get_cross_sell_products(selected_id, top_n=2)
-
-                        # ── Micro-task 9: Agent — 크로스셀링 메시지 생성 ──────
-                        if not cross_df.empty:
-                            customer_id   = int(customer["customer_id"])
-                            cross_msg_key = f"cross_msg_{selected_id}_{customer_id}"
-
-                            if cross_msg_key not in st.session_state:
-                                with st.spinner("AI가 맞춤 시너지 추천 메시지를 작성 중입니다..."):
-                                    st.session_state[cross_msg_key] = agent_recommend_cross_sell(
-                                        p, cross_df, customer
-                                    )
-
-                            st.subheader("✨ 함께 쓰면 더 좋은 시너지 상품")
-
-                            cross_msg = st.session_state.get(cross_msg_key)
-                            if cross_msg:
-                                st.info(f"💡 {cross_msg}")
-
-                            # 추천 상품 카드 표시
-                            for _, cs_row in cross_df.iterrows():
-                                with st.container(border=True):
-                                    cs_type_ko = PRODUCT_TYPE_KO.get(
-                                        cs_row["product_type"], cs_row["product_type"]
-                                    )
-                                    st.markdown(
-                                        f"**{cs_row['product_name']}**&nbsp;&nbsp;`{cs_type_ko}`"
-                                    )
-                                    st.caption(
-                                        f"브랜드: {cs_row['brand']} &nbsp;|&nbsp; "
-                                        f"가격: {int(cs_row['price']):,}원 &nbsp;|&nbsp; "
-                                        f"재고: {int(cs_row['stock'])}개"
-                                    )
-                                    if cs_row.get("description"):
-                                        st.write(f"💬 {cs_row['description']}")
-
-                                    cs_id = int(cs_row["product_id"])
-                                    if cs_id in st.session_state.cart_added:
-                                        st.button(
-                                            "✅ 담겼습니다",
-                                            key=f"cart_cross_{cs_id}",
-                                            use_container_width=True,
-                                            disabled=True,
-                                        )
-                                    else:
-                                        st.button(
-                                            "🛒 장바구니 추가",
-                                            key=f"cart_cross_{cs_id}",
-                                            use_container_width=True,
-                                            on_click=_cb_add_to_cart,
-                                            args=(cs_id,),
-                                        )
-                        else:
-                            st.info("이 상품과 함께 구매된 데이터가 충분하지 않아 시너지 추천을 제공할 수 없습니다.")
+            # 화면 하단에도 '목록으로 돌아가기' 버튼 추가 (긴 페이지 UX 고려)
+            st.button(
+                "← 목록으로 돌아가기",
+                on_click=_cb_back_to_search,
+                type="secondary",
+                key="btn_back_bottom",
+            )
