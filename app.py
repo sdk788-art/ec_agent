@@ -35,6 +35,23 @@ if "last_search_query" not in st.session_state:
     st.session_state.last_search_query = ""    # 마지막 검색어 (LLM 캐시 무효화 기준)
 if "cart_added" not in st.session_state:
     st.session_state.cart_added = set()        # 장바구니에 담긴 상품 ID 집합
+if "current_page" not in st.session_state:
+    st.session_state.current_page = 1          # 검색 결과 현재 페이지 번호
+if "sort_by" not in st.session_state:
+    st.session_state.sort_by = "평점순"         # 검색 결과 정렬 기준
+
+
+# ── 정렬 옵션 상수 ──────────────────────────────────────────────────────────
+# 표시 이름 → (DataFrame 컬럼명, 오름차순 여부) 매핑
+_SORT_OPTIONS = ["평점순", "후기 많은순", "판매량 순", "낮은 가격순", "높은 가격순"]
+_SORT_COLUMN_MAP: dict[str, tuple[str, bool]] = {
+    "평점순":     ("avg_rating",   False),  # 내림차순
+    "후기 많은순": ("review_count", False),  # 내림차순
+    "판매량 순":  ("sales_volume", False),  # 내림차순
+    "낮은 가격순": ("price",        True),   # 오름차순
+    "높은 가격순": ("price",        False),  # 내림차순
+}
+_PAGE_SIZE = 10  # 페이지당 노출 상품 수
 
 
 # ── LLM 캐시 관리 유틸리티 ──────────────────────────────────────────────────
@@ -68,6 +85,23 @@ def _cb_add_to_cart(pid: int) -> None:
     """'장바구니 담기/추가' 버튼 콜백: cart_added에 ID를 추가하고 풍선 효과 표시."""
     st.session_state.cart_added.add(pid)
     st.balloons()
+
+
+def _cb_sort_changed() -> None:
+    """정렬 기준 변경 시 페이지 번호를 1로 초기화."""
+    st.session_state.current_page = 1
+
+
+def _cb_prev_page() -> None:
+    """이전 페이지 버튼 콜백: 첫 페이지가 아닌 경우 페이지 번호 1 감소."""
+    if st.session_state.current_page > 1:
+        st.session_state.current_page -= 1
+
+
+def _cb_next_page(max_page: int) -> None:
+    """다음 페이지 버튼 콜백: 마지막 페이지가 아닌 경우 페이지 번호 1 증가."""
+    if st.session_state.current_page < max_page:
+        st.session_state.current_page += 1
 
 
 # ── 사이드바: 고객 선택 및 로그인 ─────────────────────────────────────────
@@ -206,8 +240,9 @@ else:
             # Micro-task 3: System — 결정론적 Pandas 필터링
             filtered = system_filter_products(st.session_state.parsed_params, customer)
             st.session_state.search_results = filtered
-            # 상품 선택 상태 초기화
+            # 상품 선택 상태 및 페이지 번호 초기화
             st.session_state.selected_product_id = None
+            st.session_state.current_page = 1
 
     # ── 파싱된 파라미터 표시 (검색 투명성 확보) ────────────────────────────
     if st.session_state.parsed_params is not None:
@@ -226,7 +261,7 @@ else:
                 else:
                     st.write("**추출된 피부 고민:** 없음")
 
-    # ── Step 2 / Micro-task 3 & 4: 검색 결과 표시 + 상품 선택 버튼 ─────────
+    # ── Step 2 / Micro-task 3 & 4: 검색 결과 표시 + 정렬 + 페이지네이션 ──────
     if st.session_state.search_results is not None:
         result_df = st.session_state.search_results
 
@@ -238,10 +273,37 @@ else:
                 "검색어를 바꾸거나 더 넓은 조건으로 다시 검색해보세요."
             )
         else:
-            st.write(f"**총 {len(result_df)}개의 상품**을 찾았습니다.")
+            total_count = len(result_df)
+            st.write(f"**총 {total_count}개의 상품**을 찾았습니다.")
 
-            # 각 상품을 카드 형태로 표시
-            for _, row in result_df.iterrows():
+            # 정렬 기준 선택 UI
+            # key="sort_by"로 세션 상태와 직접 연동; on_change로 페이지 번호 초기화
+            st.selectbox(
+                "정렬 기준",
+                options=_SORT_OPTIONS,
+                key="sort_by",
+                on_change=_cb_sort_changed,
+            )
+
+            # 선택된 정렬 기준으로 DataFrame 정렬
+            sort_col, sort_asc = _SORT_COLUMN_MAP[st.session_state.sort_by]
+            sorted_df = result_df.sort_values(sort_col, ascending=sort_asc).reset_index(drop=True)
+
+            # 페이지네이션 계산 (올림 나눗셈으로 총 페이지 수 산출)
+            total_pages = max(1, -(-total_count // _PAGE_SIZE))
+            current_page = st.session_state.current_page
+
+            # 안전장치: 정렬 변경 또는 결과 변동으로 페이지가 범위를 벗어날 경우 조정
+            if current_page > total_pages:
+                st.session_state.current_page = total_pages
+                current_page = total_pages
+
+            start_idx = (current_page - 1) * _PAGE_SIZE
+            end_idx   = start_idx + _PAGE_SIZE
+            page_df   = sorted_df.iloc[start_idx:end_idx]
+
+            # 현재 페이지 상품 카드 렌더링
+            for _, row in page_df.iterrows():
                 with st.container(border=True):
                     # 상품 정보 컬럼 (왼쪽) + 선택 버튼 (오른쪽)
                     info_col, btn_col = st.columns([4, 1])
@@ -250,12 +312,21 @@ else:
                         product_type_ko = PRODUCT_TYPE_KO.get(
                             row["product_type"], row["product_type"]
                         )
-                        # 상품명 및 카테고리 태그
+                        # 평점 표시: 리뷰가 있는 경우 평점 + 건수, 없는 경우 "리뷰 없음"
+                        avg_rating   = float(row.get("avg_rating",   0.0))
+                        review_count = int(row.get("review_count", 0))
+                        if review_count > 0:
+                            rating_str = f"⭐ {avg_rating:.1f} ({review_count}건)"
+                        else:
+                            rating_str = "⭐ 리뷰 없음"
+
+                        # 상품명, 카테고리 태그, 평점 한 줄 표시
                         st.markdown(
                             f"**{row['product_name']}**&nbsp;&nbsp;"
-                            f"`{product_type_ko}`"
+                            f"`{product_type_ko}`&nbsp;&nbsp;"
+                            f"{rating_str}"
                         )
-                        # 브랜드 및 가격
+                        # 브랜드, 가격, 재고
                         st.caption(
                             f"브랜드: {row['brand']} &nbsp;|&nbsp; "
                             f"가격: {int(row['price']):,}원 &nbsp;|&nbsp; "
@@ -265,8 +336,7 @@ else:
                         if row.get("description"):
                             st.info(f"💬 {row['description']}")
 
-                    # Micro-task 4: 상품 선택 버튼
-                    # on_click 콜백으로 교체 → 클릭 즉시 상태 반영 (단일 클릭 동작)
+                    # Micro-task 4: 상품 선택 버튼 (on_click 콜백 → 단일 클릭 동작)
                     with btn_col:
                         is_selected = (
                             st.session_state.selected_product_id == row["product_id"]
@@ -280,6 +350,32 @@ else:
                             on_click=_cb_select_product,
                             args=(int(row["product_id"]),),
                         )
+
+            # 페이지 네비게이션 바 (이전 / 페이지 표시 / 다음)
+            nav_left, nav_center, nav_right = st.columns([1, 2, 1])
+            with nav_left:
+                st.button(
+                    "⬅ 이전 페이지",
+                    on_click=_cb_prev_page,
+                    disabled=(current_page <= 1),
+                    use_container_width=True,
+                    key="btn_prev_page",
+                )
+            with nav_center:
+                st.markdown(
+                    f"<div style='text-align:center; padding-top:8px'>"
+                    f"<b>{current_page} / {total_pages} 페이지</b></div>",
+                    unsafe_allow_html=True,
+                )
+            with nav_right:
+                st.button(
+                    "다음 페이지 ➡",
+                    on_click=_cb_next_page,
+                    args=(total_pages,),
+                    disabled=(current_page >= total_pages),
+                    use_container_width=True,
+                    key="btn_next_page",
+                )
 
     # ── Step 3: 상품 상세 / 리뷰 요약 / 시너지 상품 추천 ──────────────────
     if st.session_state.selected_product_id is not None:
