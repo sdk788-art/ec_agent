@@ -144,6 +144,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Streamlit 로컬 시크릿 파일 (실제 API Key 포함 위험)
+.streamlit/secrets.toml
+
 # Spyder project settings
 .spyderproject
 .spyproject
