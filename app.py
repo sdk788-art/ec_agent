@@ -1,7 +1,6 @@
 import json
 
 import streamlit as st
-import streamlit.components.v1 as components
 
 # 에이전트 함수 및 상수 임포트 (Anthropic API 호출 계층)
 # agents.py 내부에서 load_dotenv()가 선행 실행되므로 별도 호출 불필요
@@ -37,11 +36,11 @@ if "last_search_query" not in st.session_state:
 if "cart_added" not in st.session_state:
     st.session_state.cart_added = set()        # 장바구니에 담긴 상품 ID 집합
 if "current_page" not in st.session_state:
-    st.session_state.current_page = 1          # 검색 결과 현재 페이지 번호
+    st.session_state.current_page = 1              # 검색 결과 현재 페이지 번호
 if "sort_by" not in st.session_state:
-    st.session_state.sort_by = "평점순"         # 검색 결과 정렬 기준
-if "scroll_to_review" not in st.session_state:
-    st.session_state.scroll_to_review = False  # 리뷰 섹션 자동 스크롤 트리거 플래그
+    st.session_state.sort_by = "평점순"             # 검색 결과 정렬 기준
+if "search_results_expanded" not in st.session_state:
+    st.session_state.search_results_expanded = True  # 검색 결과 목록 Expander 펼침 여부
 
 
 # ── 정렬 옵션 상수 ──────────────────────────────────────────────────────────
@@ -80,9 +79,10 @@ def _clear_llm_caches() -> None:
 # 상태 변경이 즉시 반영되어 한 번의 클릭만으로 UI가 업데이트된다.
 
 def _cb_select_product(pid: int) -> None:
-    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID를 세션에 저장하고 스크롤 플래그 설정."""
+    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID 저장 + 결과 목록 Expander 자동 접기."""
     st.session_state.selected_product_id = pid
-    st.session_state.scroll_to_review = True  # 다음 렌더링 시 리뷰 섹션으로 자동 스크롤
+    # 목록을 접어서 하단 리뷰 섹션이 화면 상단으로 올라오도록 함
+    st.session_state.search_results_expanded = False
 
 
 def _cb_add_to_cart(pid: int) -> None:
@@ -244,9 +244,10 @@ else:
             # Micro-task 3: System — 결정론적 Pandas 필터링
             filtered = system_filter_products(st.session_state.parsed_params, customer)
             st.session_state.search_results = filtered
-            # 상품 선택 상태 및 페이지 번호 초기화
+            # 상품 선택 상태, 페이지 번호, Expander 상태 초기화
             st.session_state.selected_product_id = None
             st.session_state.current_page = 1
+            st.session_state.search_results_expanded = True  # 새 검색 시 목록 펼치기
 
     # ── 파싱된 파라미터 표시 (검색 투명성 확보) ────────────────────────────
     if st.session_state.parsed_params is not None:
@@ -306,117 +307,86 @@ else:
             end_idx   = start_idx + _PAGE_SIZE
             page_df   = sorted_df.iloc[start_idx:end_idx]
 
-            # 현재 페이지 상품 카드 렌더링
-            for _, row in page_df.iterrows():
-                with st.container(border=True):
-                    # 상품 정보 컬럼 (왼쪽) + 선택 버튼 (오른쪽)
-                    info_col, btn_col = st.columns([4, 1])
+            # 검색 결과 목록 Expander: 상품 선택 시 접히고, 새 검색 시 펼쳐짐
+            # expanded 값은 search_results_expanded 세션 상태로 제어
+            with st.expander("검색 결과 목록", expanded=st.session_state.search_results_expanded):
+                # 현재 페이지 상품 카드 렌더링
+                for _, row in page_df.iterrows():
+                    with st.container(border=True):
+                        # 상품 정보 컬럼 (왼쪽) + 선택 버튼 (오른쪽)
+                        info_col, btn_col = st.columns([4, 1])
 
-                    with info_col:
-                        product_type_ko = PRODUCT_TYPE_KO.get(
-                            row["product_type"], row["product_type"]
-                        )
-                        # 평점 표시: 리뷰가 있는 경우 평점 + 건수, 없는 경우 "리뷰 없음"
-                        avg_rating   = float(row.get("avg_rating",   0.0))
-                        review_count = int(row.get("review_count", 0))
-                        if review_count > 0:
-                            rating_str = f"⭐ {avg_rating:.1f} ({review_count}건)"
-                        else:
-                            rating_str = "⭐ 리뷰 없음"
+                        with info_col:
+                            product_type_ko = PRODUCT_TYPE_KO.get(
+                                row["product_type"], row["product_type"]
+                            )
+                            # 평점 표시: 리뷰가 있는 경우 평점 + 건수, 없는 경우 "리뷰 없음"
+                            avg_rating   = float(row.get("avg_rating",   0.0))
+                            review_count = int(row.get("review_count", 0))
+                            if review_count > 0:
+                                rating_str = f"⭐ {avg_rating:.1f} ({review_count}건)"
+                            else:
+                                rating_str = "⭐ 리뷰 없음"
 
-                        # 상품명, 카테고리 태그, 평점 한 줄 표시
-                        st.markdown(
-                            f"**{row['product_name']}**&nbsp;&nbsp;"
-                            f"`{product_type_ko}`&nbsp;&nbsp;"
-                            f"{rating_str}"
-                        )
-                        # 브랜드, 가격, 재고
-                        st.caption(
-                            f"브랜드: {row['brand']} &nbsp;|&nbsp; "
-                            f"가격: {int(row['price']):,}원 &nbsp;|&nbsp; "
-                            f"재고: {int(row['stock'])}개"
-                        )
-                        # 한 줄 대표 리뷰 (description)
-                        if row.get("description"):
-                            st.info(f"💬 {row['description']}")
+                            # 상품명, 카테고리 태그, 평점 한 줄 표시
+                            st.markdown(
+                                f"**{row['product_name']}**&nbsp;&nbsp;"
+                                f"`{product_type_ko}`&nbsp;&nbsp;"
+                                f"{rating_str}"
+                            )
+                            # 브랜드, 가격, 재고
+                            st.caption(
+                                f"브랜드: {row['brand']} &nbsp;|&nbsp; "
+                                f"가격: {int(row['price']):,}원 &nbsp;|&nbsp; "
+                                f"재고: {int(row['stock'])}개"
+                            )
+                            # 한 줄 대표 리뷰 (description)
+                            if row.get("description"):
+                                st.info(f"💬 {row['description']}")
 
-                    # Micro-task 4: 상품 선택 버튼 (on_click 콜백 → 단일 클릭 동작)
-                    with btn_col:
-                        is_selected = (
-                            st.session_state.selected_product_id == row["product_id"]
-                        )
-                        btn_label = "✅ 선택됨" if is_selected else "상품 선택"
-                        st.button(
-                            btn_label,
-                            key=f"select_{row['product_id']}",
-                            use_container_width=True,
-                            type="primary" if is_selected else "secondary",
-                            on_click=_cb_select_product,
-                            args=(int(row["product_id"]),),
-                        )
+                        # Micro-task 4: 상품 선택 버튼 (on_click 콜백 → 단일 클릭 동작)
+                        with btn_col:
+                            is_selected = (
+                                st.session_state.selected_product_id == row["product_id"]
+                            )
+                            btn_label = "✅ 선택됨" if is_selected else "상품 선택"
+                            st.button(
+                                btn_label,
+                                key=f"select_{row['product_id']}",
+                                use_container_width=True,
+                                type="primary" if is_selected else "secondary",
+                                on_click=_cb_select_product,
+                                args=(int(row["product_id"]),),
+                            )
 
-            # 페이지 네비게이션 바 (이전 / 페이지 표시 / 다음)
-            nav_left, nav_center, nav_right = st.columns([1, 2, 1])
-            with nav_left:
-                st.button(
-                    "⬅ 이전 페이지",
-                    on_click=_cb_prev_page,
-                    disabled=(current_page <= 1),
-                    use_container_width=True,
-                    key="btn_prev_page",
-                )
-            with nav_center:
-                st.markdown(
-                    f"<div style='text-align:center; padding-top:8px'>"
-                    f"<b>{current_page} / {total_pages} 페이지</b></div>",
-                    unsafe_allow_html=True,
-                )
-            with nav_right:
-                st.button(
-                    "다음 페이지 ➡",
-                    on_click=_cb_next_page,
-                    args=(total_pages,),
-                    disabled=(current_page >= total_pages),
-                    use_container_width=True,
-                    key="btn_next_page",
-                )
+                # 페이지 네비게이션 바 (이전 / 페이지 표시 / 다음)
+                nav_left, nav_center, nav_right = st.columns([1, 2, 1])
+                with nav_left:
+                    st.button(
+                        "⬅ 이전 페이지",
+                        on_click=_cb_prev_page,
+                        disabled=(current_page <= 1),
+                        use_container_width=True,
+                        key="btn_prev_page",
+                    )
+                with nav_center:
+                    st.markdown(
+                        f"<div style='text-align:center; padding-top:8px'>"
+                        f"<b>{current_page} / {total_pages} 페이지</b></div>",
+                        unsafe_allow_html=True,
+                    )
+                with nav_right:
+                    st.button(
+                        "다음 페이지 ➡",
+                        on_click=_cb_next_page,
+                        args=(total_pages,),
+                        disabled=(current_page >= total_pages),
+                        use_container_width=True,
+                        key="btn_next_page",
+                    )
 
     # ── Step 3: 상품 상세 / 리뷰 요약 / 시너지 상품 추천 ──────────────────
-    # 자동 스크롤 앵커: 상품 선택 시 이 위치로 부드럽게 스크롤
-    st.markdown('<div id="review-anchor"></div>', unsafe_allow_html=True)
-
     if st.session_state.selected_product_id is not None:
-        # 상품 선택 직후 첫 렌더링에서만 리뷰 섹션으로 자동 스크롤
-        # scroll_to_review 플래그 소비 후 즉시 False로 초기화 → 이후 재렌더링에서 반복 스크롤 방지
-        if st.session_state.scroll_to_review:
-            st.session_state.scroll_to_review = False
-            components.html(
-                """
-                <script>
-                    // Streamlit은 iframe 내부에서 실행 → window.parent로 부모 문서에 접근
-                    // setInterval 폴링: 앵커가 DOM에 등장할 때까지 최대 10회(100ms 간격) 재시도
-                    var attempts = 0;
-                    var maxAttempts = 10;
-                    console.log("[AutoScroll] 앵커 탐색 시작...");
-                    var timer = setInterval(function () {
-                        attempts++;
-                        var el = window.parent.document.getElementById("review-anchor");
-                        if (el) {
-                            clearInterval(timer);
-                            el.scrollIntoView({ behavior: "smooth", block: "start" });
-                            console.log("[AutoScroll] 스크롤 실행 완료 (시도 횟수: " + attempts + ")");
-                        } else if (attempts >= maxAttempts) {
-                            clearInterval(timer);
-                            console.log("[AutoScroll] 앵커를 찾지 못했습니다 (" + maxAttempts + "회 시도 후 중단)");
-                        } else {
-                            console.log("[AutoScroll] 앵커 탐색 중... (" + attempts + "/" + maxAttempts + ")");
-                        }
-                    }, 100);
-                </script>
-                """,
-                height=0,  # 화면에 표시되지 않는 0px 높이 iframe
-            )
-
         selected_id = st.session_state.selected_product_id
         selected_row = products[products["product_id"] == selected_id]
 
