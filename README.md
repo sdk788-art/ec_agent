@@ -47,9 +47,9 @@
 my-ecommerce-agent/
 ├── data/                      # 대규모 목업 데이터 (JSON)
 │   ├── customers.json         # 고객 데이터 (200 rows)
-│   ├── logs.json              # 유저 행동 로그 (3,124 rows)
+│   ├── logs.json              # 유저 행동 로그 (6,188 rows)
 │   ├── products.json          # 뷰티 상품 데이터 (512 rows)
-│   └── reviews.json           # 상품별 고객 리뷰 (796 rows)
+│   └── reviews.json           # 상품별 고객 리뷰 (1,503 rows)
 ├── docs/                      # 기획 및 설계 문서
 │   ├── architecture.md        # H-A-S 아키텍처 설계 메모
 │   ├── functional_spec.md     # 기능 명세서
