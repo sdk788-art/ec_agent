@@ -29,6 +29,61 @@ def _to_list(value) -> list:
     return []
 
 
+# ── 검색 결과 상품 지표 집계: 평점 평균, 리뷰 수, 판매량 ───────────────────────
+def system_aggregate_product_stats(products_df: pd.DataFrame) -> pd.DataFrame:
+    """검색된 상품 DataFrame에 평점 평균(avg_rating), 리뷰 수(review_count),
+    판매량(sales_volume) 지표를 병합하여 반환.
+
+    H-A-S 원칙: LLM 개입 없이 순수 Pandas 집계 연산만 사용.
+    리뷰나 판매량이 없는 상품은 결측치를 0으로 처리.
+    """
+    if products_df.empty:
+        # 빈 DataFrame에도 정렬용 컬럼 추가
+        result = products_df.copy()
+        result["avg_rating"]   = 0.0
+        result["review_count"] = 0
+        result["sales_volume"] = 0
+        return result
+
+    product_ids = products_df["product_id"].tolist()
+
+    # 평점 평균 및 리뷰 수 계산 (reviews 테이블 집계)
+    product_reviews = reviews[reviews["product_id"].isin(product_ids)]
+    if not product_reviews.empty:
+        rating_stats = (
+            product_reviews.groupby("product_id")
+            .agg(avg_rating=("rate", "mean"), review_count=("rate", "count"))
+            .reset_index()
+        )
+        rating_stats["avg_rating"] = rating_stats["avg_rating"].round(1)
+    else:
+        rating_stats = pd.DataFrame(columns=["product_id", "avg_rating", "review_count"])
+
+    # 판매량 계산 (logs 테이블에서 purchase 행만 집계)
+    purchase_logs = logs[logs["action_type"] == "purchase"]
+    product_purchases = purchase_logs[purchase_logs["product_id"].isin(product_ids)]
+    if not product_purchases.empty:
+        sales_stats = (
+            product_purchases.groupby("product_id")
+            .size()
+            .reset_index(name="sales_volume")
+        )
+    else:
+        sales_stats = pd.DataFrame(columns=["product_id", "sales_volume"])
+
+    # 세 지표를 상품 DataFrame에 left-join 병합
+    result = products_df.copy()
+    result = result.merge(rating_stats, on="product_id", how="left")
+    result = result.merge(sales_stats,  on="product_id", how="left")
+
+    # 결측치 처리: 리뷰/판매 이력 없는 상품은 0으로 대체
+    result["avg_rating"]   = result["avg_rating"].fillna(0.0)
+    result["review_count"] = result["review_count"].fillna(0).astype(int)
+    result["sales_volume"] = result["sales_volume"].fillna(0).astype(int)
+
+    return result
+
+
 # ── Step 2 / Micro-task 3: System — 결정론적 Pandas 필터링 ─────────────────
 def system_filter_products(params: dict, customer: dict) -> pd.DataFrame:
     """A → S: Agent 파라미터 + 고객 피부 정보로 상품을 결정론적 필터링.
@@ -66,8 +121,9 @@ def system_filter_products(params: dict, customer: dict) -> pd.DataFrame:
             )
         ]
 
-    # 상품 노출 제한: UI 렌더링 부하 및 토큰 비용 절감을 위해 최대 10개만 반환
-    return result.head(10).reset_index(drop=True)
+    # 전체 필터링 결과에 평점·리뷰 수·판매량 지표를 병합하여 반환
+    # (페이지네이션은 app.py에서 처리하므로 head 제한 없음)
+    return system_aggregate_product_stats(result.reset_index(drop=True))
 
 
 # ── Step 3 / Micro-task 5: System — 동일 피부 타입 리뷰 필터링 및 지표 계산 ──
