@@ -1,6 +1,7 @@
 import json
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 # 에이전트 함수 및 상수 임포트 (Anthropic API 호출 계층)
 # agents.py 내부에서 load_dotenv()가 선행 실행되므로 별도 호출 불필요
@@ -39,6 +40,8 @@ if "current_page" not in st.session_state:
     st.session_state.current_page = 1          # 검색 결과 현재 페이지 번호
 if "sort_by" not in st.session_state:
     st.session_state.sort_by = "평점순"         # 검색 결과 정렬 기준
+if "scroll_to_review" not in st.session_state:
+    st.session_state.scroll_to_review = False  # 리뷰 섹션 자동 스크롤 트리거 플래그
 
 
 # ── 정렬 옵션 상수 ──────────────────────────────────────────────────────────
@@ -77,8 +80,9 @@ def _clear_llm_caches() -> None:
 # 상태 변경이 즉시 반영되어 한 번의 클릭만으로 UI가 업데이트된다.
 
 def _cb_select_product(pid: int) -> None:
-    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID를 세션에 저장."""
+    """검색 결과 '상품 선택' 버튼 콜백: 선택 상품 ID를 세션에 저장하고 스크롤 플래그 설정."""
     st.session_state.selected_product_id = pid
+    st.session_state.scroll_to_review = True  # 다음 렌더링 시 리뷰 섹션으로 자동 스크롤
 
 
 def _cb_add_to_cart(pid: int) -> None:
@@ -378,7 +382,30 @@ else:
                 )
 
     # ── Step 3: 상품 상세 / 리뷰 요약 / 시너지 상품 추천 ──────────────────
+    # 자동 스크롤 앵커: 상품 선택 시 이 위치로 부드럽게 스크롤
+    st.markdown('<div id="review-anchor"></div>', unsafe_allow_html=True)
+
     if st.session_state.selected_product_id is not None:
+        # 상품 선택 직후 첫 렌더링에서만 리뷰 섹션으로 자동 스크롤
+        # scroll_to_review 플래그 소비 후 즉시 False로 초기화 → 이후 재렌더링에서 반복 스크롤 방지
+        if st.session_state.scroll_to_review:
+            st.session_state.scroll_to_review = False
+            components.html(
+                """
+                <script>
+                    // Streamlit은 iframe 안에서 실행되므로 window.parent로 부모 문서에 접근
+                    // setTimeout으로 DOM 렌더링 완료 후 스크롤 실행
+                    setTimeout(function () {
+                        var el = window.parent.document.getElementById("review-anchor");
+                        if (el) {
+                            el.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                    }, 100);
+                </script>
+                """,
+                height=0,  # 화면에 표시되지 않는 0px 높이 iframe
+            )
+
         selected_id = st.session_state.selected_product_id
         selected_row = products[products["product_id"] == selected_id]
 
