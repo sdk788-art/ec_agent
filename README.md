@@ -45,16 +45,22 @@
 
 ```text
 my-ecommerce-agent/
-├── data/                  # 목업 데이터 (JSON)
-│   ├── customers.json     # 고객 데이터 (50 rows)
-│   ├── logs.json          # 로그 데이터 (778 rows)
-│   ├── products.json      # 상품 데이터 (48 rows)
-│   └── reviews.json       # 리뷰 데이터 (205 rows)
-├── docs/                  # 기획 문서
-│   ├── architecture.md    # 아키텍처 메모
-│   ├── functional_spec.md # 기능 명세서
-│   └── table_def.md       # 테이블 정의서
-├── app.py                 # Streamlit 메인 실행 파일
-├── requirements.txt       # 패키지 의존성 관리
-└── README.md              # 프로젝트 소개 및 가이드
+├── data/                      # 대규모 목업 데이터 (JSON)
+│   ├── customers.json         # 고객 데이터 (200 rows)
+│   ├── logs.json              # 유저 행동 로그 (3,124 rows)
+│   ├── products.json          # 뷰티 상품 데이터 (512 rows)
+│   └── reviews.json           # 상품별 고객 리뷰 (796 rows)
+├── docs/                      # 기획 및 설계 문서
+│   ├── architecture.md        # H-A-S 아키텍처 설계 메모
+│   ├── functional_spec.md     # 기능 명세서
+│   └── table_def.md           # 테이블 및 스키마 정의서
+├── .env                       # (로컬 전용) API Key 등 환경변수 보관 (Git 추적 제외)
+├── .gitignore                 # Git 버전 관리 제외 목록 (.env, __pycache__ 등)
+├── app.py                     # [UI 계층] Streamlit 메인 화면 및 상태(Session) 관리
+├── agents.py                  # [Agent 계층] LLM 프롬프트 제어 및 Anthropic API 호출
+├── logic.py                   # [System 계층] 데이터 로드 및 Pandas 교차 연산 필터링
+├── generate_mock_data.py      # 목업 데이터 대량 생성 및 스케일업 자동화 스크립트
+├── CLAUDE.md                  # AI 에이전트(Claude Code) 전용 시스템 지침 및 컨텍스트
+├── requirements.txt           # 패키지 의존성 명세
+└── README.md                  # 프로젝트 소개, 실행 가이드 및 아키텍처 요약
 ```
