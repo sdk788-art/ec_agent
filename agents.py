@@ -1,5 +1,5 @@
 import json
-
+import os
 import anthropic
 import pandas as pd
 from dotenv import load_dotenv
@@ -7,9 +7,15 @@ from dotenv import load_dotenv
 # .env 파일에서 ANTHROPIC_API_KEY 환경변수 로드 (agents 모듈 임포트 시 선행 실행)
 load_dotenv()
 
-# ── Anthropic API 클라이언트 초기화 (ANTHROPIC_API_KEY 환경변수 자동 참조) ──
-client = anthropic.Anthropic()
+# ── Anthropic API 클라이언트 초기화 (환경 변수와 Streamlit Secrets 모두 지원) ──
+# 1. 시스템 환경 변수(로컬)에서 먼저 찾고, 2. 없으면 Streamlit Secrets(배포)에서 찾음
+api_key = os.getenv("ANTHROPIC_API_KEY") or st.secrets.get("ANTHROPIC_API_KEY")
 
+if not api_key:
+    # 키가 아예 없는 경우에 대한 방어 로직
+    raise ValueError("ANTHROPIC_API_KEY가 설정되지 않았습니다. .env 또는 Streamlit Secrets를 확인하세요.")
+
+client = anthropic.Anthropic(api_key=api_key)
 # ── 피부 타입 / 고민 / 상품 종류 한국어 매핑 테이블 ─────────────────────────
 SKIN_TYPE_KO = {
     "dry":              "건성",
