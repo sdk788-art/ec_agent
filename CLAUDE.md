@@ -55,14 +55,13 @@ controls API token costs.
 ---
 
 ## Directory Structure
-
 ```
 ec_agent/
 ├── data/                   # Mock databases (JSON, read-only during MVP)
-│   ├── customers.json      # 50 customer records
-│   ├── products.json       # 48 product records
-│   ├── logs.json           # 778 customer action logs
-│   └── reviews.json        # 205 customer reviews (Korean text)
+│   ├── customers.json      # 200 customer records
+│   ├── products.json       # 512 product records
+│   ├── logs.json           # 6,188 customer action logs
+│   └── reviews.json        # 1,503 customer reviews (Korean text)
 ├── docs/                   # Design documentation (written in Korean)
 │   ├── architecture.md     # Tool choices and H-A-S data flow rationale
 │   ├── functional_spec.md  # Feature-level task definitions
@@ -344,3 +343,4 @@ is automatically picked up. Never commit API keys. `.gitignore` excludes `.env`,
 - Implement search log storage in `logs.json` (currently only view/cart/purchase are logged)
 - Add new customer registration (currently login is selector-based; `customers.json` is read-only)
 - Persist cart across sessions (currently session-only `set`)
+
