@@ -44,7 +44,7 @@ LLM에게 모든 검색과 추천을 맡기지 않고, 역할을 3단계로 엄�
 ## Tech Stack
 * **Frontend:** Streamlit 
 * **Data Processing:** Python + Pandas
-* **LLM:** Anthropic Claude 3.5 Sonnet API
+* **LLM:** Anthropic Claude Haiku 4.5
 * **Data Storage:** JSON (대규모 목업 데이터)
 
 ## 디렉토리 구조 및 데이터 스케일
